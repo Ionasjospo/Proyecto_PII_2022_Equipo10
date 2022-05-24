@@ -12,7 +12,9 @@
 ## Proyecto 2022 - Primer Semestre - [Batalla naval (juego)](https://es.wikipedia.org/wiki/Batalla_naval_(juego)).
 
 
-<img src= "C:\Users\Usuario\OneDrive - Universidad Católica del Uruguay\Escritorio\Batalla Naval p2.png">
+<img src= "Docs\Batalla Naval p2.png">
+
+
 <br/>
 <br/>
 
