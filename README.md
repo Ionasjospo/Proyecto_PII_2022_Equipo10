@@ -33,7 +33,7 @@
 ## Hito 01 (26 de mayo)
 ---
 Desde el comienzo fue extraño comenzar a diagramar las clases sin interactuar con código el IDE.
-Como toda creación de cero, para plasmar clase a clase, fuimo dibujando en borradores, realizando varias versiones del diarama, borrando, juntando, separando, aplicando patrones aprendidos... hasta llegar a una solución del diagrama de clases, sus responsabilidades y asociaciones, que permitirán llevar adelante el proyecto. Seguramente sufra alguna modificación en el camino, pero estamos satisfecho con esta versión. 
+Como toda creación de cero, para plasmar clase a clase, fuimos dibujando en borradores, realizando varias versiones del diagrama, borrando, juntando, separando, aplicando patrones aprendidos... hasta llegar a una solución del diagrama de clases, sus responsabilidades y asociaciones, que permitirán llevar adelante el proyecto. Seguramente sufra alguna modificación en el camino, pero estamos satisfecho con esta versión. 
 
 Para poder diseñar las clases, utilizamos algo similar a un diagrama de interacción, en este caso plasmamos interacciones entre dos usuarios y el sistema, este documento nos ayudó a visualizar cuáles serían las interacciones (desde inicio a fin, con situaciones iterativas y opcionales), permitiendo de esa forma llegar al diagrama de clases creado.
 
