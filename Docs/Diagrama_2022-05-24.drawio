@@ -1,39 +1,25 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
-        <mxGraphModel dx="2843" dy="77" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+        <mxGraphModel dx="2772" dy="-428" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="5d2195bd80daf111-18" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;&lt;i&gt;{abstract}&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;User&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- nombre: string&lt;br&gt;- id: int&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="400" y="1450" width="190" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="w-Vky3n0tNIHlPumxMTk-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="w-Vky3n0tNIHlPumxMTk-1" target="5d2195bd80daf111-18" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="385" y="1660"/>
-                            <mxPoint x="495" y="1660"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="w-Vky3n0tNIHlPumxMTk-1" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Admin&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
-                    <mxGeometry x="290" y="1740" width="190" height="140" as="geometry"/>
-                </mxCell>
                 <mxCell id="w-Vky3n0tNIHlPumxMTk-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=15;" parent="1" source="w-Vky3n0tNIHlPumxMTk-2" target="5d2195bd80daf111-18" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="605" y="1660"/>
-                            <mxPoint x="495" y="1660"/>
-                        </Array>
+                        <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="w-Vky3n0tNIHlPumxMTk-2" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Player&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
-                    <mxGeometry x="510" y="1740" width="190" height="140" as="geometry"/>
+                    <mxGeometry x="400" y="1720" width="190" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" style="edgeStyle=none;html=1;endArrow=openThin;endFill=0;endSize=15;" parent="1" source="w-Vky3n0tNIHlPumxMTk-5" target="wRxOvBlhjGOeDe8X8La8-2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="w-Vky3n0tNIHlPumxMTk-5" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;&lt;i&gt;{abstract}&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Board&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- sizeH: int&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- sizeV: int&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- shipsReady: bool&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+addShips&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
-                    <mxGeometry x="-560" y="1800" width="190" height="140" as="geometry"/>
+                <mxCell id="w-Vky3n0tNIHlPumxMTk-5" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;&lt;i&gt;{abstract}&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Board&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- sizeH: int&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- sizeV: int&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- shipsReady: bool&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- ships: ShipList&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- blocks: char[sizeH][szieV]&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+addShips&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
+                    <mxGeometry x="-560" y="1793" width="190" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="w-Vky3n0tNIHlPumxMTk-6" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="w-Vky3n0tNIHlPumxMTk-7" target="w-Vky3n0tNIHlPumxMTk-5" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -84,8 +70,8 @@
                 <mxCell id="wRxOvBlhjGOeDe8X8La8-2" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;ShipList&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;span&gt;- gameShipList: List&amp;lt;Ship&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SetPosition()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="-1050" y="1790" width="190" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="XxbIE4E-ZRv_lZ-lYbm2-1" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Attack&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ VerifyBlock&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ EvaluateAttack&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ResultWater&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ResultShip&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Response&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
-                    <mxGeometry x="550" y="2210" width="190" height="190" as="geometry"/>
+                <mxCell id="XxbIE4E-ZRv_lZ-lYbm2-1" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Attack&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ RequestAttack&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ VerifyBlock&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ EvaluateAttack&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ResultAttack&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="2210" width="130" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="XxbIE4E-ZRv_lZ-lYbm2-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="XxbIE4E-ZRv_lZ-lYbm2-12" target="w-Vky3n0tNIHlPumxMTk-10" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -131,16 +117,16 @@
                 <mxCell id="XxbIE4E-ZRv_lZ-lYbm2-41" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="w-Vky3n0tNIHlPumxMTk-5" target="wRxOvBlhjGOeDe8X8La8-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" style="edgeStyle=none;html=1;" edge="1" parent="1" source="XxbIE4E-ZRv_lZ-lYbm2-23" target="22">
+                <mxCell id="23" style="edgeStyle=none;html=1;" parent="1" source="XxbIE4E-ZRv_lZ-lYbm2-23" target="22" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" style="edgeStyle=none;html=1;" edge="1" parent="1" source="XxbIE4E-ZRv_lZ-lYbm2-23" target="24">
+                <mxCell id="34" style="edgeStyle=none;html=1;" parent="1" source="XxbIE4E-ZRv_lZ-lYbm2-23" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="375" y="2480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="XxbIE4E-ZRv_lZ-lYbm2-23" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Batlle&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Start&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Attack&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowOwnerShip&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowGuestShip&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowStatusMessage&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Wait&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Menu&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowResultGame&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ EndBattle&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
-                    <mxGeometry x="280" y="2040" width="190" height="190" as="geometry"/>
+                <mxCell id="XxbIE4E-ZRv_lZ-lYbm2-23" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Batlle&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- ownerBlocksAttacked: char[sizeH][sizeV]&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- guestBlocksAttacked: char[sizeH][sizeV]&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Start&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Attack&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowOwnerShip&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowGuestShip&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowStatusMessage&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Wait&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ Menu&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowResultGame&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ EndBattle&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
+                    <mxGeometry x="250" y="2040" width="240" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="XxbIE4E-ZRv_lZ-lYbm2-15" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;BattleShip&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="-1400" y="2313.77" width="190" height="140" as="geometry"/>
@@ -176,24 +162,24 @@
                     <mxGeometry x="-470" y="2100" width="60" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Singleton&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
-                    <mxGeometry x="-1050" y="1610" width="190" height="80" as="geometry"/>
+                    <mxGeometry x="-960" y="1520" width="190" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="extends" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="510" y="1630" width="60" height="20" as="geometry"/>
+                    <mxGeometry x="480" y="1640" width="60" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Menu&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowOption&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ExecuteOption&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" vertex="1" parent="1">
+                <mxCell id="22" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;Menu&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ShowOption&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ExecuteOption&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="10" y="2290" width="190" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" style="edgeStyle=none;html=1;" edge="1" parent="1" source="24" target="26">
+                <mxCell id="27" style="edgeStyle=none;html=1;endArrow=diamond;endFill=0;endSize=15;" parent="1" source="24" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;ChatBox&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- messages: List&amp;lt;IChatMessage&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SendMessage&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ ReciveMessage&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" vertex="1" parent="1">
+                <mxCell id="24" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;ChatBox&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;- messages: List&amp;lt;IChatMessage&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ OwnerMessage&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ GuestMessage&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="280" y="2480" width="190" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;IChatMessage&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SetTime&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ WriteWords&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" vertex="1" parent="1">
+                <mxCell id="26" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;IChatMessage&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SetTime&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ WriteWords&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="-120" y="2560" width="190" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" style="edgeStyle=none;html=1;dashed=1;" edge="1" parent="1" source="28" target="26">
+                <mxCell id="30" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="28" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="-145" y="2720"/>
@@ -201,10 +187,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="28" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;OwnerChatMessage&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SetTime&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ WriteWords&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" vertex="1" parent="1">
+                <mxCell id="28" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;OwnerChatMessage&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SetTime&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ WriteWords&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="-240" y="2760" width="190" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" style="edgeStyle=none;html=1;dashed=1;" edge="1" parent="1" source="31" target="26">
+                <mxCell id="32" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="31" target="26" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="85" y="2720"/>
@@ -212,57 +198,89 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="31" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;GuestChatMessage&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SetTime&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ WriteWords&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" vertex="1" parent="1">
+                <mxCell id="31" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;b&gt;GuestChatMessage&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ SetTime&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ WriteWords&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
                     <mxGeometry x="-10" y="2760" width="190" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="Implement" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="37" value="Implement" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-25" y="2690" width="70" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;" edge="1" parent="1" source="38" target="7">
+                <mxCell id="39" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;" parent="1" source="38" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="Un MATCH se encarga de recibir el join del Owner y del Guest.&lt;br&gt;Si usuario desea crear partida, entonces será tipo Owner.&lt;br&gt;Si usuario desea buscar partida, entonces será tipo Guest.&lt;br&gt;Una vez confirmado que el usuario ya está en el listado &lt;br&gt;de Usuarios del sistema, se avanza con el GAME." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
+                <mxCell id="38" value="Un MATCH se encarga de recibir el join del Owner y del Guest.&lt;br&gt;Si usuario desea crear partida, entonces será tipo Owner.&lt;br&gt;Si usuario desea buscar partida, entonces será tipo Guest.&lt;br&gt;Una vez confirmado que el usuario ya está en el listado &lt;br&gt;de Usuarios del sistema, se avanza con el GAME." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" parent="1" vertex="1">
                     <mxGeometry x="-200" y="1130" width="350" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="41" target="w-Vky3n0tNIHlPumxMTk-11">
+                <mxCell id="40" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="41" target="w-Vky3n0tNIHlPumxMTk-11" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="94.45000000000027" y="1612.1000000000001" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="41" value="Un GAME comienza cuando ya están los dos user disponibles.&lt;br&gt;Contiene ambos BOARDs.&lt;br&gt;Una vez que los Boards se encuentran prontos con&lt;br&gt;sus respectivos SHIPs, se comienza la BATLLE.." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
+                <mxCell id="41" value="Un GAME comienza cuando ya están los dos user disponibles.&lt;br&gt;Contiene ambos BOARDs.&lt;br&gt;Una vez que los Boards se encuentran prontos con&lt;br&gt;sus respectivos SHIPs, se comienza la BATLLE.." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" parent="1" vertex="1">
                     <mxGeometry x="10" y="1470" width="350" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="43" target="w-Vky3n0tNIHlPumxMTk-5">
+                <mxCell id="42" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="43" target="w-Vky3n0tNIHlPumxMTk-5" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-650" y="1685" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="43" value="Existen solo dos BOARDs, uno del Owner, y otro del Guest.&lt;br&gt;Cada Board tiene sus propios SHIPs,&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
+                <mxCell id="43" value="Existen solo dos BOARDs, uno del Owner, y otro del Guest.&lt;br&gt;Cada Board tiene sus propios SHIPs,&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" parent="1" vertex="1">
                     <mxGeometry x="-780" y="1690" width="330" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="45" target="wRxOvBlhjGOeDe8X8La8-2">
+                <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="45" target="wRxOvBlhjGOeDe8X8La8-2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-1242.5" y="1880" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="45" value="Para que un BOARD quede pronto, debe haber un SHIPLIST&lt;br&gt;pronto con sus respectivos SHIPs ya colocados en sus&amp;nbsp;&lt;br&gt;casilleros." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
-                    <mxGeometry x="-1465" y="1725" width="340" height="50" as="geometry"/>
+                <mxCell id="45" value="Para que un BOARD quede pronto, SHIPLIST se encargará&lt;br&gt;de marcar los Blocks que corresponan a cada SHIP." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" parent="1" vertex="1">
+                    <mxGeometry x="-1460" y="1735" width="330" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="47" target="w-Vky3n0tNIHlPumxMTk-10">
+                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="47" target="w-Vky3n0tNIHlPumxMTk-10" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-1355" y="1985" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="47" value="Un SHIP puede estar vivo o destruido.&lt;br&gt;Vivo está mientras los BlocksAlive son iguales en cantidad &lt;br&gt;a los Blocks que le corresponden por su tamaño.&lt;br&gt;En caso de ser tocado, los BlocksAlive disminuyen.&lt;br&gt;Una que BlocksAlive llegue a cero, el Ship a sido destruido.&lt;br&gt;Cada tipo de Ship tiene una cantidad de Blocks definida (de 2 a 5)&lt;br&gt;Su posición se establece por un block del board, y&amp;nbsp;&lt;br&gt;tantos blocks le correspondan de forma horizonatal o vertical (a&amp;nbsp;&lt;br&gt;partir del blocke seleccionado, hacia la dercha o hacia abajo)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
+                <mxCell id="47" value="Un SHIP puede estar vivo o destruido.&lt;br&gt;Vivo está mientras los BlocksAlive son iguales en cantidad &lt;br&gt;a los Blocks que le corresponden por su tamaño.&lt;br&gt;En caso de ser tocado, los BlocksAlive disminuyen.&lt;br&gt;Una vez que BlocksAlive llegue a cero, el Ship a sido destruido.&lt;br&gt;Cada tipo de Ship tiene una cantidad de Blocks definida (de 2 a 5)&lt;br&gt;Su posición se establece por un block del board, y&amp;nbsp;&lt;br&gt;tantos blocks le correspondan de forma horizonatal o vertical (a&amp;nbsp;&lt;br&gt;partir del block seleccionado, hacia la dercha o hacia abajo)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" parent="1" vertex="1">
                     <mxGeometry x="-1785" y="1840" width="370" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="50" target="wRxOvBlhjGOeDe8X8La8-1">
+                <mxCell id="49" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="50" target="wRxOvBlhjGOeDe8X8La8-1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-742.5" y="2550" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="50" value="Cada usuario verá su propio BOARD con todos los datos.&lt;br&gt;Y podrá ver el BOARD del oponente como si fuese todo agua,&amp;nbsp;&lt;br&gt;a no ser que haya tocado algun barco durante la Batlle." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
+                <mxCell id="50" value="Cada usuario verá su propio BOARD con todos los datos.&lt;br&gt;Y podrá ver el BOARD del oponente como si fuese todo agua,&amp;nbsp;&lt;br&gt;a no ser que haya tocado algun barco durante la Batlle." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" parent="1" vertex="1">
                     <mxGeometry x="-280" y="1880" width="350" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="52" target="XxbIE4E-ZRv_lZ-lYbm2-23">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="2090" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="Al comenzar el Battle, comienza la partida de Owner vs Guest.&lt;br&gt;Siempre se envía primero el tablero del User para saber el&amp;nbsp;estado actual.&lt;br&gt;Luego se envía envía el Board del enemigo y con los Ships ocultos&lt;br&gt;y los Blocks usados (agua, tocado, barco unido).&lt;br&gt;Se solicita un Attack al usuario.&lt;br&gt;Posterior al resultado del Attack se envía mensaje para que aguarde la&amp;nbsp;&lt;br&gt;jugada del oponoente, y un menú con opciones mientras espera.&lt;br&gt;En caso de finalizada la batalla, se envía ambos tableros, el&amp;nbsp;&lt;br&gt;resultado final, una despedida, y sugerecia de comenzar una nueva partida." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
+                    <mxGeometry x="565" y="1960" width="420" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontStyle=1" edge="1" parent="1" source="54" target="XxbIE4E-ZRv_lZ-lYbm2-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="760" y="2337.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="&lt;span style=&quot;font-weight: normal&quot;&gt;Se solicita al User que elija un Block donde atacar.&lt;br&gt;Se verifica qué hay en ese Block.&lt;br&gt;Se evalúa el resultado (tocado, hundido, si hay ganador, si hay empate).&lt;br&gt;Se envía mensaje con al respuesta de la jugada.&lt;br&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="805" y="2145" width="400" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="56" target="22">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-480" y="2515" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="Brinda un menú con opciones como: mostrar tablero propio,&amp;nbsp;&lt;br&gt;mostrar tablero oponente, enviar mensaje al oponente.&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="1">
+                    <mxGeometry x="-415" y="2420" width="340" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;endFill=0;dashed=1;dashPattern=1 1;strokeWidth=1;curved=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontStyle=1" edge="1" parent="1" source="58" target="24">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="529.9999999999995" y="2535" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="Guarda un listado de mensajes enviados entre los usaurios." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=1;perimeterSpacing=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="595" y="2455" width="330" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
