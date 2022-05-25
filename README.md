@@ -5,12 +5,10 @@
 
 ## Facultad de Ingeniería y Tecnologías
 ### Programación II
-
 <br/>
 <br/>
 
 ## Proyecto 2022 - Primer Semestre - [Batalla naval (juego)](https://es.wikipedia.org/wiki/Batalla_naval_(juego)).
-
 
 <img src= "Docs\batallaV2.png">
 <br/>
