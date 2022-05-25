@@ -25,7 +25,6 @@ Nuestra metodología para trabajar en el proyecto se baso en la prueba y error. 
 Para poder diseñar las clases, utilizamos algo similar a un diagrama de interacción, en este caso plasmamos interacciones entre dos usuarios y el sistema, este documento nos ayudó a visualizar cuáles serían las interacciones (desde inicio a fin, con situaciones iterativas y opcionales), permitiendo de esa forma llegar al diagrama de clases creado. Cuando tengamos el feedback del diagrama UML, nos dividiremos las clases a programar para cada integrante del grupo y pondremos una fecha limite para terminarlas y unirlas todas a la rama principal main. 
 El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama UML sin tener codigo previsto. Tambien aplicar patrones fue una tarea complicada ya que hubo mucho espacio de discusión entre nosotros.
 No aprendimos muchas cosas ademas de lo aprendido en clase. Quizas a como darle formato, agregar imagenes, direccionar links a paginas en el README.md
-
  
 Reflexionamos que esta entrega quizas es la más pesada, ya que hay que pensar muchas veces el diagrama. Las proximas entregas seran más interesantes ya que contienen código que es lo que más nos gusta a nosotros, los programadores.
 Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar proyectos de este estilo.
