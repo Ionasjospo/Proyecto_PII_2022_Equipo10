@@ -5,7 +5,6 @@
 
 ## Facultad de Ingeniería y Tecnologías
 ### Programación II
-<br/>
 
 ## Proyecto 2022 - Primer Semestre - [Batalla naval (juego)](https://es.wikipedia.org/wiki/Batalla_naval_(juego)).
 
@@ -19,8 +18,6 @@
     - Gonzalo DaSilva
     - Ionas Josponis
     - Christopher Bentancor
-<br/>
-<br/>
 
 ## Hito 01 (26 de mayo)
 ---
