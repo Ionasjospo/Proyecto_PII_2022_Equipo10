@@ -28,7 +28,7 @@ Para poder diseñar las clases, utilizamos algo similar a un diagrama de interac
 El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama UML sin tener codigo previsto. Tambien aplicar patrones fue una tarea complicada ya que hubo mucho espacio de discusión  y cambios entre nosotros. <p/><br> Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, las cuáles fueron aceptadas por el cliente(los profesores), estas son:
 <br>
     <p>
-    <Tab>Funcionalidad extra de Ionas: Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#Nuget">Nuget</a>  tiene un clase con un método para superponer imagenes. <p/>
+    Funcionalidad extra de Ionas:<br> Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#Nuget">Nuget</a>  tiene un clase con un método para superponer imagenes. <p/>
 <br>    
     Funcionalidad extra de Ricardo:
 <br> 
