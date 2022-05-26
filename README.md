@@ -48,12 +48,13 @@ El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama 
 Reflexionamos que esta entrega quizas es la más pesada, ya que hay que pensar varias veces el diagrama UML. Las proximas entregas seran más interesantes ya que contienen código que es lo que más nos gusta a nosotros, los programadores.
 Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar proyectos de este estilo.
 
+## Anexo
 <a name="NuGet">Nuget</a>
-NuGet
-Aprendimos a como usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget/what-is-nuget">NuGet</a>(lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
+<br>
+Aprendimos a usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget/what-is-nuget">NuGet</a>(lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
 
 <a name="MagickImage">MagickImage</a>
-Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
+<br><a href="https://github.com/dlemstra/Magick.NET.git">MagickImage</a>Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
  
 Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue RefactoringGuru. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
 
