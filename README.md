@@ -30,7 +30,7 @@ El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama 
     <p>
     Funcionalidad extra de Ionas:
     <br> 
-    Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#Nuget">Nuget</a>  tiene un clase con un método para superponer imagenes. <p/>
+    Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#NuGet">NuGet</a>  tiene un clase con un método para superponer imagenes. <p/>
 <br>    
     <p>
     Funcionalidad extra de Ricardo: </p>
@@ -48,10 +48,10 @@ El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama 
 Reflexionamos que esta entrega quizas es la más pesada, ya que hay que pensar varias veces el diagrama UML. Las proximas entregas seran más interesantes ya que contienen código que es lo que más nos gusta a nosotros, los programadores.
 Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar proyectos de este estilo.
 
-Nuget
+<a name="NuGet">Nuget</a>
 Aprendimos a como usar la herramienta [NuGet] (https://docs.microsoft.com/en-us/nuget/what-is-nuget) (lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
 
-MagicImage 
+<a name="MagicImage">MagicImage</a>
 Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
  
 Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue RefactoringGuru. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
