@@ -44,8 +44,10 @@ Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, la
     
 <p>
 
-    Funcionalidad extra de Gonzalo: 
-<br> Gonzalo negocio con los profesores poder jugar partidas 2vs2
+    Funcionalidad extra de Gonzalo:
+    <br> 
+    Gonzalo negocio con los profesores poder jugar partidas 2vs2
+    <br/>
 </p>
  
 <p>
@@ -64,9 +66,9 @@ Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar pro
 
 ## Anexo
 <a name="doc">Documento</a>
-<a href="https://docs.google.com/document/d/1Jx9uts9U03fkiUoHpgJhPRXCghwjseM5EBgLrv6mH20/edit?usp=sharing">Documento</a>
+
 <br>
-Este documento es para explicar todo lo relacionado nuestro software, agregar cosas que quizas no corresponden en el README.
+Este <a href="https://docs.google.com/document/d/1Jx9uts9U03fkiUoHpgJhPRXCghwjseM5EBgLrv6mH20/edit?usp=sharing">Documento</a> es para explicar todo lo relacionado nuestro software, agregar cosas que quizas no corresponden en el README.
 
 
 <a name="NuGet">Nuget</a>
