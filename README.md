@@ -42,14 +42,11 @@ Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, la
     <br>    
 </p>
     
-<p>
+
 
     Funcionalidad extra de Gonzalo:
-    <br> 
     Gonzalo negocio con los profesores poder jugar partidas 2vs2
-    <br/>
-</p>
- 
+    
 <p>
     Funcionalidad extra de Christofer:
     Christofer penso en un nuevo tipo de bomba el cual se consigue ganando 5 partidas, la bomba explota más
@@ -66,8 +63,6 @@ Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar pro
 
 ## Anexo
 <a name="doc">Documento</a>
-
-<br>
 Este <a href="https://docs.google.com/document/d/1Jx9uts9U03fkiUoHpgJhPRXCghwjseM5EBgLrv6mH20/edit?usp=sharing">Documento</a> es para explicar todo lo relacionado nuestro software, agregar cosas que quizas no corresponden en el README.
 
 
