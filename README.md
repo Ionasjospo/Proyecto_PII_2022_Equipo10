@@ -48,6 +48,7 @@ Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, la
     Funcionalidad extra de Christopher:
 
     Se penso en un nuevo tipo de bomba, el cual se consigue ganando 5 partidas, esta bomba en vez de afectar una sola coordenada del tablero, afecta 5, la coordenada elegida, la coordenada de encima y la de debajo mas las coordenadas de la izquierda y la de la derecha, todas con respecto a la coordenada que se eligio.
+    La idea se propuso para hacer el juego un poco mas dinamico y entretenido que la batalla naval original.
     
     
 
