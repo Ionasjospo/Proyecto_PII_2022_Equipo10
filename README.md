@@ -45,8 +45,9 @@ Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, la
     Gonzalo negocio con los profesores poder jugar partidas 2vs2
     
 
-    Funcionalidad extra de Christofer:
-    Christofer penso en un nuevo tipo de bomba el cual se consigue ganando 5 partidas, la bomba explota más
+    Funcionalidad extra de Christopher:
+
+    Se penso en un nuevo tipo de bomba, el cual se consigue ganando 5 partidas, esta bomba en vez de afectar una sola coordenada del tablero, afecta 5, la coordenada elegida, la coordenada de encima y la de debajo mas las coordenadas de la izquierda y la de la derecha, todas con respecto a la coordenada que se eligio.
     
     
 
