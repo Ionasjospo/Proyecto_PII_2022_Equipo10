@@ -35,25 +35,20 @@ Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, la
     <br>    
 </p>
     
-<p>
+
     Funcionalidad extra de Ricardo: 
-    <br> 
     Ricardo decidio poder crear un chat para los usuarios.
-    <br>    
-</p>
-    
+      
 
 
     Funcionalidad extra de Gonzalo:
     Gonzalo negocio con los profesores poder jugar partidas 2vs2
     
-<p>
+
     Funcionalidad extra de Christofer:
     Christofer penso en un nuevo tipo de bomba el cual se consigue ganando 5 partidas, la bomba explota más
-    <br>
     
-</p>
-
+    
 
 <br> 
 <br> 
@@ -62,15 +57,15 @@ Reflexionamos que esta entrega quizas es la más pesada, ya que hay que pensar v
 Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar proyectos de este estilo.
 
 ## Anexo
-<a name="doc">Documento</a>
+<a name="doc">Documento:</a> <br>
 Este <a href="https://docs.google.com/document/d/1Jx9uts9U03fkiUoHpgJhPRXCghwjseM5EBgLrv6mH20/edit?usp=sharing">Documento</a> es para explicar todo lo relacionado nuestro software, agregar cosas que quizas no corresponden en el README.
 
 
-<a name="NuGet">Nuget</a>
+<a name="NuGet">NuGet:</a>
 <br>
 Aprendimos a usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget/what-is-nuget">NuGet</a>(lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
 
-<a name="MagickImage">MagickImage</a>
+<a name="MagickImage">MagickImage:</a>
 <br><a href="https://github.com/dlemstra/Magick.NET.git">MagickImage</a> Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
  
 Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue <a href="https://refactoring.guru/es">RefactoringGuru</a>. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
