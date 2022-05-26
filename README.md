@@ -27,14 +27,14 @@ Nuestra metodología para trabajar en el proyecto se baso en la prueba y error. 
 Para poder diseñar las clases, utilizamos algo similar a un diagrama de interacción, en este caso plasmamos interacciones entre dos usuarios y el sistema, este documento nos ayudó a visualizar cuáles serían las interacciones (desde inicio a fin, con situaciones iterativas y opcionales, permitiendo de esa forma llegar al diagrama de clases creado. Cuando tengamos el feedback del diagrama UML, nos dividiremos las clases a programar para cada integrante del grupo, pondremos una fecha limite para terminarlas y "mergearlas" todas a la rama principal main. 
 El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama UML sin tener codigo previsto. Tambien aplicar patrones fue una tarea complicada ya que hubo mucho espacio de discusión  y cambios entre nosotros. <p/><br> Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, las cuáles fueron aceptadas por el cliente(los profesores), estas son:
 <br>
-    <p>
-    Ionas: Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#Nuget">Nuget</a>  tiene un clase con un método para superponer imagenes. <p/>
+    <Tab><p>
+    Funcionalidad extra de Ionas: Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#Nuget">Nuget</a>  tiene un clase con un método para superponer imagenes. <p/>
 <br>    
-    Ricardo:
+    Funcionalidad extra de Ricardo:
 <br> 
-    Gonzalo:
+    Funcionalidad extra de Gonzalo:
 <br> 
-    Christofer:
+    Funcionalidad extra deChristofer:
 
 
 <br> 
