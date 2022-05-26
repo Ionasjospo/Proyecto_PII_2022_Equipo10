@@ -29,26 +29,38 @@ El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama 
 Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, las cuáles fueron aceptadas por el cliente(los profesores), estas son:
 <br>
 <p>
-    Funcionalidad extra de Ionas:
+    <b> Funcionalidad extra de Ionas:</b>
     <br> 
-    Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#NuGet">NuGet</a>  tiene un clase con un método para superponer imagenes. <p/>
+    Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#NuGet">NuGet</a>  tiene un clase con un método para superponer imagenes. 
+    <br>
+    <br>
+    <img src= "Docs\Colocacion.jpeg">
+<p/>
     <br>    
-</p>
+    <p> <b> Funcionalidad extra de Ricardo:</b>
+    <br>
+    Se va implementar una modalidad para que los jugadores mientras estan combatiendo puedan enviar mensajes entre si, esto produce una mayor interaccion entre jugadores y un enfrentamiento mas entretenido 
+    <p/>
+    <br>    
+    <p>
+    <b> Funcionalidad extra de Gonzalo:</b>
+    <br> 
+    Lo que se va a implementar en este grupo ademas de los requisitos de la letra planteada es tener una modalidad 2vs2. Esto consiste en poder generar un enfrentamiento de manera que 4 usuarios puedan combatir en equipos de a 2.
+    Esto genera una mayor complejidad al bot y una gran experiencia para los jugadores.
+    <p/>
+    <br>
+    <p>  
+    <b> Funcionalidad extra de Christopher:</b>
+    <br> 
+    Se va a implementar una modalidad que al acumular 5 victorias conseguidas en el juego, el usuario va a recibir un objeto especial.
+    Este objeto especial es una bomba que su funcionalidad es que al ser disparada su rango de explosion aumenta a 5 cuadrados formando asi una cruz en el tablero.
+    Esto aumenta las posibilidades de darle al blanco y que sea meritorio el hecho de haber conseguido mas victorias en el juego<p/>
+    <br>
+    <center><img src= "Docs\Bomba.jpeg"></center>
     
 
-    Funcionalidad extra de Ricardo: 
-    Ricardo decidio poder crear un chat para los usuarios.
-      
-
-
-    Funcionalidad extra de Gonzalo:
-    Gonzalo negocio con los profesores poder jugar partidas 2vs2
     
-
-    Funcionalidad extra de Christofer:
-    Christofer penso en un nuevo tipo de bomba el cual se consigue ganando 5 partidas, la bomba explota más
-    
-    
+   </p> 
 
 <br> 
 <br> 
