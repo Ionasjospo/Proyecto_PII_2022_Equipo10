@@ -39,7 +39,7 @@ El desafio más dificil de esta primera parte, fue el hecho de crar el diagrama 
     Funcionalidad extra de Gonzalo:</p>
 <br> 
     <p>
-    Funcionalidad extra deChristofer:</p>
+    Funcionalidad extra de Christofer:</p>
 
 
 <br> 
@@ -54,9 +54,9 @@ Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar pro
 Aprendimos a usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget/what-is-nuget">NuGet</a>(lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
 
 <a name="MagickImage">MagickImage</a>
-<br><a href="https://github.com/dlemstra/Magick.NET.git">MagickImage</a>Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
+<br><a href="https://github.com/dlemstra/Magick.NET.git">MagickImage</a> Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
  
-Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue RefactoringGuru. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
+Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue <a href="https://refactoring.guru/es">RefactoringGuru</a>. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
 
 ## Hito 02 (21 de junio)
 ---
