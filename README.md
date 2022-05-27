@@ -12,11 +12,11 @@
 
 
 <br> 
-<h1> Integrantes equipo 10:</h1>
+<center><h1> Integrantes equipo 10:</h1>
 <h2>Ricardo Castro</h3>
 <h2>Gonzalo Da Silva</h3>
 <h2>Ionas Josponis</h3>
-<h2>Christopher Bentancor</h3>
+<h2>Christopher Bentancor</h3></center>
   
 <br>
 
