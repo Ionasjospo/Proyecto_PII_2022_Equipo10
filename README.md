@@ -11,13 +11,14 @@
 <img src= "Docs\batallaV2.png">
 
 
-## Equipo 10
-### Integrantes:
-
-    - Ricardo Castro
-    - Gonzalo DaSilva
-    - Ionas Josponis
-    - Christopher Bentancor
+<br> 
+<h1> Integrantes equipo 10:</h1>
+<h2>Ricardo Castro</h3>
+<h2>Gonzalo Da Silva</h3>
+<h2>Ionas Josponis</h3>
+<h2>Christopher Bentancor</h3>
+  
+<br>
 
 ## Hito 01 (26 de mayo)
 ---
@@ -31,7 +32,7 @@ Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, la
 <p>
     <b> Funcionalidad extra de Ionas:</b>
     <br> 
-    Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage<a/> la cual se implenta gracias a <a href="#NuGet">NuGet</a>  tiene un clase con un método para superponer imagenes. 
+    Desde el principio estaba preocupado por como mejorar las respuestas del chatbot para que no sean simples matrices con letras y números. Pensó que el usuario podria enviar al chatbot las posiciones de los barcos para que el mismo posteriormente le responda con una imagen con los barcos colocados. Pareciá complicado de realizarlo pero investigó y encontro la libreria <a href = "#MagickImage"> MagickImage</a> la cual se implenta gracias a <a href="#NuGet">NuGet</a>  tiene un clase con un método para superponer imagenes. 
     <br>
     <br>
     <img src= "Docs\Colocacion.jpeg">
@@ -69,16 +70,17 @@ Reflexionamos que esta entrega quizas es la más pesada, ya que hay que pensar v
 Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar proyectos de este estilo.
 
 ## Anexo
-<a name="doc">Documento:</a> <br>
-Este <a href="https://docs.google.com/document/d/1Jx9uts9U03fkiUoHpgJhPRXCghwjseM5EBgLrv6mH20/edit?usp=sharing">Documento</a> es para explicar todo lo relacionado nuestro software, agregar cosas que quizas no corresponden en el README.
+Documento:<br>
+Este Documento es para explicar todo lo relacionado nuestro software, agregar cosas que quizas no corresponden en el README.
 
 
 <a name="NuGet">NuGet:</a>
 <br>
-Aprendimos a usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget/what-is-nuget">NuGet</a>(lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
+Aprendimos a usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget/what-is-nuget">NuGet </a>(lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
 
-<a name="MagickImage">MagickImage:</a>
-<br><a href="https://github.com/dlemstra/Magick.NET.git">MagickImage</a> Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
+<a href="https://github.com/dlemstra/Magick.NET.git" name="MagickImage">MagickImage:</a>
+<br>
+Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
  
 Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue <a href="https://refactoring.guru/es">RefactoringGuru</a>. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
 
