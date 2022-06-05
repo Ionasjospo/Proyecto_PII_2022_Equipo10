@@ -24,6 +24,8 @@ namespace Library
         protected char blocks; //{ get{sizeH} get{sizeV}} ?? 
 
 
+        /// <param name="sizeH"></int>
+        /// <param name="sizeV"></int>
         protected Board(int sizeH, int sizeV)
         {
             this.sizeH = sizeH;
