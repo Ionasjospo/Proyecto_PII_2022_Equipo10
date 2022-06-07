@@ -113,19 +113,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\dasil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+
       "projectUniqueName": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
       "projectName": "Library",
       "projectPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
       "outputPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Library\\obj\\",
+
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -169,7 +171,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
