@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "B1NY7w2ckp+J9KcA8f+yEetwiyAmFC70weLUvcQ4hoHMpjAL1AShOkC0G9b9WanLeZWJnzy5yAVAz6gL/hNinw==",
+  "dgSpecHash": "HQBrxveoES0v1haW9YIKQKhfBnffbKuQxsb1Zh+LwGgmeQ9BQiDasV2uNW/J2bY1I/uo8ntlUnh5+tNwKTEtrg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
+  "projectFilePath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\magick.net-q16-anycpu\\11.1.2\\magick.net-q16-anycpu.11.1.2.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\magick.net.core\\11.1.2\\magick.net.core.11.1.2.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.net.test.sdk\\16.11.0\\microsoft.net.test.sdk.16.11.0.nupkg.sha512",
