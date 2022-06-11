@@ -12,19 +12,19 @@ namespace Library
         private User playerB2;
         private bool twoVtwo;
 
-        public string Name
-        { get { return this.name; } }
+        // public string Name
+        // { get { return this.name; } }
         public Board BoardA
         { get { return this.boardA; } }
         public Board BoardB
         { get { return this.boardB; } }
-        public Board playerA1
+        public User PlayerA1
         { get { return this.playerA1; } }
-        public Board playerB1
+        public User PlayerB1
         { get { return this.playerB1; } }
-        public Board playerA2
+        public User PlayerA2
         { get { return this.playerA2; } }
-        public Board playerB2
+        public User PlayerB2
         { get { return this.playerB2; } }
         public bool TwoVtwo
         { get { return this.twoVtwo; } }
