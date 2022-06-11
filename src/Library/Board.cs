@@ -1,12 +1,10 @@
+
 namespace Library
 {
 
     public class Board
     {
         private string[,] board = new string[10, 10];
-
-
-
 
         public string[,] Ocean
         {
@@ -16,7 +14,6 @@ namespace Library
 
         public Board()
         {
-
             for (int filas = 0; filas < board.GetLength(0); filas++)
             {
                 for (int col = 0; col < board.GetLength(1); col++)
@@ -24,8 +21,6 @@ namespace Library
                     board[filas, col] = "O";
                 }
             }
-
-
         }
 
         public void ShowBoard()
@@ -38,6 +33,7 @@ namespace Library
                 }
                 Console.Write("\n");
             }
+
         }
     }
 }

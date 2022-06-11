@@ -1,11 +1,16 @@
-﻿namespace Library
+﻿using System;
+using ImageMagick;
+
+namespace Library
 {
 
     public class Batlle
     {
-
+        private CombiningImagesSamples combiningImagesSamples = new CombiningImagesSamples();
+        private Coordinates coordinates = new Coordinates();
         public bool SetPosition(Board board, Ship1 ship, int fila, int col, string direc)
         {
+            coordinates.transformPosition(fila, col);
             if (direc == "derecha")
             {
                 if ((col + ship.Size) <= 10)
@@ -28,7 +33,8 @@
                                             {
                                                 if (F == fila && C < col + ship.Size && C >= col)
                                                 {
-                                                    board.Ocean[F, C] = "B";
+                                                    //board.Ocean[F, C] = "B";
+                                                    combiningImagesSamples.MergeMultipleImages(@"Background.jpg", ship.Path, coordinates.X, coordinates.Y);
                                                 }
                                             }
                                         }

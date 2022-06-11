@@ -59,9 +59,9 @@ namespace Library
                 using (var result = images.Mosaic())
                 {
                     // Save the result
-                    first.Composite(second, x, y);
+                    first.Composite(second, x, y, CompositeOperator.Over);
     
-                    first.Write(@"src\Program\FinalImage.png");
+                    first.Write(@"..\Program\FinalImage.jpg");
                 }
             }
         }

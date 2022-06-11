@@ -6,8 +6,13 @@
         private static string name = "Barquito";
 
         private static int size = 4; 
-      
 
+        private string path = @"ShipH4.png";
+      
+        public string Path
+        {
+            get { return path; }
+        }
         public string Name
         {
             get { return name; }
@@ -31,6 +36,13 @@
         private static string name = "Barquito";
 
         private static int size = 5; 
+
+        private string path = @"AircraftCarrierH";
+      
+        public string Path
+        {
+            get { return path; }
+        }
       
 
         public string Name
