@@ -85,4 +85,10 @@ Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchi
 Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue <a href="https://refactoring.guru/es">RefactoringGuru</a>. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
 
 <h1> Hito 2 (21 de junio)</h1>
+
+    (Recordar explicar cómo usar la librería ImageMagick, ya sea instalar un paquete y de dónde, o qué hacer para poder usar el programa, pues en caso contrario no compila).
+    Referncia: NuGet (2022) Magick.NET-Q16-AnyCPU https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/
+
+
+
 <h1> Hito 3 (5 de julio)</h1>

@@ -1,9 +1,32 @@
-using System;
 namespace Library
 {
-    public class BattleShip : Ship
+    public class BattleShip : IShip
     {
-        public BattleShip (bool live = true, int blocks = 2, string image = " ") : base(live, blocks, image) { }
+
+        private string name = "battleship"; 
+        private static int size = 4;
+
+        private static string path = @"BattleShipH4.png";
+
+        public BattleShip()
+        {
+        }
         
+        public string Name 
+        {
+            get 
+            {
+                return this.name;
+            }
+        }
+        public string Path
+        {
+            get { return path; }
+        }
+        public int Size
+        {
+            get { return size; }
+        }
     }
-}
+ }    
+
