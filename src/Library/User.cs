@@ -8,6 +8,7 @@ namespace Library
         private int id;
         private int battlesWon;
         private int specialBomb;
+        private static int contador = 0;
 
         public string Name
         {get{return this.name;}}
@@ -40,6 +41,21 @@ namespace Library
         {
             this.specialBomb -= 1;
         }
+        
+        public int Contador
+        {
+            get { return contador; }  
+        }
 
     }
 }
+
+
+
+   
+
+        
+
+        
+         
+
