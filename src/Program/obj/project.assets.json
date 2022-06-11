@@ -3,6 +3,7 @@
   "targets": {
     "net6.0": {
 
+
       "Magick.NET-Q16-AnyCPU/11.1.2": {
         "type": "package",
         "dependencies": {
@@ -64,6 +65,7 @@
           "Magick.NET-Q16-AnyCPU": "11.1.2"
         },
         
+
         "compile": {
           "bin/placeholder/Library.dll": {}
         },
@@ -74,6 +76,7 @@
     }
   },
   "libraries": {
+
 
     "Magick.NET-Q16-AnyCPU/11.1.2": {
       "sha512": "yP6Ib72zEivsC0jeE+laBBrxie1dbkfUR/yomtdgsp7y8/rfXpN4P4Nx+TW9mchyDS64pIRl8P5jAzJYmgS3Iw==",
@@ -123,6 +126,7 @@
       ]
     },
 
+
     "Library/1.0.0": {
       "type": "project",
       "path": "../Library/Library.csproj",
@@ -132,6 +136,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
 
+
       "Library >= 1.0.0",
       "Magick.NET-Q16-AnyCPU >= 11.1.2"
 
@@ -139,10 +144,12 @@
   },
   "packageFolders": {
     "C:\\Users\\dasil\\.nuget\\packages\\": {}
+
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+
 
       "projectUniqueName": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
       "projectName": "Program",
@@ -153,6 +160,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -164,6 +172,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+
 
             "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
               "projectPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
@@ -202,7 +211,9 @@
             "privateAssets": "all"
           }
         },
+
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+
       }
     }
   }

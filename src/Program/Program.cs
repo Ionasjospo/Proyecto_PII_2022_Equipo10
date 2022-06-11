@@ -1,10 +1,4 @@
-﻿using Library;
-namespace Program
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+
             Board board = new Board();
             
             //board.ShowBoard();
@@ -13,8 +7,7 @@ namespace Program
             //batlle.SetPosition(board,ship,4,7,"abajo");
             batlle.EspecialBombAttack(1,4,board);
             board.ShowBoard();
-
-            
+           
         }
     }
 }

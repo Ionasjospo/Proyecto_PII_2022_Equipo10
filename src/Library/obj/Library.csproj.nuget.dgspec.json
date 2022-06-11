@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+
     "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {}
   },
   "projects": {
@@ -15,6 +16,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -58,7 +60,9 @@
               "privateAssets": "all"
             }
           },
+
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+
         }
       }
     }

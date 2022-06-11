@@ -1,6 +1,7 @@
 {
   "version": 2,
 
+
   "dgSpecHash": "VTeHVdw+D3EoxlnZO5/fsNsDA+KfWV50gE62Y2BT35DLzaNl0+ly42eH5ZdbMsLAEZD8Rf3SatVgIPDWIYbZLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\Proyecto_BatallaNaval\\InitiVersion\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
@@ -8,6 +9,7 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\magick.net-q16-anycpu\\11.1.2\\magick.net-q16-anycpu.11.1.2.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\magick.net.core\\11.1.2\\magick.net.core.11.1.2.nupkg.sha512"
   ],
+
 
   "logs": []
 }

@@ -1,39 +1,61 @@
+using System;
+
 namespace Library
 {
-
     public class User
     {
         private string name;
-
+        private int id;
+        private int battlesWon;
+        private int specialBomb;
         private static int contador = 0;
 
-        private int id;
-
-        public User(string name)
-        {
-            this.Name = name;
-            this.Id = Contador;
-            contador++;
-        }
-
         public string Name
-        {
-            get { return name; }
-            set { this.name = value; }
+        {get{return this.name;}}
 
-        }
         public int Id
-        {
-            get { return id; }
-            set { this.id = value; }
+        {get{return this.id;}}
 
+        public int BattlesWon
+        {get{return this.battlesWon;}}
+
+        public int SpecialBomb
+        {get{return this.specialBomb;}}
+        
+        public User (string name, int id)
+        {
+            this.name = name;
+            this.id = id;
+            this.battlesWon = 0;
+            this.specialBomb = 0;
         }
 
-         public int Contador
+        public void AddBattleWon()
         {
-            get { return contador; }
-            
+            this.battlesWon += 1;
+            if (this.battlesWon % 5 == 0)
+                this.specialBomb += 1;
+        }
+
+        public void SpecialBombUsed()
+        {
+            this.specialBomb -= 1;
+        }
+        
+        public int Contador
+        {
+            get { return contador; }  
         }
 
     }
 }
+
+
+
+   
+
+        
+
+        
+         
+
