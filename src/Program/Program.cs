@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Library;
 
 namespace Program
@@ -17,7 +17,6 @@ namespace Program
            // batlle.SetPosition(board, battleShip, 1, 4,"horizontal");
             //batlle.SetPosition(board, airCraftCarrier, 7, 2, "horizontal");
             board.ShowBoard();
-
             // batlle.EspecialBombAttack(2, 4, board);
 
             CombineImage combineImage = new CombineImage();
