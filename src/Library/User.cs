@@ -13,6 +13,8 @@ namespace Library
         public string Name
         {get{return this.name;}}
 
+        // public int shipSetCount = 0;
+
         public int Id
         {get{return this.id;}}
 
@@ -22,10 +24,10 @@ namespace Library
         public int SpecialBomb
         {get{return this.specialBomb;}}
         
-        public User (string name, int id)
+        public User (string name)
         {
             this.name = name;
-            this.id = id;
+            //this.id = id;
             this.battlesWon = 0;
             this.specialBomb = 0;
         }
@@ -41,11 +43,20 @@ namespace Library
         {
             this.specialBomb -= 1;
         }
-        
+
+
         public int Contador
         {
             get { return contador; }  
         }
+
+        // public int ShipSetCount
+        // {
+        //     get 
+        //     { 
+        //         return this.shipSetCount; 
+        //     }
+        // }
 
     }
 }
