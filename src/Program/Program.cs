@@ -9,16 +9,19 @@ namespace Program
         {
             Board board = new Board();
             Batlle batlle = new Batlle();
-            Ship1 ship1 = new Ship1();
-            //IShip ship2 = new Ship2();
+            IShip battleShip = new BattleShip();
+            //IShip airCraftCarrier = new AirCraftCarrier();
             
             // board.ShowBoard();
             // Console.WriteLine("____________________");
-            batlle.SetPosition(board, ship1, 4, 2,"derecha");
-            //batlle.SetPosition(board, ship2, 4, 1, "derecha");
-            // board.ShowBoard();
+           // batlle.SetPosition(board, battleShip, 1, 4,"horizontal");
+            //batlle.SetPosition(board, airCraftCarrier, 7, 2, "horizontal");
+            board.ShowBoard();
 
             // batlle.EspecialBombAttack(2, 4, board);
+
+            CombineImage combineImage = new CombineImage();
+            combineImage.MergeMultipleImages(@"Background.jpg", @"AircraftCarrierH5.png", 163, 209);
 
 
         } 

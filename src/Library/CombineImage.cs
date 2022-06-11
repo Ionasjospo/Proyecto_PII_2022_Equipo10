@@ -5,7 +5,7 @@ namespace Library
     /// <summary>
     /// Clase que combina imagenes para el board.
     /// </summary>
-    public class CombiningImagesSamples
+    public class CombineImage
     {
         /// <summary>
         /// Imagen la cual va de fondo.
@@ -26,6 +26,8 @@ namespace Library
         ///  Posisión en el eje y.
         /// </summary>
         private int y;
+
+        private int i = 0;
 
         /// <summary>
         /// Método el cual combina imagenes y asigna su posicion.
@@ -61,7 +63,9 @@ namespace Library
                     // Save the result
                     first.Composite(second, x, y, CompositeOperator.Over);
     
-                    first.Write(@"..\Program\FinalImage.jpg");
+                    first.Write(@$"..\Program\FinalImage.jpg");
+                    i++;
+                    //first.Write(@$"..\Program\User{user.id}.jpg");
                 }
             }
         }

@@ -9,6 +9,8 @@ namespace Library
 
         private int id;
 
+        // public int shipSetCount = 0;
+
         public User(string name)
         {
             this.Name = name;
@@ -29,11 +31,19 @@ namespace Library
 
         }
 
-         public int Contador
+        public int Contador
         {
             get { return contador; }
             
         }
+
+        // public int ShipSetCount
+        // {
+        //     get 
+        //     { 
+        //         return this.shipSetCount; 
+        //     }
+        // }
 
     }
 }
