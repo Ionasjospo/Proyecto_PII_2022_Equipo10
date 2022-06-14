@@ -52,16 +52,15 @@ namespace Library
             ShowOptions(Options.NewMatch, playerA1);
             CreateMatch(playerA1);
             Console.WriteLine ("Aqui tienes tu tablero\n");
-            boardA.ShowBoard();
+            ShowBoard.ShowConsoleBoard(boardA);
 
             User playerB1 = new User("Lola");
             ShowOptions(Options.NewUser, playerB1);
             ShowOptions(Options.JoinCurrentMatch, playerB1);
             CreateBoardPlayerB();
-            boardB.ShowBoard();
 
-            NewBattle();
-            
+            ShowBoard.ShowConsoleBoard(boardB);            
+
         }
 
 
