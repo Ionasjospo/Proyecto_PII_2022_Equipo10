@@ -5,24 +5,31 @@ namespace Library
 {
     public class MatchList
     {
-        private List<Match> activeMatches;
+        private List<Match> historicMatches;
 
-        public List<Match> AciveMatches
+        public List<Match> HistoricMatches
         {
             get
             {
-                return this.activeMatches;
+                return this.historicMatches;
             }
         }
 
         public MatchList ()
         {
-            activeMatches = new List<Match>();
+            historicMatches = new List<Match>();
         }
 
-        public void addMatch(Match match)
+        // public void addMatch(Match match)
+        // {
+        //     activeMatches.Add(match);
+        // }
+
+        public Match addNewMatch()
         {
-            activeMatches.Add(match);
+            Match match = new Match();
+            historicMatches.Add(match);
+            return match;
         }
     }
 }
