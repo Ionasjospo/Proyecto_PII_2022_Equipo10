@@ -22,8 +22,6 @@ namespace Program
             //CombineImage combineImage = new CombineImage();
             //combineImage.MergeMultipleImages(@"Background.jpg", @"AircraftCarrierH5.png", 163, 209);
 
-            Match partida = new Match();
-
         } 
     }
 }  
