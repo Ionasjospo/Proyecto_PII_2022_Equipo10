@@ -11,6 +11,9 @@ namespace Library
         private User playerA2;
         private User playerB2;
         private bool twoVtwo;
+        private Batlle battle;
+        private bool openToJoin;
+
 
         /// <summary>
         /// opciones para mostrar al usuario
@@ -42,6 +45,8 @@ namespace Library
 
         public Match()
         {
+            openToJoin = true;
+
             User playerA1 = new User("Pepe");
             ShowOptions(Options.NewUser, playerA1);         
             ShowOptions(Options.NewMatch, playerA1);
@@ -53,7 +58,9 @@ namespace Library
             ShowOptions(Options.NewUser, playerB1);
             ShowOptions(Options.JoinCurrentMatch, playerB1);
             CreateBoardPlayerB();
+
             ShowBoard.ShowConsoleBoard(boardB);            
+
         }
 
 
@@ -131,7 +138,7 @@ namespace Library
         /// </summary>
         private void NewBattle()
         {
-
+            battle = new Batlle();
         }
 
 

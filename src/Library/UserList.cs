@@ -23,5 +23,12 @@ namespace Library
         {
             players.Add(user);
         }
+
+        public int addNewUser(string name)
+        {
+            User user = new User(name);
+            players.Add(user);
+            return players.IndexOf(user);
+        }
     }
 }

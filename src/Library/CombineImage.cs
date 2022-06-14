@@ -70,6 +70,7 @@ namespace Library
                     first.Write(@$"..\Program\FinalImage.jpg");
                     //i++;
                     //first.Write(@$"..\Program\User{user.id}.jpg");
+                    //{match_id}_{user_id}_FinalImage_{numero}
                 }
             }
         }

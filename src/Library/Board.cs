@@ -13,7 +13,7 @@ namespace Library
         public string[,] Ocean
         {
             get { return ocean; }
-            set { this.ocean = value; }
+            //set { this.ocean = value; }
         }
 
         public Board()
@@ -26,6 +26,7 @@ namespace Library
                     ocean[filas, col] = "O";
                 }
             }
+
             // Console.WriteLine("Estamos crerando los barcos...\n");
             // IShip jet = new Jet();
             // IShip destroyer = new Destroyer();
@@ -41,6 +42,7 @@ namespace Library
             // Console.WriteLine("Vamos con el cuarto barco.\n");
             // SetPosition(jet,3,3,"vertical");
             // this.shipsReady = true;
+
         }
 
         public int SizeH { get{return sizeH;} }
