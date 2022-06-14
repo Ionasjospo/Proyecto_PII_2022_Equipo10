@@ -1,4 +1,3 @@
-/*
 namespace Library
 {
     /// <summary>
@@ -13,7 +12,16 @@ namespace Library
         /// <summary>
         /// Usuario que manda el mensaje ? .
         /// </summary>
-        private User user;
+       
+        /// <summary>
+        /// Id del usuario que envia el mensaje.
+        /// </summary>
+        private int id;
+
+        public Text(User user, string text)
+        {
+            this.id = user.Id;
+            this.text = text;
+        }
     }
 }
-*/

@@ -6,7 +6,8 @@ namespace Library
         private string name = "destroyer"; 
         private static int size = 3;
 
-        private static string path = @"DestroyerH.png";
+        private static string pathV = @"../Library/Images/DestroyerV4.png";
+        private static string pathH = @"../Library/Images/DestroyerH4.png";
 
         public Destroyer()
         {
@@ -19,9 +20,14 @@ namespace Library
                 return this.name;
             }
         }
-        public string Path
+        public string PathV
         {
-            get { return path; }
+            get { return pathV; }
+        }
+
+        public string PathH
+        {
+            get { return pathH; }
         }
         public int Size
         {

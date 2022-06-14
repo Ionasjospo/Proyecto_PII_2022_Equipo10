@@ -26,39 +26,29 @@ namespace Library
                     ocean[filas, col] = "O";
                 }
             }
-            Console.WriteLine("Estamos crerando los barcos...\n");
-            IShip jet = new Jet();
-            IShip destroyer = new Destroyer();
-            IShip battleShip = new BattleShip();
-            IShip airCraftCarrier = new AirCraftCarrier();
-            Console.WriteLine("... listo,\n");
-            Console.WriteLine("ya podemos comenzar a colocar el primer barco.\n");
-            SetPosition(jet,0,0,"horizontal");
-            Console.WriteLine("Vamos con el segundo barco.\n");
-            SetPosition(jet,1,1,"vertical");
-            Console.WriteLine("Vamos con el tercer barco.\n");
-            SetPosition(jet,2,2,"horizontal");
-            Console.WriteLine("Vamos con el cuarto barco.\n");
-            SetPosition(jet,3,3,"vertical");
-            this.shipsReady = true;
+            // Console.WriteLine("Estamos crerando los barcos...\n");
+            // IShip jet = new Jet();
+            // IShip destroyer = new Destroyer();
+            // IShip battleShip = new BattleShip();
+            // IShip airCraftCarrier = new AirCraftCarrier();
+            // Console.WriteLine("... listo,\n");
+            // Console.WriteLine("ya podemos comenzar a colocar el primer barco.\n");
+            // SetPosition(jet,0,0,"horizontal");
+            // Console.WriteLine("Vamos con el segundo barco.\n");
+            // SetPosition(jet,1,1,"vertical");
+            // Console.WriteLine("Vamos con el tercer barco.\n");
+            // SetPosition(jet,2,2,"horizontal");
+            // Console.WriteLine("Vamos con el cuarto barco.\n");
+            // SetPosition(jet,3,3,"vertical");
+            // this.shipsReady = true;
         }
 
-        public void ShowBoard()
-        {
-            for (int filas = 0; filas < sizeH; filas++)
-            {
-                for (int col = 0; col < sizeV; col++)
-                {
-                    Console.Write(ocean[filas, col]);
-                }
-                Console.Write("\n");
-            }
-
-        }
+        public int SizeH { get{return sizeH;} }
+        public int SizeV { get{return sizeV;} }
 
 
         //public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
-        private bool SetPosition(IShip ship, int fila, int col, string direc)
+        public bool SetPosition(IShip ship, int fila, int col, string direc)
         {
             coordinates.transformPosition(col, fila);
             if (direc == "horizontal")
