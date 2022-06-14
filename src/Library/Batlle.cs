@@ -5,87 +5,84 @@ namespace Library
 {
     public class Batlle
     {
-        private CombineImage combineImage = new CombineImage();
-        private Coordinates coordinates = new Coordinates();
-        public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
+        private Match match{get; set;}
+
+        private string[,] boardA {get; set;}
+
+        private string[,] boardB {get; set;}
+
+        private List<User> ListTurns = new List<User>();
+
+        private  int turn=0;
+
+        private User Winner;
+
+        
+
+        public Battle (Match match)
         {
-            coordinates.transformPosition(col, fila);
-            if (direc == "horizontal")
+            this.match = match;
+
+            this.Turns.Add(match.PlayerA1);
+            this.Turns.Add(match.PlayerB1);
+
+            if(match.TwoVtwo)
             {
-                if ((col + ship.Size) <= 10)
+                this.Turns.Add(match.PlayerA2);
+                this.Turns.Add(match.PlayerB2);
+            }
+
+            for (int i = 0; i < boardA.GetLength(0); i++)
+            {
+                for (int j = 0; j < boardA.GetLength(1); j++)
                 {
-                    int contador = 0;
-                    for (int Fila = 0; Fila < board.Ocean.GetLength(0); Fila++)
-                    {
-                        for (int Col = 0; Col < board.Ocean.GetLength(1); Col++)
-                        {
-                            if (Fila == fila && Col < col + ship.Size && Col >= col)
-                            {
-                                if (board.Ocean[Fila, Col] == "O")
-                                {
-                                    contador++;
-                                    if (contador == ship.Size)
-                                    {
-                                        for (int F = 0; F < board.Ocean.GetLength(0); F++)
-                                        {
-                                            for (int C = 0; C < board.Ocean.GetLength(1); C++)
-                                            {
-                                                if (F == fila && C < col + ship.Size && C >= col)
-                                                {
-                                                    board.Ocean[F, C] = "B";
-                                                }
-                                            }
-                                        }
-                                        combineImage.MergeMultipleImages(@"Background.jpg", ship.Path, coordinates.X, coordinates.Y);
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    boardA[i,j]="O";
                 }
             }
-            
-            if (direc == "vertical")
+
+            for (int i = 0; i < boardB.GetLength(0); i++)
             {
-                if ((fila + ship.Size) <= 10)
+                for (int j = 0; j < boardB.GetLength(1); j++)
                 {
-                    int contador = 0;
-                    for (int Fila = 0; Fila < board.Ocean.GetLength(0); Fila++)
-                    {
-                        for (int Col = 0; Col < board.Ocean.GetLength(1); Col++)
-                        {
-                            if (Col == col && Fila < fila + ship.Size && Fila >= fila)
-                            {
-                                if (board.Ocean[Fila, Col] == "O")
-                                {
-                                    contador++;
-                                    if (contador == ship.Size)
-                                    {
-                                        for (int F = 0; F < board.Ocean.GetLength(0); F++)
-                                        {
-                                            for (int C = 0; C < board.Ocean.GetLength(1); C++)
-                                            {
-                                                if (C == col && F < fila + ship.Size && F >= fila)
-                                                {
-                                                    board.Ocean[F, C] = "B";
-                                                }
-                                            }
-                                        }
-                                        combineImage.MergeMultipleImages(@"ImageDone.jpg", ship.Path, coordinates.X, coordinates.Y);
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    boardB[i,j]="O";
                 }
             }
-            return false;
         }
 
-        public bool Attack(int fila, int col, Board board)
+        public bool VerifyTurn(User user)
         {
+            if(turn%2==0)
+            {
+               if(user = this.ListTurns[0] ) 
+               {
+                    return true;
+               } 
+               return false;
+            } 
+            else 
+            {
+                if(user = this.ListTurns[1])
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        public void Attack(int fila, int col, User player)
+        {
+            if(this.VerifyTurn(player))
+            {
+
+
+
+
+
+
+
+               
+                
+            }
             if(board.Ocean[fila,col]=="O")
             {   
                 board.Ocean[fila,col]="X";
@@ -96,7 +93,6 @@ namespace Library
                 board.Ocean[fila,col]="H";
                 return true;
             }
-            return false;
         }
 
         public bool EspecialBombAttack(int fila, int col, Board board)

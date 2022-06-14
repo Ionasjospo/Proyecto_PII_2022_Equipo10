@@ -4,36 +4,118 @@ namespace Library
 
     public class Board
     {
-        private string[,] board = new string[10, 10];
+        private const int sizeH = 10;
+        private const int sizeV = 10;
+        private bool shipsReady;
+        private string[,] ocean = new string[sizeH, sizeV];
+        private Coordinates coordinates = new Coordinates();
 
         public string[,] Ocean
         {
-            get { return board; }
-            set { this.board = value; }
+            get { return ocean; }
+            set { this.ocean = value; }
         }
 
         public Board()
         {
-            for (int filas = 0; filas < board.GetLength(0); filas++)
+            this.shipsReady = false; 
+            for (int filas = 0; filas < sizeH; filas++)
             {
-                for (int col = 0; col < board.GetLength(1); col++)
+                for (int col = 0; col < sizeV; col++)
                 {
-                    board[filas, col] = "O";
+                    ocean[filas, col] = "O";
                 }
             }
         }
 
         public void ShowBoard()
         {
-            for (int filas = 0; filas < board.GetLength(0); filas++)
+            for (int filas = 0; filas < sizeH; filas++)
             {
-                for (int col = 0; col < board.GetLength(1); col++)
+                for (int col = 0; col < sizeV; col++)
                 {
-                    Console.Write(board[filas, col]);
+                    Console.Write(ocean[filas, col]);
                 }
                 Console.Write("\n");
             }
 
+        }
+
+
+        //public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
+        private bool SetPosition(IShip ship, int fila, int col, string direc)
+        {
+            coordinates.transformPosition(col, fila);
+            if (direc == "horizontal")
+            {
+                if ((col + ship.Size) <= 10)
+                {
+                    int contador = 0;
+                    for (int Fila = 0; Fila < sizeH; Fila++)
+                    {
+                        for (int Col = 0; Col < sizeV; Col++)
+                        {
+                            if (Fila == fila && Col < col + ship.Size && Col >= col)
+                            {
+                                if (this.Ocean[Fila, Col] == "O")
+                                {
+                                    contador++;
+                                    if (contador == ship.Size)
+                                    {
+                                        for (int F = 0; F < sizeH; F++)
+                                        {
+                                            for (int C = 0; C < sizeV; C++)
+                                            {
+                                                if (F == fila && C < col + ship.Size && C >= col)
+                                                {
+                                                    this.Ocean[F, C] = "B";
+                                                }
+                                            }
+                                        }
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if (direc == "vertical")
+            {
+                if ((fila + ship.Size) <= 10)
+                {
+                    int contador = 0;
+                    for (int Fila = 0; Fila < sizeH; Fila++)
+                    {
+                        for (int Col = 0; Col < sizeV; Col++)
+                        {
+                            if (Col == col && Fila < fila + ship.Size && Fila >= fila)
+                            {
+                                if (this.Ocean[Fila, Col] == "O")
+                                {
+                                    contador++;
+                                    if (contador == ship.Size)
+                                    {
+                                        for (int F = 0; F < sizeH; F++)
+                                        {
+                                            for (int C = 0; C < sizeV; C++)
+                                            {
+                                                if (C == col && F < fila + ship.Size && F >= fila)
+                                                {
+                                                    this.Ocean[F, C] = "B";
+                                                }
+                                            }
+                                        }
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
         }
     }
 }
