@@ -1,9 +1,33 @@
-using System;
 namespace Library
 {
-    public class AircraftCarrier : Ship
+    public class AirCraftCarrier : IShip
     {
-        public AircraftCarrier (bool live = true, int blocks = 5, string image = " ") : base(live, blocks, image) { }
 
+        private string name = "aircraftcarrier"; 
+        private static int size = 3;
+
+        private static string path = @"AirCraftCarrierH5.png";
+
+        public AirCraftCarrier()
+        {
+        }
+        
+        public string Name 
+        {
+            get 
+            {
+                return this.name;
+            }
+        }
+        public string Path
+        {
+            get { return path; }
+        }
+        public int Size
+        {
+            get { return size; }
+        }
     }
-}
+ }    
+
+    
