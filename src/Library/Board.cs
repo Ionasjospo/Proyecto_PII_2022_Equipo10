@@ -75,7 +75,7 @@ namespace Library
                                             {
                                                 if (F == fila && C < col + ship.Size && C >= col)
                                                 {
-                                                    this.Ocean[F, C] = "B";
+                                                    this.Ocean[F, C] = ship.LetterId;
                                                 }
                                             }
                                         }
@@ -110,7 +110,7 @@ namespace Library
                                             {
                                                 if (C == col && F < fila + ship.Size && F >= fila)
                                                 {
-                                                    this.Ocean[F, C] = "B";
+                                                    this.Ocean[F, C] = ship.LetterId;
                                                 }
                                             }
                                         }

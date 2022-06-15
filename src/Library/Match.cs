@@ -11,7 +11,7 @@ namespace Library
         private User playerA2;
         private User playerB2;
         private bool twoVtwo;
-        private Batlle battle;
+        private Battle battle;
         private bool openToJoin;
 
 
@@ -138,7 +138,7 @@ namespace Library
         /// </summary>
         private void NewBattle()
         {
-            battle = new Batlle();
+            battle = new Battle();
         }
 
 
