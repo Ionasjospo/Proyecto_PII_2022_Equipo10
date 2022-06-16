@@ -8,14 +8,23 @@ namespace Library
         private List<Match> historicMatches;
 
         public List<Match> HistoricMatches
+        { get { return this.historicMatches; } }
+
+        private static MatchList matchList;
+
+        public static MatchList Instance
         {
             get
             {
-                return this.historicMatches;
+                if (matchList == null)
+                {
+                    matchList = new MatchList();
+                }
+                return matchList;
             }
         }
 
-        public MatchList ()
+        private MatchList ()
         {
             historicMatches = new List<Match>();
         }
@@ -25,11 +34,9 @@ namespace Library
         //     activeMatches.Add(match);
         // }
 
-        public Match addNewMatch()
+        public void addNewMatch(Match match)
         {
-            Match match = new Match();
             historicMatches.Add(match);
-            return match;
         }
     }
 }

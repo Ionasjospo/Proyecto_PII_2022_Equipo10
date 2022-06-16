@@ -14,7 +14,21 @@ namespace Library
             }
         }
 
-        public UserList ()
+        private static UserList userlist;
+
+        public static UserList Instance
+        {
+            get
+            {
+                if (userlist == null)
+                {
+                    userlist = new UserList();
+                }
+                return userlist;
+            }
+        }
+
+        private UserList ()
         {
             players = new List<User>();
         }
