@@ -6,6 +6,7 @@ namespace Library
         private const int sizeH = 10;
         private const int sizeV = 10;
         private bool shipsReady;
+        private int boardId;
         private string[,] ocean = new string[sizeH, sizeV];
         private Coordinates coordinates = new Coordinates();
 
@@ -14,10 +15,12 @@ namespace Library
             get { return ocean; }
             //set { this.ocean = value; }
         }
+        public int BoardId { get{return this.boardId; } }
 
-        public Board()
+        public Board(int boardId)
         {
             this.shipsReady = false; 
+            this.boardId = boardId;
             for (int filas = 0; filas < sizeH; filas++)
             {
                 for (int col = 0; col < sizeV; col++)

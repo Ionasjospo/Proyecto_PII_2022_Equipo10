@@ -122,7 +122,7 @@ namespace Library
         /// </summary>
         private void CreateBoardPlayerA()
         {
-            this.boardA = new Board();
+            //this.boardA = new Board();
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Library
         /// </summary>
         private void CreateBoardPlayerB()
         {
-            this.boardB = new Board();
+            //this.boardB = new Board();
         }
 
         /// <summary>

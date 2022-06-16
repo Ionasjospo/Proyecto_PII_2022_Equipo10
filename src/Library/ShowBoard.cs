@@ -17,11 +17,10 @@ namespace Library
     // }
     public static class ShowBoard
     {
-        private static int positionYinColumsn = 0;
         private static bool combinedImage = false;
         private static CombineImage combineImage = new CombineImage();
         private static Coordinates coordinates = new Coordinates();
-        
+
         //private static Dictionary<string, string> paths = new Dictionary<string, string>();
         private static int counterLetter = 0;
         private static int counterHP = 0;
@@ -56,19 +55,47 @@ namespace Library
                             if (board.Ocean[positionXinFila, positionYinColumn + 1] == board.LettersIds[counterLetter])
                             {
                                 coordinates.transformPosition(positionYinColumn, positionXinFila);
-                                combineImage.MergeMultipleImages(@"..\Program\FinalImage.jpg", board.HorizontalPaths[counterHP], coordinates.X, coordinates.Y);
-                                counterLetter++;
-                                counterHP++;
+                                if (counterLetter == 0)
+                                {
+                                    combineImage.MergeMultipleImages(@"..\Library\Images\Background.jpg", board.HorizontalPaths[counterHP], coordinates.X, coordinates.Y, board);
+                                    counterLetter++;
+                                    counterHP++;
+                                }
+                                else
+                                {
+                                    combineImage.MergeMultipleImages(@$"..\Library\CombinedImages\FinalImage{board.BoardId}.jpg", board.HorizontalPaths[counterHP], coordinates.X, coordinates.Y, board);
+                                    counterLetter++;
+                                    counterHP++;
+                                }
+
 
                             }
                             if (board.Ocean[positionXinFila + 1, positionYinColumn] == board.LettersIds[counterLetter])
                             {
                                 coordinates.transformPosition(positionYinColumn, positionXinFila);
-                                combineImage.MergeMultipleImages(@"..\Program\FinalImage.jpg", board.VerticalPaths[counterVP], coordinates.X, coordinates.Y);
-                                counterLetter++;
-                                counterVP++;
+                                if (counterLetter == 0)
+                                {
+                                    combineImage.MergeMultipleImages(@"..\Library\Images\Background.jpg", board.VerticalPaths[counterVP], coordinates.X, coordinates.Y, board);
+                                    counterLetter++;
+                                    counterVP++;
+                                }
+                                else
+                                {
+                                    combineImage.MergeMultipleImages(@$"..\Library\CombinedImages\FinalImage{board.BoardId}.jpg", board.VerticalPaths[counterVP], coordinates.X, coordinates.Y, board);
+                                    counterLetter++;
+                                    counterVP++;
+                                }
+                                
                             }
                         }
+                        // if (board.Ocean[positionXinFila, positionYinColumn] == "O")
+                        // {
+                            
+                        // }
+                        // if (board.LettersIds.Contains(board.Ocean[positionXinFila, positionYinColumn]))
+                        // {
+                            
+                        // }
                     }
                 }
             }
