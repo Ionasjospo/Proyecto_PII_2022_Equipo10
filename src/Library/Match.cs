@@ -81,8 +81,9 @@ namespace Library
         /// </summary>
         private void NewBattle()
         {
-            //battle = new Batlle(playerA1,playerA2);
-            battle = new Battle();
+            battle = new Battle(this);
+            //battle = new Battle(playerA1,playerB1);
+            //battle = new Battle(playerA1,playerA2,playerB1,playerB2);
         }
     }
 }

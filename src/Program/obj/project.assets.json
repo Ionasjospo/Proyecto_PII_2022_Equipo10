@@ -132,19 +132,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dasil\\.nuget\\packages\\": {}
+    "C:\\Users\\rc4st\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
+      "projectUniqueName": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
       "projectName": "Program",
-      "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
-      "packagesPath": "C:\\Users\\dasil\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\obj\\",
+      "projectPath": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
+      "packagesPath": "C:\\Users\\rc4st\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Program\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\rc4st\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -156,8 +156,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
-              "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
+            "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
             }
           }
         }
@@ -192,7 +192,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

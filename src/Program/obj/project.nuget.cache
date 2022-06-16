@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jJK39eitKE0E4bdxLtzJxvCmUjxloMuS1euzv08leyhRsTpeeCfBGejT+2+Rr0AwDnEL3QyWnhkkhoJdRAvg8w==",
+  "dgSpecHash": "NrSwx7KPnyQzUOsCciLlFTpf1XfsdpQtPAPuGdSo9CWMmROv2oaKvXGU5qENt9eNeLWu2g6b0xrVAP09Gkz5Jg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
+  "projectFilePath": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dasil\\.nuget\\packages\\magick.net-q16-anycpu\\11.1.2\\magick.net-q16-anycpu.11.1.2.nupkg.sha512",
-    "C:\\Users\\dasil\\.nuget\\packages\\magick.net.core\\11.1.2\\magick.net.core.11.1.2.nupkg.sha512"
+    "C:\\Users\\rc4st\\.nuget\\packages\\magick.net-q16-anycpu\\11.1.2\\magick.net-q16-anycpu.11.1.2.nupkg.sha512",
+    "C:\\Users\\rc4st\\.nuget\\packages\\magick.net.core\\11.1.2\\magick.net.core.11.1.2.nupkg.sha512"
   ],
   "logs": []
 }

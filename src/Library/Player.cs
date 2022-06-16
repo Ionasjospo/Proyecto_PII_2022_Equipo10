@@ -21,5 +21,9 @@ namespace Library
             this.board = new Board();
             this.readyToBattle = true;
         }
+        public Player (User user, Player player)
+        {
+            
+        }
     }
 }
