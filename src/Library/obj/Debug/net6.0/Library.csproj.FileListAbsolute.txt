@@ -22,3 +22,15 @@ C:\Users\rc4st\OneDrive - Universidad Católica del Uruguay\Programacion2\Proyec
 C:\Users\rc4st\OneDrive - Universidad Católica del Uruguay\Programacion2\Proyectos\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\refint\Library.dll
 C:\Users\rc4st\OneDrive - Universidad Católica del Uruguay\Programacion2\Proyectos\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.pdb
 C:\Users\rc4st\OneDrive - Universidad Católica del Uruguay\Programacion2\Proyectos\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\ref\Library.dll
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\bin\Debug\net6.0\Library.deps.json
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\bin\Debug\net6.0\Library.dll
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\bin\Debug\net6.0\Library.pdb
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.csproj.AssemblyReference.cache
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.AssemblyInfoInputs.cache
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.AssemblyInfo.cs
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.csproj.CoreCompileInputs.cache
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.dll
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\refint\Library.dll
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.pdb
+C:\Users\chris\OneDrive\Documentos\GitHub\Trabajo_Grupal\Proyecto\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\ref\Library.dll

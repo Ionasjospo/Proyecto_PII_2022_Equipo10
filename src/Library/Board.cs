@@ -9,6 +9,8 @@ namespace Library
         private bool shipsReady;
         private string[,] ocean = new string[sizeH, sizeV];
         private Coordinates coordinates = new Coordinates();
+        private List<IShip> ShipList;
+        public int contador = 0;
 
         public string[,] Ocean
         {
@@ -31,19 +33,33 @@ namespace Library
             
             Console.WriteLine("Estamos crerando los barcos...\n");
             IShip jet = new Jet();
+            this.AddShip(jet);
             IShip destroyer = new Destroyer();
+            this.AddShip(destroyer);
             IShip battleShip = new BattleShip();
+            this.AddShip(battleShip);
             IShip airCraftCarrier = new AirCraftCarrier();
+            this.AddShip(airCraftCarrier);
             Console.WriteLine("... listo,\n");
             Console.WriteLine("ya podemos comenzar a colocar el primer barco.\n");
-            SetPosition(jet,0,0,"horizontal");
-            Console.WriteLine("Vamos con el segundo barco.\n");
-            SetPosition(destroyer,1,1,"vertical");
-            Console.WriteLine("Vamos con el tercer barco.\n");
-            SetPosition(battleShip,2,2,"horizontal");
-            Console.WriteLine("Vamos con el cuarto barco.\n");
-            SetPosition(airCraftCarrier,3,3,"vertical");
-            this.shipsReady = true;
+
+
+            foreach (var ship in ShipList)
+            {
+                {
+                    SetPosition(ship,0,0,"vertical");
+                }
+                contador += 1;
+            } 
+            
+            // SetPosition(jet,0,0,"horizontal");
+            // Console.WriteLine("Vamos con el segundo barco.\n");
+            // SetPosition(destroyer,1,1,"vertical");
+            // Console.WriteLine("Vamos con el tercer barco.\n");
+            // SetPosition(battleShip,2,2,"horizontal");
+            // Console.WriteLine("Vamos con el cuarto barco.\n");
+            // SetPosition(airCraftCarrier,3,3,"vertical");
+            // this.shipsReady = true;
         }
 
         public void ShowBoard()
@@ -59,7 +75,24 @@ namespace Library
 
         }
 
+        public void AddShip(IShip ship)
+        {
+            this.ShipList.Add(ship);
+        }
 
+        public void RemoveShip(IShip ship)
+        {
+            this.ShipList.Remove(ship);
+        }
+
+        public bool Verify(int contador)
+        {
+            if (contador == 4)
+            {
+                shipsReady = true;
+            }
+            return this.shipsReady;
+        }
         //public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
         private bool SetPosition(IShip ship, int fila, int col, string direc)
         {
@@ -133,6 +166,7 @@ namespace Library
                     }
                 }
             }
+            // this.Verify(contador = 4);
             return false;
         }
     }
