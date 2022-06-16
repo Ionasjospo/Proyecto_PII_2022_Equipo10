@@ -18,12 +18,8 @@ namespace Library
         public Player (User user)
         {
             this.user = user;
+            this.board =new Board();
         }
 
-        public void CreateBoard()
-        {
-            //this.defenseBoard = new Board();
-            //this.attackBoard = new Board();
-        }
     }
 }

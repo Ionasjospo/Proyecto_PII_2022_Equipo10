@@ -10,6 +10,8 @@ namespace Library
         private string[,] ocean = new string[sizeH, sizeV];
         private Coordinates coordinates = new Coordinates();
 
+        private List<IShip> listShip = new List<IShip>();
+
         public string[,] Ocean
         {
             get { return ocean; }
@@ -17,7 +19,26 @@ namespace Library
         }
         public int BoardId { get{return this.boardId; } }
 
-        public Board(int boardId)
+        public Board(int boardId) 
+        {
+            this.shipsReady=false;
+            this.boardId=boardId;
+
+            for (int filas = 0; filas < sizeH; filas++)
+            {
+                for (int col = 0; col < sizeV; col++)
+                {
+                    ocean[fila,col]=="O";
+                }
+            }
+        }
+        public List<IShip> ListShip
+        {
+            get { return listShip; }
+            
+        }
+
+        public Board()
         {
             this.shipsReady = false; 
             this.boardId = boardId;
@@ -28,23 +49,6 @@ namespace Library
                     ocean[filas, col] = "O";
                 }
             }
-
-            // Console.WriteLine("Estamos crerando los barcos...\n");
-            // IShip jet = new Jet();
-            // IShip destroyer = new Destroyer();
-            // IShip battleShip = new BattleShip();
-            // IShip airCraftCarrier = new AirCraftCarrier();
-            // Console.WriteLine("... listo,\n");
-            // Console.WriteLine("ya podemos comenzar a colocar el primer barco.\n");
-            // SetPosition(jet,0,0,"horizontal");
-            // Console.WriteLine("Vamos con el segundo barco.\n");
-            // SetPosition(jet,1,1,"vertical");
-            // Console.WriteLine("Vamos con el tercer barco.\n");
-            // SetPosition(jet,2,2,"horizontal");
-            // Console.WriteLine("Vamos con el cuarto barco.\n");
-            // SetPosition(jet,3,3,"vertical");
-            // this.shipsReady = true;
-
         }
 
         public int SizeH { get{return sizeH;} }
@@ -57,32 +61,34 @@ namespace Library
         //public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
         public bool SetPosition(IShip ship, int fila, int col, string direc)
         {
+            if(!this.ListShip.Contains(ship))
+            {  
             coordinates.transformPosition(col, fila);
-            if (direc == "horizontal")
-            {
-                if ((col + ship.Size) <= 10)
+                if (direc == "horizontal")
                 {
-                    int contador = 0;
-                    for (int Fila = 0; Fila < sizeH; Fila++)
+                    if ((col + ship.Size) <= 10)
                     {
-                        for (int Col = 0; Col < sizeV; Col++)
+                        int contador = 0;
+                        for (int Fila = 0; Fila < sizeH; Fila++)
                         {
-                            if (Fila == fila && Col < col + ship.Size && Col >= col)
+                            for (int Col = 0; Col < sizeV; Col++)
                             {
-                                if (this.Ocean[Fila, Col] == "O")
+                                if (Fila == fila && Col < col + ship.Size && Col >= col)
                                 {
-                                    contador++;
-                                    if (contador == ship.Size)
+                                    if (this.Ocean[Fila, Col] == "O")
                                     {
-                                        for (int F = 0; F < sizeH; F++)
+                                        contador++;
+                                        if (contador == ship.Size)
                                         {
-                                            for (int C = 0; C < sizeV; C++)
+                                            for (int F = 0; F < sizeH; F++)
                                             {
-                                                if (F == fila && C < col + ship.Size && C >= col)
+                                                for (int C = 0; C < sizeV; C++)
                                                 {
                                                     this.Ocean[F, C] = ship.LetterId;
                                                 }
                                             }
+                                            ListShip.Add(ship);
+                                            return true;
                                         }
                                         lettersIds.Add(ship.LetterId);
                                         horizontalPaths.Add(ship.PathH);
@@ -93,33 +99,32 @@ namespace Library
                         }
                     }
                 }
-            }
-            
-            if (direc == "vertical")
-            {
-                if ((fila + ship.Size) <= 10)
+                
+                if (direc == "vertical")
                 {
-                    int contador = 0;
-                    for (int Fila = 0; Fila < sizeH; Fila++)
+                    if ((fila + ship.Size) <= 10)
                     {
-                        for (int Col = 0; Col < sizeV; Col++)
+                        int contador = 0;
+                        for (int Fila = 0; Fila < sizeH; Fila++)
                         {
-                            if (Col == col && Fila < fila + ship.Size && Fila >= fila)
+                            for (int Col = 0; Col < sizeV; Col++)
                             {
-                                if (this.Ocean[Fila, Col] == "O")
+                                if (Col == col && Fila < fila + ship.Size && Fila >= fila)
                                 {
-                                    contador++;
-                                    if (contador == ship.Size)
+                                    if (this.Ocean[Fila, Col] == "O")
                                     {
-                                        for (int F = 0; F < sizeH; F++)
+                                        contador++;
+                                        if (contador == ship.Size)
                                         {
-                                            for (int C = 0; C < sizeV; C++)
+                                            for (int F = 0; F < sizeH; F++)
                                             {
-                                                if (C == col && F < fila + ship.Size && F >= fila)
+                                                for (int C = 0; C < sizeV; C++)
                                                 {
                                                     this.Ocean[F, C] = ship.LetterId;
                                                 }
                                             }
+                                            ListShip.Add(ship);
+                                            return true;
                                         }
                                         lettersIds.Add(ship.LetterId);
                                         verticalPaths.Add(ship.PathV);
@@ -130,12 +135,14 @@ namespace Library
                         }
                     }
                 }
-            }
             return false;
         }
+        
+        
+    }
         public List<string> LettersIds { get{return this.lettersIds;} }
         public List<string> HorizontalPaths { get{return this.horizontalPaths;} }
         public List<string> VerticalPaths { get{return this.verticalPaths;} }
-        
-    }
+}
+
 }

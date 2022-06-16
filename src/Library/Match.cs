@@ -6,10 +6,10 @@ namespace Library
     {
         private Board boardA;
         private Board boardB;
-        private User playerA1;
-        private User playerB1;
-        private User playerA2;
-        private User playerB2;
+        private Player playerA1;
+        private Player playerB1;
+        private Player playerA2;
+        private Player playerB2;
         private bool twoVtwo;
         private Battle battle;
         private bool openToJoin;
