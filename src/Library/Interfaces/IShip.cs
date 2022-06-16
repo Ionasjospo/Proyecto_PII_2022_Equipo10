@@ -17,9 +17,17 @@ namespace Library
         public int Size { get;}
 
         /// <summary>
-        /// Ruta de la imagen de la nave.
+        /// Ruta de la imagen vertical de la nave.
         /// </summary>
         /// <value>path.</value>
-        public string Path { get;}
+        public string PathV { get;}
+
+        /// <summary>
+        /// Ruta de la imagen horizontal de la nave.
+        /// </summary>
+        /// <value>path.</value>
+        public string PathH { get;}
+
+        public string LetterId { get; }
     }
 }

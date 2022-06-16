@@ -4,9 +4,10 @@ namespace Library
     {
 
         private string name = "aircraftcarrier"; 
-        private static int size = 3;
-
-        private static string path = @"AirCraftCarrierH5.png";
+        private const int size = 5;
+        private string letterId = "A";
+        private const string pathV = @"../Library/Images/AirCraftCarrierV5.png";
+        private const string pathH = @"../Library/Images/AirCraftCarrierH5.png";
 
         public AirCraftCarrier()
         {
@@ -19,13 +20,25 @@ namespace Library
                 return this.name;
             }
         }
-        public string Path
+        public string PathV
         {
-            get { return path; }
+            get { return pathV; }
+        }
+
+        public string PathH
+        {
+            get { return pathH; }
         }
         public int Size
         {
             get { return size; }
+        }
+        public string LetterId 
+        {
+            get 
+            {
+                return this.letterId;
+            }
         }
     }
  }    

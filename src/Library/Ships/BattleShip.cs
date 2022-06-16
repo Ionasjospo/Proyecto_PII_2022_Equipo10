@@ -4,9 +4,11 @@ namespace Library
     {
 
         private string name = "battleship"; 
-        private static int size = 4;
+        private const int size = 3;
+        private string letterId = "B";
 
-        private static string path = @"BattleShipH4.png";
+        private const string pathV = @"../Library/Images/BattleShipV3.png";
+        private const string pathH = @"../Library/Images/BattleShipH3.png";
 
         public BattleShip()
         {
@@ -19,13 +21,26 @@ namespace Library
                 return this.name;
             }
         }
-        public string Path
+        public string PathV
         {
-            get { return path; }
+            get { return pathV; }
+        }
+
+        public string PathH
+        {
+            get { return pathH; }
         }
         public int Size
         {
             get { return size; }
+        }
+
+        public string LetterId 
+        {
+            get 
+            {
+                return this.letterId;
+            }
         }
     }
  }    

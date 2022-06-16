@@ -4,7 +4,6 @@ namespace Library
 {
     public class Match
     {
-
         private Player playerA1;
         private Player playerB1;
         private Player playerA2;

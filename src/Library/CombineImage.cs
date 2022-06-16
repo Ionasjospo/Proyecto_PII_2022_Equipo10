@@ -36,7 +36,7 @@ namespace Library
         /// <param name="imagePath">Imagen a superponer.</param>
         /// <param name="xpos">Posisión x</param>
         /// <param name="ypos">Posisión y</param>
-        public void MergeMultipleImages(string fondoPath, string imagePath, int xpos, int ypos)
+        public void MergeMultipleImages(string fondoPath, string imagePath, int xpos, int ypos, Board board)
         {
             this.fondo = fondoPath;
             this.image = imagePath;
@@ -46,29 +46,35 @@ namespace Library
             
             using (var images = new MagickImageCollection())
             {
-                // Add the first image
-                var first = new MagickImage(fondo);//burrito
+                /// <summary>
+                /// Agraga la primer imagen a la coleccion.
+                /// </summary>
+                var first = new MagickImage(fondo);
                 images.Add(first);
 
-                // Add the second image
-                var second = new MagickImage(image);//cola
+                /// <summary>
+                /// Agraga la segunda imagen a la coleccion.
+                /// </summary>
+                var second = new MagickImage(image);
                 images.Add(second);
 
-                //var third = new MagickImage(submarine);//cola
-                //images.Add(third);
 
-                // Create a mosaic from both images
+                /// <summary>
+                /// Combina las dos imagenes.
+                /// </summary>
                 using (var result = images.Mosaic())
                 {
-                    // Save the result
+                    //Guarda el resultado.
                     first.Composite(second, x, y, CompositeOperator.Over);
     
-                    first.Write(@$"..\Program\FinalImage.jpg");
-                    i++;
+                    first.Write(@$"..\Library\CombinedImages\FinalImage{board.BoardId}.jpg");
+                    //i++;
                     //first.Write(@$"..\Program\User{user.id}.jpg");
                     //{match_id}_{user_id}_FinalImage_{numero}
                 }
             }
         }
+
+        
     }
 }
