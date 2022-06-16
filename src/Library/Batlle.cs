@@ -3,7 +3,7 @@ using ImageMagick;
 
 namespace Library
 {
-    public class Batlle
+    public class Battle
     {
         private Match match { get; set; }
 
@@ -33,19 +33,19 @@ namespace Library
                 this.turn = 4;
             }
 
-            for (int i = 0; i < boardA.GetLength(0); i++)
+            for (int i = 0; i < board1.GetLength(0); i++)
             {
-                for (int j = 0; j < boardA.GetLength(1); j++)
+                for (int j = 0; j < board1.GetLength(1); j++)
                 {
-                    boardA[i, j] = "O";
+                    board1[i, j] = "O";
                 }
             }
 
-            for (int i = 0; i < boardB.GetLength(0); i++)
+            for (int i = 0; i < board2.GetLength(0); i++)
             {
-                for (int j = 0; j < boardB.GetLength(1); j++)
+                for (int j = 0; j < board2.GetLength(1); j++)
                 {
-                    boardB[i, j] = "O";
+                    board2[i, j] = "O";
                 }
             }
         }
@@ -83,7 +83,7 @@ namespace Library
         {
             if (this.VerifyTurn() == player)
             {
-                if (!this.match.BoardA[fila, col] == "O")
+                if (this.match.PlayerA1.Board.Ocean[fila,col] == "O")
                 {
                     this.VerifyBoard()[fila,col]="X";
                     

@@ -28,7 +28,7 @@ namespace Library
             {
                 for (int col = 0; col < sizeV; col++)
                 {
-                    ocean[fila,col]=="O";
+                    ocean[filas,col]="O";
                 }
             }
         }
@@ -137,6 +137,7 @@ namespace Library
                 }
             return false;
         }
+        return false;
         
         
     }
