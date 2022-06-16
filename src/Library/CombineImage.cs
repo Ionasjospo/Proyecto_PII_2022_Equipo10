@@ -36,7 +36,7 @@ namespace Library
         /// <param name="imagePath">Imagen a superponer.</param>
         /// <param name="xpos">Posisión x</param>
         /// <param name="ypos">Posisión y</param>
-        public void MergeMultipleImages(string fondoPath, string imagePath, int xpos, int ypos)
+        public void MergeMultipleImages(string fondoPath, string imagePath, int xpos, int ypos, Board board)
         {
             this.fondo = fondoPath;
             this.image = imagePath;
@@ -67,12 +67,14 @@ namespace Library
                     //Guarda el resultado.
                     first.Composite(second, x, y, CompositeOperator.Over);
     
-                    first.Write(@$"..\Program\FinalImage.jpg");
+                    first.Write(@$"..\Library\CombinedImages\FinalImage{board.BoardId}.jpg");
                     //i++;
                     //first.Write(@$"..\Program\User{user.id}.jpg");
                     //{match_id}_{user_id}_FinalImage_{numero}
                 }
             }
         }
+
+        
     }
 }

@@ -11,7 +11,7 @@ namespace Library
         private Player playerA2;
         private Player playerB2;
         private bool twoVtwo;
-        private Batlle battle;
+        private Battle battle;
         private bool openToJoin;
 
 
@@ -122,7 +122,7 @@ namespace Library
         /// </summary>
         private void CreateBoardPlayerA()
         {
-            this.boardA = new Board();
+            //this.boardA = new Board();
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Library
         /// </summary>
         private void CreateBoardPlayerB()
         {
-            this.boardB = new Board();
+            //this.boardB = new Board();
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace Library
         /// </summary>
         private void NewBattle()
         {
-            battle = new Batlle();
+            battle = new Battle();
         }
 
 

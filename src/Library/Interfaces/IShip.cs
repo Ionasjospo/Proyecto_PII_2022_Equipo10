@@ -27,5 +27,7 @@ namespace Library
         /// </summary>
         /// <value>path.</value>
         public string PathH { get;}
+
+        public string LetterId { get; }
     }
 }

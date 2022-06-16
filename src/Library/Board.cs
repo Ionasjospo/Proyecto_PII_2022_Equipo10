@@ -1,12 +1,12 @@
-
+using System.Collections.Generic;
 namespace Library
 {
-
     public class Board
     {
         private const int sizeH = 10;
         private const int sizeV = 10;
         private bool shipsReady;
+        private int boardId;
         private string[,] ocean = new string[sizeH, sizeV];
         private Coordinates coordinates = new Coordinates();
 
@@ -17,7 +17,21 @@ namespace Library
             get { return ocean; }
             //set { this.ocean = value; }
         }
+        public int BoardId { get{return this.boardId; } }
 
+        public Board(int boardId) 
+        {
+            this.shipsReady=false;
+            this.boardId=boardId;
+
+            for (int filas = 0; filas < sizeH; filas++)
+            {
+                for (int col = 0; col < sizeV; col++)
+                {
+                    ocean[fila,col]=="O";
+                }
+            }
+        }
         public List<IShip> ListShip
         {
             get { return listShip; }
@@ -27,6 +41,7 @@ namespace Library
         public Board()
         {
             this.shipsReady = false; 
+            this.boardId = boardId;
             for (int filas = 0; filas < sizeH; filas++)
             {
                 for (int col = 0; col < sizeV; col++)
@@ -39,6 +54,9 @@ namespace Library
         public int SizeH { get{return sizeH;} }
         public int SizeV { get{return sizeV;} }
 
+        private List<string> lettersIds = new List<string>();
+        private List<string> horizontalPaths = new List<string>();
+        private List<string> verticalPaths = new List<string>();
 
         //public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
         public bool SetPosition(IShip ship, int fila, int col, string direc)
@@ -66,15 +84,15 @@ namespace Library
                                             {
                                                 for (int C = 0; C < sizeV; C++)
                                                 {
-                                                    if (F == fila && C < col + ship.Size && C >= col)
-                                                    {
-                                                        this.Ocean[F, C] = "B";
-                                                    }
+                                                    this.Ocean[F, C] = ship.LetterId;
                                                 }
                                             }
                                             ListShip.Add(ship);
                                             return true;
                                         }
+                                        lettersIds.Add(ship.LetterId);
+                                        horizontalPaths.Add(ship.PathH);
+                                        return true;
                                     }
                                 }
                             }
@@ -102,15 +120,15 @@ namespace Library
                                             {
                                                 for (int C = 0; C < sizeV; C++)
                                                 {
-                                                    if (C == col && F < fila + ship.Size && F >= fila)
-                                                    {
-                                                        this.Ocean[F, C] = "B";
-                                                    }
+                                                    this.Ocean[F, C] = ship.LetterId;
                                                 }
                                             }
                                             ListShip.Add(ship);
                                             return true;
                                         }
+                                        lettersIds.Add(ship.LetterId);
+                                        verticalPaths.Add(ship.PathV);
+                                        return true;
                                     }
                                 }
                             }
@@ -119,6 +137,12 @@ namespace Library
                 }
             return false;
         }
-        }
+        
+        
     }
+        public List<string> LettersIds { get{return this.lettersIds;} }
+        public List<string> HorizontalPaths { get{return this.horizontalPaths;} }
+        public List<string> VerticalPaths { get{return this.verticalPaths;} }
+}
+
 }
