@@ -15,11 +15,9 @@ namespace Library
         public Player (User user)
         {
             this.user = user;
+            this.board =new Board();
         }
 
-        public void CreateBoard()
-        {
-            this.board = new Board();
-        }
+
     }
 }
