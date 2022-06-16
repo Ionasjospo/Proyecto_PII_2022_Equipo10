@@ -7,12 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Library.Test
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\rc4st\OneDrive - Universidad Católica del Uruguay\Programacion2\Proyectos\Proyecto_PII_2022_Equipo10\src\Test\Library.Test\
-=======
-<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\dasil\Programacion2\Proyecto_PII_2022_Equipo10\src\Test\Library.Test\
-=======
-build_property.ProjectDir = c:\Users\rc4st\OneDrive - Universidad Católica del Uruguay\Programacion2\Proyectos\Proyecto_PII_2022_Equipo10\src\Test\Library.Test\
->>>>>>> b20dd635903b2fa92d135ec356508170a0a15fa2
->>>>>>> e788cea81ec8c485a56e97c3fcb665aafcb4fcbc

@@ -9,7 +9,7 @@ namespace Library
         private Player playerA2;
         private Player playerB2;
         private bool twoVtwo = false;
-        private Batlle battle;
+        private Battle battle;
         private bool openToJoin;
 
 
@@ -82,7 +82,7 @@ namespace Library
         private void NewBattle()
         {
             //battle = new Batlle(playerA1,playerA2);
-            battle = new Batlle();
+            battle = new Battle();
         }
     }
 }
