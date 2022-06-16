@@ -1,7 +1,6 @@
-
+using System.Collections.Generic;
 namespace Library
 {
-
     public class Board
     {
         private const int sizeH = 10;
@@ -48,6 +47,9 @@ namespace Library
         public int SizeH { get{return sizeH;} }
         public int SizeV { get{return sizeV;} }
 
+        private List<string> lettersIds = new List<string>();
+        private List<string> horizontalPaths = new List<string>();
+        private List<string> verticalPaths = new List<string>();
 
         //public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
         public bool SetPosition(IShip ship, int fila, int col, string direc)
@@ -79,6 +81,8 @@ namespace Library
                                                 }
                                             }
                                         }
+                                        lettersIds.Add(ship.LetterId);
+                                        horizontalPaths.Add(ship.PathH);
                                         return true;
                                     }
                                 }
@@ -114,6 +118,8 @@ namespace Library
                                                 }
                                             }
                                         }
+                                        lettersIds.Add(ship.LetterId);
+                                        verticalPaths.Add(ship.PathV);
                                         return true;
                                     }
                                 }
@@ -124,5 +130,9 @@ namespace Library
             }
             return false;
         }
+        public List<string> LettersIds { get{return this.lettersIds;} }
+        public List<string> HorizontalPaths { get{return this.horizontalPaths;} }
+        public List<string> VerticalPaths { get{return this.verticalPaths;} }
+        
     }
 }

@@ -6,8 +6,8 @@ namespace Library
         private string name = "submarine"; 
         private const int size = 2;
         private  string letterId = "S";
-        private const string pathV = @"../Library/Images/SubmarinoV2.png";
-        private const string pathH = @"../Library/Images/SubmarinoH2.png";
+        private const string pathV = @"../Library/Images/SubmarineV2.png";
+        private const string pathH = @"../Library/Images/SubmarineH2.png";
         //hacer 2 tipos de iship, iverticalship y ihorizontalship y q cada barco 
         //implemente esas 2 abstracciones o que se la pase por parametro algun mensaje que indique si el path es v o h.
         // o simplemente sea submarino.PathV o .PathH
