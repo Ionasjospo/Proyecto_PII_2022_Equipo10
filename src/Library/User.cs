@@ -8,12 +8,10 @@ namespace Library
         private int id;
         private int battlesWon;
         private int specialBomb;
-        private static int contador = 0;
 
         public string Name
         {get{return this.name;}}
 
-        // public int shipSetCount = 0;
 
         public int Id
         {get{return this.id;}}
@@ -45,19 +43,15 @@ namespace Library
         }
 
 
-        public int Contador
+        public void NewMatch()
         {
-            get { return contador; }  
+            Match match = new Match(this,false);
         }
 
-        // public int ShipSetCount
-        // {
-        //     get 
-        //     { 
-        //         return this.shipSetCount; 
-        //     }
-        // }
-
+        public void JoinMatch(Match match)
+        {
+            //match.PlayerA2.User=this;
+        }
     }
 }
 

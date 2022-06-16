@@ -5,21 +5,21 @@ namespace Library
     public class Player
     {
         private User user;
-        private Board defenseBoard;
-        private Board attackBoard;
+        private Board board;
+        private bool readyToBattle = false;
 
         public User User 
         { get { return this.user; } }
-        public Board DefenseBoard 
-        { get { return this.defenseBoard; } }
-        public Board AttackBoard 
-        { get { return this.attackBoard; } }
+        public Board Board 
+        { get { return this.board; } }
+        public bool ReadyToBattle 
+        { get { return this.readyToBattle; } }
 
         public Player (User user)
         {
             this.user = user;
-            this.board =new Board();
+            this.board = new Board();
+            this.readyToBattle = true;
         }
-
     }
 }
