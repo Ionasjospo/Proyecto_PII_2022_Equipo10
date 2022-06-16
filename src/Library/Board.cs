@@ -36,20 +36,12 @@ namespace Library
             }
         }
 
-        public void ShowBoard()
-        {
-            for (int filas = 0; filas < sizeH; filas++)
-            {
-                for (int col = 0; col < sizeV; col++)
-                {
-                    Console.Write(ocean[filas, col]);
-                }
-                Console.Write("\n");
-            }
+        public int SizeH { get{return sizeH;} }
+        public int SizeV { get{return sizeV;} }
 
-        }
 
-        private bool SetPosition(IShip ship, int fila, int col, string direc)
+        //public bool SetPosition(Board board, IShip ship, int fila, int col, string direc)
+        public bool SetPosition(IShip ship, int fila, int col, string direc)
         {
             if(!this.ListShip.Contains(ship))
             {  
