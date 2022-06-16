@@ -7,12 +7,12 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            //Board board = new Board();
-            //Batlle batlle = new Batlle();
+            Board board = new Board();
+            Batlle batlle = new Batlle();
             //IShip battleShip = new BattleShip();
             //IShip airCraftCarrier = new AirCraftCarrier();
             
-            // board.ShowBoard();
+            board.ShowBoard();
             // Console.WriteLine("____________________");
            // batlle.SetPosition(board, battleShip, 1, 4,"horizontal");
             //batlle.SetPosition(board, airCraftCarrier, 7, 2, "horizontal");
