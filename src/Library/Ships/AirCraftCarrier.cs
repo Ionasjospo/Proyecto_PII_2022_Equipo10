@@ -4,7 +4,7 @@ namespace Library
     {
 
         private string name = "aircraftcarrier"; 
-        private static int size = 3;
+        private static int size = 5;
 
         private static string path = @"AirCraftCarrierH5.png";
 

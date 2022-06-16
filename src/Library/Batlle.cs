@@ -5,38 +5,39 @@ namespace Library
 {
     public class Batlle
     {
-        private Match match{get; set;}
+        private Match match { get; set; }
 
-        private string[,] boardA {get; set;}
+        private string[,] board1 { get; set; }
 
-        private string[,] boardB {get; set;}
+        private string[,] board2 { get; set; }
 
-        private List<User> ListTurns = new List<User>();
+        private List<Player> ListTurns = new List<Player>();
 
-        private  int turn=0;
+        private int turn = 2;
 
-        private User Winner;
+        private Player Winner;
 
-        
 
-        public Battle (Match match)
+
+        public Battle(Match match)
         {
             this.match = match;
 
-            this.Turns.Add(match.PlayerA1);
-            this.Turns.Add(match.PlayerB1);
+            this.ListTurns.Add(match.PlayerA1);
+            this.ListTurns.Add(match.PlayerB1);
 
-            if(match.TwoVtwo)
+            if (match.TwoVtwo)
             {
-                this.Turns.Add(match.PlayerA2);
-                this.Turns.Add(match.PlayerB2);
+                this.ListTurns.Add(match.PlayerA2);
+                this.ListTurns.Add(match.PlayerB2);
+                this.turn = 4;
             }
 
             for (int i = 0; i < boardA.GetLength(0); i++)
             {
                 for (int j = 0; j < boardA.GetLength(1); j++)
                 {
-                    boardA[i,j]="O";
+                    boardA[i, j] = "O";
                 }
             }
 
@@ -44,115 +45,115 @@ namespace Library
             {
                 for (int j = 0; j < boardB.GetLength(1); j++)
                 {
-                    boardB[i,j]="O";
+                    boardB[i, j] = "O";
                 }
             }
         }
 
-        public bool VerifyTurn(User user)
+        public Player VerifyTurn()
         {
-            if(turn%2==0)
+            if (!this.match.TwoVtwo)
             {
-               if(user = this.ListTurns[0] ) 
-               {
-                    return true;
-               } 
-               return false;
-            } 
-            else 
+                int turn = this.turn % 2;
+                return ListTurns[turn];
+            }
+            else
             {
-                if(user = this.ListTurns[1])
+                int turn = this.turn % 4;
+                return ListTurns[turn];
+            }
+
+        }
+
+        public string[,] VerifyBoard()
+        {
+            if (this.turn % 2 == 0)
+            {
+                return this.board1;
+            }
+            else
+            {
+                return this.board2;
+            }
+
+        }
+
+
+        public void Attack(int fila, int col, Player player)
+        {
+            if (this.VerifyTurn() == player)
+            {
+                if (!this.match.BoardA[fila, col] == "O")
                 {
-                    return true;
+                    this.VerifyBoard()[fila,col]="X";
+                    
+                    this.turn++;
                 }
-                return false;
+
+
+
             }
-        }
 
-        public void Attack(int fila, int col, User player)
-        {
-            if(this.VerifyTurn(player))
-            {
-
-
-
-
-
-
-
-               
-                
-            }
-            if(board.Ocean[fila,col]=="O")
-            {   
-                board.Ocean[fila,col]="X";
-                return false;
-            }
-            if(board.Ocean[fila,col]=="B")
-            {
-                board.Ocean[fila,col]="H";
-                return true;
-            }
         }
 
         public bool EspecialBombAttack(int fila, int col, Board board)
         {
-            if(board.Ocean[fila,col]=="O")
-            {   
-                board.Ocean[fila,col]="X";
-               
-            }
-            if(board.Ocean[fila,col]=="B")
+            if (board.Ocean[fila, col] == "O")
             {
-                board.Ocean[fila,col]="H";
-                
+                board.Ocean[fila, col] = "X";
+
+            }
+            if (board.Ocean[fila, col] == "B")
+            {
+                board.Ocean[fila, col] = "H";
+
             }
 
-             if(board.Ocean[fila+1,col]=="O")
-            {   
-                board.Ocean[fila+1,col]="X";
-               
-            }
-            if(board.Ocean[fila+1,col]=="B")
+            if (board.Ocean[fila + 1, col] == "O")
             {
-                board.Ocean[fila+1,col]="H";
-                
+                board.Ocean[fila + 1, col] = "X";
+
+            }
+            if (board.Ocean[fila + 1, col] == "B")
+            {
+                board.Ocean[fila + 1, col] = "H";
+
             }
 
-             if(board.Ocean[fila-1,col]=="O")
-            {   
-                board.Ocean[fila-1,col]="X";
-               
-            }
-            if(board.Ocean[fila-1,col]=="B")
+            if (board.Ocean[fila - 1, col] == "O")
             {
-                board.Ocean[fila-1,col]="H";
-                
+                board.Ocean[fila - 1, col] = "X";
+
+            }
+            if (board.Ocean[fila - 1, col] == "B")
+            {
+                board.Ocean[fila - 1, col] = "H";
+
             }
 
-            if(board.Ocean[fila,col-1]=="O")
-            {   
-                board.Ocean[fila,col-1]="X";
-               
-            }
-            if(board.Ocean[fila,col-1]=="B")
+            if (board.Ocean[fila, col - 1] == "O")
             {
-                board.Ocean[fila,col-1]="H";
-                
+                board.Ocean[fila, col - 1] = "X";
+
+            }
+            if (board.Ocean[fila, col - 1] == "B")
+            {
+                board.Ocean[fila, col - 1] = "H";
+
             }
 
-            if(board.Ocean[fila,col+1]=="O")
-            {   
-                board.Ocean[fila,col+1]="X";
-               
-            }
-            if(board.Ocean[fila,col+1]=="B")
+            if (board.Ocean[fila, col + 1] == "O")
             {
-                board.Ocean[fila,col+1]="H";
-                
+                board.Ocean[fila, col + 1] = "X";
+
+            }
+            if (board.Ocean[fila, col + 1] == "B")
+            {
+                board.Ocean[fila, col + 1] = "H";
+
             }
 
-           return false;
+            return false;
         }
 
     }
