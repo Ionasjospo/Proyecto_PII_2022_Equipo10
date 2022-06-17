@@ -82,7 +82,7 @@ namespace Library
         private void NewBattle()
         {
             //battle = new Batlle(playerA1,playerA2);
-            battle = new Battle();
+            //battle = new Battle();
         }
     }
 }
