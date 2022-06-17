@@ -43,6 +43,12 @@ namespace Library
             MatchList.Instance.addNewMatch(this);
             this.playerA1 = new Player(user);
         }
+        //ricardo calvo
+        //34 pirulos
+        //pd: tu compoñaro de la derecha o a veces la izquierda
+        //cambie un par de cosas que hiciste como el orto
+        //Я изменил класс и какой из них гил
+        // мы любим тебя, Ричи
 
         /// <summary>
         /// Un usuario decide unirse a una partida (simple)
