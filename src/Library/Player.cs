@@ -23,7 +23,8 @@ namespace Library
         }
         public Player (User user, Player player)
         {
-            
+            this.user = user;
+            this.board = player.board;
         }
     }
 }
