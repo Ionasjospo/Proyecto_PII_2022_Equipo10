@@ -77,6 +77,7 @@ namespace Library
         {
             if (twoVtwo && countPlayers == 4)
             {
+                //foreach (Player on )
                 battle = new Battle(this);
             }
             if (!twoVtwo && countPlayers == 2)

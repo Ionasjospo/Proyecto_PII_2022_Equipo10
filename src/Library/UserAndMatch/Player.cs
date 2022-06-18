@@ -5,26 +5,30 @@ namespace Library
     public class Player
     {
         private User user;
-        private Board board;
-        private bool readyToBattle = false;
+        private Board boardWithShips;
+        private Board boardWithShoots;
 
         public User User 
         { get { return this.user; } }
-        public Board Board 
-        { get { return this.board; } }
-        public bool ReadyToBattle 
-        { get { return this.readyToBattle; } }
+        public Board BoardWithShips
+        { get { return this.boardWithShips; } }
+        public Board BoardWithShoots 
+        { 
+            get { return this.boardWithShoots; } 
+        }
 
         public Player (User user)
         {
             this.user = user;
-            this.board = new Board();
-            this.readyToBattle = true;
+            this.boardWithShips = new Board();
+            //this.boardWithShips.SetPosition();
+            this.boardWithShoots = new Board();
         }
         public Player (User user, Player player)
         {
             this.user = user;
-            this.board = player.board;
+            this.boardWithShips = player.BoardWithShips;
+            this.boardWithShoots = player.BoardWithShoots;
         }
     }
 }
