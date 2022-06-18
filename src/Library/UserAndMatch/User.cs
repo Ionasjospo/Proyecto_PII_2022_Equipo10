@@ -48,7 +48,7 @@ namespace Library
             Match match = new Match(this,twoVtwo);
         }
 
-        public void JoinMatchA(Match match)
+        public void JoinMatch(Match match)
         {
             match.Join(this);
         }
