@@ -14,16 +14,6 @@ namespace Library
         private int countPlayers = 0;
 
 
-        /// <summary>
-        /// opciones para mostrar al usuario
-        /// </summary>
-        // public enum  Options
-        // {
-        //     NewUser,
-        //     NewMatch,
-        //     JoinCurrentMatch
-        // }
-
         public Player PlayerA1
         { get { return this.playerA1; } }
         public Player PlayerB1
@@ -53,8 +43,7 @@ namespace Library
         private void JoinB1(User user)
         {
             countPlayers++;
-            if (!twoVtwo)
-                this.openToJoin = false;
+            JoinMatchStatus();
             this.playerB1 = new Player(user);
             NewBattle();
         }
@@ -65,7 +54,8 @@ namespace Library
         /// <param name="user"></param>
         private void JoinA2(User user)
         {
-            this.openToJoin = false;
+            countPlayers++;
+            JoinMatchStatus();
             this.playerA2 = new Player(user,playerA1);
             NewBattle();
         }
@@ -76,7 +66,8 @@ namespace Library
         /// <param name="user"></param>
         private void JoinB2(User user)
         {
-            this.openToJoin = false;
+            countPlayers++;
+            JoinMatchStatus();
             this.playerB2 = new Player(user,playerB1);
             NewBattle();
         }
@@ -85,13 +76,26 @@ namespace Library
         /// </summary>
         private void NewBattle()
         {
-            if (twoVtwo)
+            if (twoVtwo && countPlayers == 4)
             {
-                
+                battle = new Battle(this);
             }
-            battle = new Battle(this);
-            //battle = new Battle(playerA1,playerB1);
-            //battle = new Battle(playerA1,playerA2,playerB1,playerB2);
+            if (!twoVtwo && countPlayers == 2)
+            {
+                battle = new Battle(this);
+            }
+        }
+
+        private void JoinMatchStatus()
+        {
+            if (twoVtwo && countPlayers == 4)
+            {
+                this.openToJoin = false;
+            }
+            if (!twoVtwo && countPlayers == 2)
+            {
+                this.openToJoin = false;
+            }
         }
     }
 }

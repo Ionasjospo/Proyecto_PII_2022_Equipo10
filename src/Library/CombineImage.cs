@@ -67,7 +67,7 @@ namespace Library
                     //Guarda el resultado.
                     first.Composite(second, x, y, CompositeOperator.Over);
     
-                    first.Write(@$"..\Library\CombinedImages\FinalImage{board.BoardId}.jpg");
+                    first.Write(@$"..\Library\CombinedImages\Board{board.BoardId}.jpg");
                     //i++;
                     //first.Write(@$"..\Program\User{user.id}.jpg");
                     //{match_id}_{user_id}_FinalImage_{numero}

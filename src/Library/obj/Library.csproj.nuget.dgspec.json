@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {}
+    "c:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
+    "c:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
+        "projectUniqueName": "c:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
+        "projectPath": "c:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\rc4st\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\obj\\",
+        "outputPath": "c:\\Users\\rc4st\\OneDrive - Universidad Católica del Uruguay\\Programacion2\\Proyectos\\Proyecto_PII_2022_Equipo10\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rc4st\\AppData\\Roaming\\NuGet\\NuGet.Config"
