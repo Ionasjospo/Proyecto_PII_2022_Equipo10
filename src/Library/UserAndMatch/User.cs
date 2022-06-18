@@ -43,9 +43,9 @@ namespace Library
         }
 
 
-        public void NewMatch()
+        public void NewMatch(bool twoVtwo)
         {
-            Match match = new Match(this,false);
+            Match match = new Match(this,twoVtwo);
         }
 
         public void JoinMatch(Match match)
