@@ -36,40 +36,39 @@ namespace Library
             this.playerA1 = new Player(user);
             NewBattle();
         }
-
         /// <summary>
-        /// Un usuario decide unirse a una partida (simple)
+        /// Un usuario decide unirse a una partida
         /// </summary>
-        private void JoinB1(User user)
+        public void Join(User user)
         {
             countPlayers++;
             JoinMatchStatus();
-            this.playerB1 = new Player(user);
+            switch (countPlayers)
+            {
+                case 2:
+                this.playerB1 = new Player(user);
+                break;
+                case 3:
+                this.playerA2 = new Player(user);
+                break;
+                case 4:
+                this.playerB2 = new Player(user);
+                break;
+                default:
+                break;
+            }
             NewBattle();
         }
-        /// <summary>
-        /// Un usuario decide unirse a una partida 2v2
-        /// siendo player A
-        /// </summary>
-        /// <param name="user"></param>
-        private void JoinA2(User user)
+        private void JoinMatchStatus()
         {
-            countPlayers++;
-            JoinMatchStatus();
-            this.playerA2 = new Player(user,playerA1);
-            NewBattle();
-        }
-        /// <summary>
-        /// Un usuario decide unirse a una partida 2v2
-        /// siendo player B
-        /// </summary>
-        /// <param name="user"></param>
-        private void JoinB2(User user)
-        {
-            countPlayers++;
-            JoinMatchStatus();
-            this.playerB2 = new Player(user,playerB1);
-            NewBattle();
+            if (twoVtwo && countPlayers == 4)
+            {
+                this.openToJoin = false;
+            }
+            if (!twoVtwo && countPlayers == 2)
+            {
+                this.openToJoin = false;
+            }
         }
         /// <summary>
         /// Una vez prontos ambos jugadores con sus tableros, comienza la partida.
@@ -86,16 +85,6 @@ namespace Library
             }
         }
 
-        private void JoinMatchStatus()
-        {
-            if (twoVtwo && countPlayers == 4)
-            {
-                this.openToJoin = false;
-            }
-            if (!twoVtwo && countPlayers == 2)
-            {
-                this.openToJoin = false;
-            }
-        }
+
     }
 }
