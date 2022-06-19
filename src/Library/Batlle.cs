@@ -33,11 +33,11 @@ namespace Library
                 this.turn = 4;
             }
 
-            for (int i = 0; i < board1.GetLength(0); i++)
+            for (int i = 0; i < match.PlayerA1.BoardWithShips.Ocean.GetLength(0); i++)
             {
-                for (int j = 0; j < board1.GetLength(1); j++)
+                for (int j = 0; j < match.PlayerA1.BoardWithShips.Ocean.GetLength(1); j++)
                 {
-                    board1[i, j] = "O";
+                    match.PlayerA1.BoardWithShips.Ocean[i, j] = "O";
                 }
             }
 
@@ -48,6 +48,7 @@ namespace Library
                     board2[i, j] = "O";
                 }
             }
+
         }
 
         public Player VerifyTurn()
@@ -65,30 +66,14 @@ namespace Library
 
         }
 
-        public string[,] VerifyBoard()
-        {
-            if (this.turn % 2 == 0)
-            {
-                return this.board1;
-            }
-            else
-            {
-                return this.board2;
-            }
 
-        }
 
 
         public void Attack(int fila, int col, Player player)
         {
             if (this.VerifyTurn() == player)
             {
-                if (this.match.PlayerA1.Board.Ocean[fila,col] == "O")
-                {
-                    this.VerifyBoard()[fila,col]="X";
-                    
-                    this.turn++;
-                }
+
 
 
 
@@ -96,7 +81,7 @@ namespace Library
 
         }
 
-        public bool EspecialBombAttack(int fila, int col, Board board)
+        public bool EspecialBombAttack(int fila, int col, Boards board)
         {
             if (board.Ocean[fila, col] == "O")
             {

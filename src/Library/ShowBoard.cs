@@ -100,7 +100,7 @@ namespace Library
             // }
             // return true;
         //}
-        public static void ShowConsoleBoard(Board board)
+        /*public static void ShowConsoleBoard(Board board)
         {
             for (int filas = 0; filas < board.SizeH; filas++)
             {
@@ -110,6 +110,6 @@ namespace Library
                 }
                 Console.Write("\n");
             }
-        }
+        }*/
     }
 }
