@@ -8,6 +8,7 @@ namespace Library
         private int id;
         private int battlesWon;
         private int specialBomb;
+        public const int battlesForWinSpecialBomb = 5;
 
         public string Name
         {get{return this.name;}}
@@ -33,7 +34,7 @@ namespace Library
         public void AddBattleWon()
         {
             this.battlesWon += 1;
-            if (this.battlesWon % 5 == 0)
+            if (this.battlesWon % battlesForWinSpecialBomb == 0)
                 this.specialBomb += 1;
         }
 
@@ -43,14 +44,14 @@ namespace Library
         }
 
 
-        public void NewMatch()
+        public void NewMatch(bool twoVtwo)
         {
-            Match match = new Match(this,false);
+            Match match = new Match(this,twoVtwo);
         }
 
         public void JoinMatch(Match match)
         {
-            //match.PlayerA2.User=this;
+            match.Join(this);
         }
     }
 }

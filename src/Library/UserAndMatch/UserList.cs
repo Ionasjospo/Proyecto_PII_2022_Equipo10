@@ -4,13 +4,13 @@ namespace Library
 {
     public class UserList
     {
-        private List<User> players;
+        private List<User> users;
 
-        public List<User> Players
+        public List<User> Users
         {
             get
             {
-                return this.players;
+                return this.users;
             }
         }
 
@@ -30,19 +30,14 @@ namespace Library
 
         private UserList ()
         {
-            players = new List<User>();
-        }
-
-        public void addMatch(User user)
-        {
-            players.Add(user);
+            users = new List<User>();
         }
 
         public int addNewUser(string name)
         {
             User user = new User(name);
-            players.Add(user);
-            return players.IndexOf(user);
+            users.Add(user);
+            return users.IndexOf(user);
         }
     }
 }

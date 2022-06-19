@@ -36,7 +36,7 @@ namespace Library
         /// <param name="imagePath">Imagen a superponer.</param>
         /// <param name="xpos">Posisión x</param>
         /// <param name="ypos">Posisión y</param>
-        public void MergeMultipleImages(string fondoPath, string imagePath, int xpos, int ypos, Board board)
+        public void MergeMultipleImages(string fondoPath, string imagePath, int xpos, int ypos, Boards board)
         {
             this.fondo = fondoPath;
             this.image = imagePath;
