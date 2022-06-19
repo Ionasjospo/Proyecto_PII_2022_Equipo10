@@ -33,11 +33,6 @@ namespace Library
             users = new List<User>();
         }
 
-        public void addMatch(User user)
-        {
-            users.Add(user);
-        }
-
         public int addNewUser(string name)
         {
             User user = new User(name);

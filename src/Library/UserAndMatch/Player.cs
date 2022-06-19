@@ -5,14 +5,14 @@ namespace Library
     public class Player
     {
         private User user;
-        private Board boardWithShips;
-        private Board boardWithShoots;
+        private Boards boardWithShips;
+        private Boards boardWithShoots;
 
         public User User 
         { get { return this.user; } }
-        public Board BoardWithShips
+        public Boards BoardWithShips
         { get { return this.boardWithShips; } }
-        public Board BoardWithShoots 
+        public Boards BoardWithShoots 
         { 
             get { return this.boardWithShoots; } 
         }
@@ -20,9 +20,8 @@ namespace Library
         public Player (User user)
         {
             this.user = user;
-            this.boardWithShips = new Board();
-            //this.boardWithShips.SetPosition();
-            this.boardWithShoots = new Board();
+            this.boardWithShips = new BoardWithShips();
+            this.boardWithShoots = new BoardWithShoots();
         }
         public Player (User user, Player player)
         {
