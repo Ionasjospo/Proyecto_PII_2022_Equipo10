@@ -29,11 +29,6 @@ namespace Library
             historicMatches = new List<Match>();
         }
 
-        // public void addMatch(Match match)
-        // {
-        //     activeMatches.Add(match);
-        // }
-
         public void addNewMatch(Match match)
         {
             historicMatches.Add(match);

@@ -8,6 +8,7 @@ namespace Library
         private int id;
         private int battlesWon;
         private int specialBomb;
+        public const int battlesForWinSpecialBomb = 5;
 
         public string Name
         {get{return this.name;}}
@@ -33,7 +34,7 @@ namespace Library
         public void AddBattleWon()
         {
             this.battlesWon += 1;
-            if (this.battlesWon % 5 == 0)
+            if (this.battlesWon % battlesForWinSpecialBomb == 0)
                 this.specialBomb += 1;
         }
 

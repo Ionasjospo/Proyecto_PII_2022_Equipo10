@@ -13,7 +13,6 @@ namespace Library
         private bool openToJoin;
         private int countPlayers = 0;
 
-
         public Player PlayerA1
         { get { return this.playerA1; } }
         public Player PlayerB1
@@ -34,7 +33,7 @@ namespace Library
             this.twoVtwo = twoVtwo;
             MatchList.Instance.addNewMatch(this);
             this.playerA1 = new Player(user);
-            NewBattle();
+           //NewBattle();
         }
         /// <summary>
         /// Un usuario decide unirse a una partida
@@ -57,7 +56,7 @@ namespace Library
                 default:
                 break;
             }
-            NewBattle();
+            //NewBattle();
         }
         private void JoinMatchStatus()
         {
@@ -77,7 +76,6 @@ namespace Library
         {
             if (twoVtwo && countPlayers == 4)
             {
-                //foreach (Player on )
                 battle = new Battle(this);
             }
             if (!twoVtwo && countPlayers == 2)
