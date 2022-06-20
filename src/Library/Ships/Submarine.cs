@@ -1,20 +1,40 @@
 namespace Library
 {
+    /// <summary>
+    /// Buque de guerra que ocupa 2 espacios en nuestro tablero.
+    /// </summary>
     public class Submarine : IShip
     {
-
+        /// <summary>
+        /// Nombre del buque.
+        /// </summary>
         private string name = "submarine"; 
+        /// <summary>
+        /// Tamaño del buque.
+        /// </summary>
         private const int size = 2;
+        /// <summary>
+        /// Letra la cual identifica al buque.
+        /// </summary>
         private  string letterId = "S";
+        /// <summary>
+        /// Ruta de la imagen vértical que lo representa.
+        /// </summary>
         private const string pathV = @"../Library/Images/SubmarineV2.png";
+        /// <summary>
+        /// Ruta de la imagen horizontal que lo representa.
+        /// </summary>
         private const string pathH = @"../Library/Images/SubmarineH2.png";
-        //hacer 2 tipos de iship, iverticalship y ihorizontalship y q cada barco 
-        //implemente esas 2 abstracciones o que se la pase por parametro algun mensaje que indique si el path es v o h.
-        // o simplemente sea submarino.PathV o .PathH
+        /// <summary>
+        /// Constructor del buque.
+        /// </summary>        
         public Submarine()
         {
         }
-        
+        /// <summary>
+        /// Propiedad que devuelve el nombre del buque.
+        /// </summary>
+        /// <value>Nombre.</value>
         public string Name 
         {
             get 
@@ -22,19 +42,34 @@ namespace Library
                 return this.name;
             }
         }
+        /// <summary>
+        /// Propiedad que devuelve el path vértical del buque.
+        /// </summary>
+        /// <value>Path vértical.</value>
         public string PathV
         {
             get { return pathV; }
         }
+        /// <summary>
+        /// Propiedad que devuelve el path horizontal del buque.
+        /// </summary>
+        /// <value>Path horizontal.</value>
         public string PathH
         {
             get { return pathH; }
         }
+        /// <summary>
+        /// Propiedad que devuelve el tamaño del buque.
+        /// </summary>
+        /// <value>Tamaño del buque.</value>
         public int Size
         {
             get { return size; }
         }
-        
+        /// <summary>
+        /// Propiedad que devuelve la letra identificadora del buque.
+        /// </summary>
+        /// <value>Letra identificadora del buque.</value>
         public string LetterId 
         {
             get 

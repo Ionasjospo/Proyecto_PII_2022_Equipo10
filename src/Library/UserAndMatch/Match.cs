@@ -4,28 +4,74 @@ namespace Library
 {
     public class Match
     {
+        /// <summary>
+        /// Primer jugador en la partida. 
+        /// </summary>
         private Player playerA1;
+        /// <summary>
+        /// Segundo jugador en la partida. Si la partida es 1vs1 es rival del "playerA1". 
+        /// </summary>
         private Player playerB1;
+        /// <summary>
+        /// Si la partida es 2vs2, este jugador es compañero del "playerA1".
+        /// </summary>
         private Player playerA2;
+        /// <summary>
+        /// Si la partida es 2vs2, este jugador es compañero del "playerB2".
+        /// </summary>
         private Player playerB2;
+        /// <summary>
+        /// Valor booleano que indica si la partida es 2vs2.
+        /// </summary>
         private bool twoVtwo = false;
+        /// <summary>
+        /// Instancia de battle.
+        /// </summary>
         private Battle battle;
+        /// <summary>
+        /// Indica si la partida esta pronta para recibir otros jugadores.
+        /// </summary>
         private bool openToJoin;
+        /// <summary>
+        /// Contador de jugadores en la partida.
+        /// </summary>
         private int countPlayers = 0;
-
+        /// <summary>
+        /// Propiedad que retorna el jugador A1.
+        /// </summary>
+        /// <value>PlayerA1.</value>
         public Player PlayerA1
         { get { return this.playerA1; } }
+        /// <summary>
+        /// Propiedad que retorna el jugador B1.
+        /// </summary>
+        /// <value>PlayerB1.</value>
         public Player PlayerB1
         { get { return this.playerB1; } }
+        /// <summary>
+        /// Propiedad que retorna el jugador A2.
+        /// </summary>
+        /// <value>PlayerA2.</value>
         public Player PlayerA2
         { get { return this.playerA2; } }
+        /// <summary>
+        /// Propiedad que retorna el jugador B2
+        /// </summary>
+        /// <value>PlayerB2</value>
         public Player PlayerB2
         { get { return this.playerB2; } }       
-
+        /// <summary>
+        /// Propiedad que retorna si la partida es 2vs2.
+        /// </summary>
+        /// <value>Valor booleano.</value>
         public bool TwoVtwo
         { get { return this.twoVtwo; } }
-
-
+        /// <summary>
+        /// Constructor de match.
+        /// </summary>
+        /// <param name="user"Usuario.></param>
+        /// <param name="twoVtwo">Si es 2vs2 o no.
+        /// </param>
         public Match(User user,bool twoVtwo)
         {
             countPlayers++;
@@ -36,7 +82,7 @@ namespace Library
            //NewBattle();
         }
         /// <summary>
-        /// Un usuario decide unirse a una partida
+        /// Método para que un usuario se une a una partida.
         /// </summary>
         public void Join(User user)
         {
@@ -58,6 +104,9 @@ namespace Library
             }
             //NewBattle();
         }
+        /// <summary>
+        /// Verificador si es posible unirse a una partida.
+        /// </summary>
         private void JoinMatchStatus()
         {
             if (twoVtwo && countPlayers == 4)
@@ -70,7 +119,7 @@ namespace Library
             }
         }
         /// <summary>
-        /// Una vez prontos ambos jugadores con sus tableros, comienza la partida.
+        /// Metodo para comenzar la partida.
         /// </summary>
         private void NewBattle()
         {
@@ -83,7 +132,5 @@ namespace Library
                 battle = new Battle(this);
             }
         }
-
-
     }
 }

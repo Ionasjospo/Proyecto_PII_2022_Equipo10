@@ -1,33 +1,34 @@
 namespace Library
 {
     /// <summary>
-    /// Interface para generar las distintas naves y lorgar el  mismo comportamiento aunque tengan atributos diferentes.
+    /// Interfaz para generar los distintas buques y lorgar el  mismo comportamiento aunque tengan atributos diferentes.
     /// </summary>
     public interface IShip
     {
         /// <summary>
-        /// Nombre de la nave.
+        /// Nombre del buque.
         /// </summary>
         /// <value>Name.</value>
         public string Name { get; }
         /// <summary>
-        /// Tamaño de la nave.
+        /// Tamaño del buque.
         /// </summary>
         /// <value>tamaño.</value>
         public int Size { get;}
-
         /// <summary>
-        /// Ruta de la imagen vertical de la nave.
+        /// Ruta de la imagen vertical del buque.
         /// </summary>
         /// <value>path.</value>
         public string PathV { get;}
-
         /// <summary>
-        /// Ruta de la imagen horizontal de la nave.
+        /// Ruta de la imagen horizontal del buque.
         /// </summary>
         /// <value>path.</value>
         public string PathH { get;}
-
+        /// <summary>
+        /// Letra identificadora del buque.
+        /// </summary>
+        /// <value>Un string con una letra identificadora.</value>
         public string LetterId { get; }
     }
 }
