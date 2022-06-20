@@ -33,11 +33,17 @@ namespace Library
             users = new List<User>();
         }
 
-        public int addNewUser(string name)
+        // public int addNewUser(string name)
+        // {
+        //     User user = new User(name);
+        //     users.Add(user);
+        //     return users.IndexOf(user);
+        // }
+
+        public void addNewUser(string name)
         {
             User user = new User(name);
             users.Add(user);
-            return users.IndexOf(user);
         }
     }
 }
