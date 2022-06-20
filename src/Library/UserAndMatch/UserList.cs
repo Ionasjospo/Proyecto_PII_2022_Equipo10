@@ -48,6 +48,8 @@ namespace Library
         {
             users = new List<User>();
         }
+
+
         /// <summary>
         /// Método para agregar un nuevo usuario a la lista de usuarios.
         /// </summary>
@@ -57,7 +59,6 @@ namespace Library
         {
             User user = new User(name);
             users.Add(user);
-            return users.IndexOf(user);
         }
     }
 }
