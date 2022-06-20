@@ -1,21 +1,19 @@
-﻿using ImageMagick;
+﻿
+using ImageMagick;
 
 namespace Library
 {
     /// <summary>
-    /// Clase que combina imagenes para el board.
+    /// Clase que combina imagenes para poder ver el juego visualmente.
     /// </summary>
     public class CombineImage
     {
         /// <summary>
-        /// Imagen la cual va de fondo.
+        /// Path de la imagen que va de fondo.
         /// </summary>
         private string fondo = "";
         /// <summary>
-        /// Imagen a superponer.
-        /// </summary>
-        /// <summary>
-        /// Path de la imagen.
+        /// Path de la imagen a superponer.
         /// </summary>
         private string image = "";
         /// <summary>
@@ -23,12 +21,9 @@ namespace Library
         /// </summary>
         private int x;
         /// <summary>
-        ///  Posisión en el eje y.
+        /// Posisión en el eje y.
         /// </summary>
         private int y;
-
-        private int i = 0;
-
         /// <summary>
         /// Método el cual combina imagenes y asigna su posicion.
         /// </summary>
@@ -68,9 +63,6 @@ namespace Library
                     first.Composite(second, x, y, CompositeOperator.Over);
     
                     first.Write(@$"..\Library\CombinedImages\Board{board.BoardId}.jpg");
-                    //i++;
-                    //first.Write(@$"..\Program\User{user.id}.jpg");
-                    //{match_id}_{user_id}_FinalImage_{numero}
                 }
             }
         }
