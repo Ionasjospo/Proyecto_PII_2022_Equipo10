@@ -1,9 +1,15 @@
 using System.Collections.Generic;
 namespace Library
 {
-    public class BoardWithShoots : Boards
+    /// <summary>
+    /// Tablero el cual contiene los disparos del jugador.
+    /// </summary>
+    public class BoardWithShots : Boards
     {
-        public BoardWithShoots()
+        /// <summary>
+        /// Constructor del tablero.
+        /// </summary>
+        public BoardWithShots()
         {
             this.BoardId = Counter;
             this.CombineImage.MergeMultipleImages(@"..\Library\Images\Background.jpg", @"..\Library\Images\Background.jpg", 0, 0, this);
@@ -16,8 +22,6 @@ namespace Library
                 }
             }
             Counter++;
-
         }
     }
-
 }
