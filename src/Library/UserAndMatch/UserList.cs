@@ -55,7 +55,7 @@ namespace Library
         /// </summary>
         /// <param name="name">Nombre del usuario.</param>
         /// <returns>El número que tiene en la lista.</returns>
-        public int addNewUser(string name)
+        public void addNewUser(string name)
         {
             User user = new User(name);
             users.Add(user);
