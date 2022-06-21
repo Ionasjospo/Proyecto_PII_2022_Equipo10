@@ -27,7 +27,7 @@ namespace Library
         /// Para tener una bomba especial necesitas al menos 5 partidas ganadas, esta constante 
         /// sirve para dividir las partidas ganadas entre esta y obtener cuantas bombas especiales tiene el usuario.
         /// </summary>
-        public const int battlesForWinSpecialBomb = 5;
+        private const int battlesForWinSpecialBomb = 5;
 
         /// <summary>
         /// Propiedad que returna el nombre del usuario.
