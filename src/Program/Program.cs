@@ -1,5 +1,5 @@
 using System;
-using Library;
+
 
 namespace Program
 {
@@ -7,34 +7,6 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            // Board board = new Board(12345);
-            // //Battle battle = new Battle();
-            
-            // // IShip submarine = new Submarine();
-            // // IShip destroyer = new Destroyer();
-            // // IShip battleShip = new BattleShip();
-            // // IShip airCraftCarrier = new AirCraftCarrier();
-            
-            // // //ShowBoard.ShowConsoleBoard(board);
-            // // //Console.WriteLine("---------------------------------");
-
-            // // board.SetPosition(submarine, 0, 3,"horizontal");
-            // // board.SetPosition(battleShip, 3, 0,"vertical");
-            // // board.SetPosition(destroyer, 8, 5, "horizontal");
-            // // board.SetPosition(airCraftCarrier, 3, 4, "vertical");
-            // // ShowBoard.ShowConsoleBoard(board);
-            // // ShowBoard.ShowImageBoard(board);
-
-            
-
-            
-            
-            // // batlle.EspecialBombAttack(2, 4, board);
-            // // int i = 0;
-            // CombineImage combineImage = new CombineImage();
-            // Coordinates coordinates = new Coordinates();
-            // coordinates.transformPosition(5,5);
-            // combineImage.MergeMultipleImages(@"..\Library\Images\Background.jpg", @"..\Library\Images\TiroEmbocado.png", coordinates.X, coordinates.Y , board);
 
         } 
     }

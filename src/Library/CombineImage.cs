@@ -11,7 +11,7 @@ namespace Library
         /// <summary>
         /// Path de la imagen que va de fondo.
         /// </summary>
-        private string fondo = "";
+        private string background = "";
         /// <summary>
         /// Path de la imagen a superponer.
         /// </summary>
@@ -31,9 +31,9 @@ namespace Library
         /// <param name="imagePath">Imagen a superponer.</param>
         /// <param name="xpos">Posisión x</param>
         /// <param name="ypos">Posisión y</param>
-        public void MergeMultipleImages(string fondoPath, string imagePath, int xpos, int ypos, Boards board)
+        public void MergeMultipleImages(string backgroundPath, string imagePath, int xpos, int ypos, Boards board)
         {
-            this.fondo = fondoPath;
+            this.background = backgroundPath;
             this.image = imagePath;
             this.x = xpos;
             this.y = ypos;
@@ -44,7 +44,7 @@ namespace Library
                 /// <summary>
                 /// Agraga la primer imagen a la coleccion.
                 /// </summary>
-                var first = new MagickImage(fondo);
+                var first = new MagickImage(background);
                 images.Add(first);
 
                 /// <summary>
@@ -61,12 +61,9 @@ namespace Library
                 {
                     //Guarda el resultado.
                     first.Composite(second, x, y, CompositeOperator.Over);
-    
-                    first.Write(@$"..\Library\CombinedImages\Board{board.BoardId}.jpg");
+                    first.Write(@$"C:\Images\CombinedImages\Board{board.BoardId}.jpg");
                 }
             }
-        }
-
-        
+        }        
     }
 }

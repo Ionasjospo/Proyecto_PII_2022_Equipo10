@@ -3,14 +3,11 @@ using ImageMagick;
 
 namespace Library
 {
-    // ??????????????
+
     public class Battle
     {
         private Match match { get; set; }
 
-        private string[,] board1 { get; set; }
-
-        private string[,] board2 { get; set; }
 
         private List<Player> ListTurns = new List<Player>();
 
@@ -18,7 +15,12 @@ namespace Library
 
         private Player Winner;
 
-        private User User;
+        private CombineImage combineImage = new CombineImage();
+
+        private Coordinates coordinates = new Coordinates();
+
+        private int shipsDestroys=0;
+
 
         /// <summary>
         /// Constructor de Battle.
@@ -46,11 +48,11 @@ namespace Library
                 }
             }
 
-            for (int i = 0; i < board2.GetLength(0); i++)
+            for (int i = 0; i < match.PlayerB1.BoardWithShips.Ocean.GetLength(0); i++)
             {
-                for (int j = 0; j < board2.GetLength(1); j++)
+                for (int j = 0; j < match.PlayerB1.BoardWithShips.Ocean.GetLength(0); j++)
                 {
-                    board2[i, j] = "O";
+                    match.PlayerB1.BoardWithShips.Ocean[i, j] = "O";
                 }
             }
         }
@@ -79,9 +81,37 @@ namespace Library
         /// <param name="player">???????</param>
         public void Attack(int fila, int col, Player player)
         {
+            coordinates.transformPosition(fila,col);
             if (this.VerifyTurn() == player)
             {
-
+                if (player.BoardWithShips.Ocean[fila, col] == "O")
+                {
+                    player.BoardWithShoots.Ocean[fila, col] = "X";
+                    combineImage.MergeMultipleImages(player.BoardWithShoots.BoardDefaultPath,@"src\Library\Images\HitOceanShot.png",coordinates.X,coordinates.Y,player.BoardWithShips);
+                    
+                }
+                else
+                {
+                    player.BoardWithShoots.Ocean[fila, col] = "H";
+                    int counter = 0;
+                    foreach (IShip ship in player.BoardWithShips.ListShip)
+                    {
+                        if (player.BoardWithShips.Ocean[fila, col] == ship.LetterId)
+                        {
+                            player.BoardWithShips.ListShip[counter].Size--;
+                            combineImage.MergeMultipleImages(player.BoardWithShoots.BoardDefaultPath,@"src\Library\Images\HitShipShot.png",coordinates.X,coordinates.Y,player.BoardWithShips);
+                            if(!player.BoardWithShips.ListShip[counter].IsAlive())
+                            {
+                                shipsDestroys ++;
+                                if (IsChampion())
+                                {
+                                    this.Winner=player;
+                                }
+                            }
+                        }
+                        counter++;
+                    }
+                }
 
 
 
@@ -89,140 +119,15 @@ namespace Library
 
         }
 
-        public bool SpecialBombAttack(int fila, int col, Boards board)
+        public bool IsChampion()
         {
-            if (board.Ocean[fila, col] == "O")
+            if(this.shipsDestroys==4)
             {
-                board.Ocean[fila, col] = "X";
-
+                return true;
             }
-            if (board.Ocean[fila, col] == "A")
-            {
-                board.Ocean[fila, col] = "H";
-
-            }
-            if (board.Ocean[fila, col] == "B")
-            {
-                board.Ocean[fila, col] = "H";
-
-            }
-            if (board.Ocean[fila, col] == "D")
-            {
-                board.Ocean[fila, col] = "H";
-
-            }
-            if (board.Ocean[fila, col] == "S")
-            {
-                board.Ocean[fila, col] = "H";
-
-            }
-
-            if (board.Ocean[fila + 1, col] == "O")
-            {
-                board.Ocean[fila + 1, col] = "X";
-
-            }
-            if (board.Ocean[fila + 1, col] == "A")
-            {
-                board.Ocean[fila + 1, col] = "H";
-
-            }
-            if (board.Ocean[fila + 1, col] == "B")
-            {
-                board.Ocean[fila + 1, col] = "H";
-
-            }
-            if (board.Ocean[fila + 1, col] == "D")
-            {
-                board.Ocean[fila + 1, col] = "H";
-
-            }
-            if (board.Ocean[fila + 1, col] == "S")
-            {
-                board.Ocean[fila + 1, col] = "H";
-
-            }
-
-            if (board.Ocean[fila - 1, col] == "O")
-            {
-                board.Ocean[fila - 1, col] = "X";
-
-            }
-            if (board.Ocean[fila - 1, col] == "A")
-            {
-                board.Ocean[fila - 1, col] = "H";
-
-            }
-            if (board.Ocean[fila - 1, col] == "B")
-            {
-                board.Ocean[fila - 1, col] = "H";
-
-            }
-            if (board.Ocean[fila - 1, col] == "D")
-            {
-                board.Ocean[fila - 1, col] = "H";
-
-            }            
-            if (board.Ocean[fila - 1, col] == "S")
-            {
-                board.Ocean[fila - 1, col] = "H";
-
-            }
-
-            if (board.Ocean[fila, col - 1] == "O")
-            {
-                board.Ocean[fila, col - 1] = "X";
-
-            }
-            if (board.Ocean[fila, col - 1] == "A")
-            {
-                board.Ocean[fila, col - 1] = "H";
-
-            }
-            if (board.Ocean[fila, col - 1] == "B")
-            {
-                board.Ocean[fila, col - 1] = "H";
-
-            }
-            if (board.Ocean[fila, col - 1] == "D")
-            {
-                board.Ocean[fila, col - 1] = "H";
-
-            }
-            if (board.Ocean[fila, col - 1] == "S")
-            {
-                board.Ocean[fila, col - 1] = "H";
-
-            }
-
-            if (board.Ocean[fila, col + 1] == "O")
-            {
-                board.Ocean[fila, col + 1] = "X";
-
-            }
-            if (board.Ocean[fila, col + 1] == "A")
-            {
-                board.Ocean[fila, col + 1] = "H";
-
-            }
-            if (board.Ocean[fila, col + 1] == "B")
-            {
-                board.Ocean[fila, col + 1] = "H";
-
-            }
-            if (board.Ocean[fila, col + 1] == "D")
-            {
-                board.Ocean[fila, col + 1] = "H";
-
-            }
-            if (board.Ocean[fila, col + 1] == "S")
-            {
-                board.Ocean[fila, col + 1] = "H";
-
-            }           
-
-            User.SpecialBombUsed();
             return false;
         }
+
+        
     }
 }

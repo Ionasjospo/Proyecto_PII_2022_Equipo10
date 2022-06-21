@@ -20,11 +20,11 @@ namespace Library
         /// <summary>
         /// Ruta de la imagen vértical que lo representa.
         /// </summary>
-        private const string pathV = @"../Library/Images/DestroyerV4.png";
+        private const string pathV = @"C:/Images/DestroyerV4.png";
         /// <summary>
         /// Ruta de la imagen horizontal que lo representa.
         /// </summary>
-        private const string pathH = @"../Library/Images/DestroyerH4.png";
+        private const string pathH = @"C:/Images/DestroyerH4.png";
         /// <summary>
         /// Constructor del buque.
         /// </summary>
@@ -65,6 +65,7 @@ namespace Library
         public int Size
         {
             get { return size; }
+            set {this.Size=value;}
         }
         /// <summary>
         /// Propiedad que devuelve la letra identificadora del buque.
@@ -77,6 +78,22 @@ namespace Library
                 return this.letterId;
             }
         }
+         public bool IsAlive()
+        {
+            if (this.Size == 0)
+            {
+                this.Alive = false;
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Estado del buque
+        /// </summary>
+        private bool alive = false;
+
+        public bool Alive { get { return alive; } set { this.alive = value;} }
     }
  }    
 

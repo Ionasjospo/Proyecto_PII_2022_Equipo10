@@ -68,6 +68,28 @@ Cada integrante debia agregó una funcionalidad extra para sumar al proyecto, la
 Reflexionamos que esta entrega quizas es la más pesada, ya que hay que pensar varias veces el diagrama UML. Las proximas entregas seran más interesantes ya que contienen código que es lo que más nos gusta a nosotros, los programadores.
 Nos encanto el hecho de usar GitHub, es una herramienta muy util para llevar proyectos de este estilo.
 
+<h1> Hito 2 (21 de junio)</h1>
+poner lo de los conflictos
+poner los patrones
+preguntar rutas
+preguntar cuantos test por posicion
+limpieza de cosas al pedo
+<p>
+    En esta segunda entrega nos encontramos con nuevos desafios por delante. Comenzamos repartiendo las clases y responsabilidades que cada integrante debería hacer antes de una fecha previamente planeada. A medida que fuimos avanzando en nuetro programa encontramos clases nuevas que no estaban planeadas anteriormente. Como anticipamos en la primera parte, el diagrama uml cambió bastante ya que encontramos nuevas clases que eran necesarias. Para esta entrega priorizamos la lógica del juego y por ahora no implementamos nada del bot de Telegram. 
+    Con respecto a las funcionalidades extras de cada integrante: 
+</p> <br>
+        Mostrar imagen del tablero: <br>
+        Decidimos que las imagenes se vayan creando en simultaneo a medida que el jugador va colocando sus buques de guerra o sus bombas en su tablero. Todo iba genial hasta que comenzamos a 'testear' nuestro programa. Nos encontramos con un error que era que desde 'Library.Test' no nos reconocia el path de las imagenes que estaban dentro del repositorio. La única solución que encontramos hasta ahora es guardar las imagenes en nuestras computadoras, para poder asi usar rutas absolutas "C:\Images". Para poder usar los test deberas crear una carpeta en el disco local C: llamada Images ("C:\Images") donde contengan nuestras imagenes. <br>
+        <br>Modalidad 2vs2: <br>
+        La modalidad 2vs2 se implementó correctamente a pesar que parecia complicada, ofrece una mayor libertad al usurio y más diversion a los usuarios ya que pueden jugar con amigos al mismo tiempo juntos!.<br>
+        <br>Chat entre jugadores: <br>
+        Como en esta entrega no hicimos uso del bot esta funcionalidad se vió opacada pero para la proxima entrega va a estar implementada y los jugadores serán capaz de hablar entre ellos <br>
+        <br>Bomba especial: <br>
+        Ofrece una funcionalidad distinta y genera competitividad entre los usuario, ya que estos van a querer ganar para que se le sume al contador de victorias para que cuando acumulen 5 victorias tengan la super bomba que es una gran ventaja frente al rival. 
+        Se cumplió con ella y se implemento correctamente. <br>     
+El desafio más dificil de esta entrega fue el hecho de respetar y utilizar los principios y patrones dados en clase. Otra cosa que se nos dificultó fueron los Unit Test, si bien realizarlos no son muy complicados, dejamos para ultimo momento ya que queriamos terminar la parte logica y eso fue un error. 
+plabras claves nueva y investigamos a fondo algunas
+
 <h1>Anexo</h1>
 Documento:<br>
 Este Documento es para explicar todo lo relacionado nuestro software, agregar cosas que quizas no corresponden en el README.
@@ -79,14 +101,13 @@ Aprendimos a usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget
 
 <a href="https://github.com/dlemstra/Magick.NET.git" name="MagickImage">MagickImage:</a>
 <br>
-Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más 
+Es una libreria gratuita para manejar imagenes con una alta calidad. Tiene muchisimas funcionalidades que pueden ser util, como por ejemplo, superponer imagenes, cambiar el tamaño de estas, crear gif, entre otras muchas más. Para usar esta libreria necesitas instalarte la extension de Nuget en visual studio code. Luego dentro de ella buscar "Magick Image" e instalar el paquete.
+
+Imagenes: La imagenes fueron creadas por nosotros con los programas Adobe Illustrator y Adobe Photoshop. Se tomó como referencia imagenes de buques de guerra en google. 
  
 Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue <a href="https://refactoring.guru/es">RefactoringGuru</a>. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
 
-<h1> Hito 2 (21 de junio)</h1>
-
-    (Recordar explicar cómo usar la librería ImageMagick, ya sea instalar un paquete y de dónde, o qué hacer para poder usar el programa, pues en caso contrario no compila).
-    Referncia: NuGet (2022) Magick.NET-Q16-AnyCPU https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/
+ 
 
 
 

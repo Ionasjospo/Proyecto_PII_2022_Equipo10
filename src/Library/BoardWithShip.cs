@@ -25,8 +25,10 @@ namespace Library
         {
             this.shipsReady = false;
             this.BoardId = Counter;
-            this.CombineImage.MergeMultipleImages(@"..\Library\Images\Background.jpg", @"..\Library\Images\Background.jpg", 0, 0, this);
-            this.BoardDefaultPath = @$"..\Library\CombinedImages\Board{this.BoardId}.jpg";
+// aca repo //this.CombineImage.MergeMultipleImages(@"..\..\Library\Images\Background.jpg", @"..\..\Library\Images\Background.jpg", 0, 0, this);
+            //this.BoardDefaultPath = @$"..\..\Library\CombinedImages\Board{this.BoardId}.jpg";
+            this.CombineImage.MergeMultipleImages(@"C:\Images\Background.jpg", @"C:\Images\Background.jpg", 0, 0, this);
+            this.BoardDefaultPath = @$"C:\Images\CombinedImages\Board{this.BoardId}.jpg";
             for (int filas = 0; filas < this.SizeH; filas++)
             {
                 for (int col = 0; col < this.SizeV; col++)
@@ -35,13 +37,13 @@ namespace Library
                 }
             }
             IShip submarine = new Submarine();
-            IShip destroyer = new Destroyer();
             IShip battleShip = new BattleShip();
+            IShip destroyer = new Destroyer();
             IShip airCraftCarrier = new AirCraftCarrier();
 
             Ship.Add(submarine);
-            Ship.Add(destroyer);
             Ship.Add(battleShip);
+            Ship.Add(destroyer);
             Ship.Add(airCraftCarrier);
             Counter++;
         }

@@ -21,11 +21,11 @@ namespace Library
         /// <summary>
         /// Ruta de la imagen vértical que lo representa.
         /// </summary>
-        private const string pathV = @"../Library/Images/BattleShipV3.png";
+        private const string pathV = @"C:/Images/BattleShipV3.png";
         /// <summary>
         /// Ruta de la imagen horizontal que lo representa.
         /// </summary>
-        private const string pathH = @"../Library/Images/BattleShipH3.png";
+        private const string pathH = @"C:/Images/BattleShipH3.png";
 
         /// <summary>
         /// Constructor del buque.
@@ -69,6 +69,7 @@ namespace Library
         public int Size
         {
             get { return size; }
+            set {this.Size=value;}
         }
 
         /// <summary>
@@ -82,6 +83,22 @@ namespace Library
                 return this.letterId;
             }
         }
+         public bool IsAlive()
+        {
+            if (this.Size == 0)
+            {
+                this.Alive = false;
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Estado del buque
+        /// </summary>
+        private bool alive = false;
+
+        public bool Alive { get { return alive; } set { this.alive = value;} }
     }
  }    
 
