@@ -1,12 +1,26 @@
 using System.Collections.Generic;
 namespace Library
 {
+    /// <summary>
+    /// Tablero el cual contiene la ubicacion de los buques del jugador.
+    /// </summary>
     public class BoardWithShips : Boards
     {
+        /// <summary>
+        /// Indica si se lo colocaron todos los barcos en el tablero.
+        /// </summary>
         private bool shipsReady;
+        /// <summary>
+        /// Lista que contiene los barcos colocados.
+        /// </summary>
+        /// <typeparam name="IShip">Tipo IShip de los buques.</typeparam>
+        /// <returns>Los buques colocados.</returns>
         private List<IShip> listShip = new List<IShip>();
+        // para que es esta lista???
         private List<IShip> ships = new List<IShip>();
-
+        /// <summary>
+        /// Constructor del tablero.
+        /// </summary>
         public BoardWithShips()
         {
             this.shipsReady = false;
@@ -20,7 +34,6 @@ namespace Library
                     this.Ocean[filas, col] = "O";
                 }
             }
-
             IShip submarine = new Submarine();
             IShip destroyer = new Destroyer();
             IShip battleShip = new BattleShip();
@@ -31,21 +44,25 @@ namespace Library
             Ship.Add(battleShip);
             Ship.Add(airCraftCarrier);
             Counter++;
-
         }
-
+        /// <summary>
+        /// Propiedad que devuelve la lista de los buques colocados.
+        /// </summary>
+        /// <value>Los buques colocados.</value>
         public List<IShip> ListShip
         {
             get { return listShip; }
 
         }
+        //???????????
         public List<IShip> Ship
         {
             get { return this.ships; }
 
         }
-
-
+        /// <summary>
+        /// Método que verifica si estan todos los buques colocados.
+        /// </summary>
         public void Verifyships()
         {
             int contador = 0;
@@ -56,14 +73,19 @@ namespace Library
                     contador++;
                 }
             }
-
             if (contador == 4)
             {
                 this.shipsReady = true;
             }
         }
-
-
+        /// <summary>
+        /// Método para colocar los buques.
+        /// </summary>
+        /// <param name="ship">El buque a colocar.</param>
+        /// <param name="fila">Fila a colocar.</param>
+        /// <param name="col">Columna a colocar.</param>
+        /// <param name="direc">Dirección a colocar.</param>
+        /// <returns></returns>
         public bool SetPosition(IShip ship, int fila, int col, string direc)
         {
             if (!this.ListShip.Contains(ship))
@@ -151,9 +173,6 @@ namespace Library
                 return false;
             }
             return false;
-
-
         }
     }
-
 }

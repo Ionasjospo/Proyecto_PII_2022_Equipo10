@@ -3,6 +3,7 @@ using ImageMagick;
 
 namespace Library
 {
+    // ??????????????
     public class Battle
     {
         private Match match { get; set; }
@@ -18,7 +19,10 @@ namespace Library
         private Player Winner;
 
 
-
+        /// <summary>
+        /// Constructor de Battle.
+        /// </summary>
+        /// <param name="match">Partida.</param>
         public Battle(Match match)
         {
             this.match = match;
@@ -48,9 +52,11 @@ namespace Library
                     board2[i, j] = "O";
                 }
             }
-
         }
-
+        /// <summary>
+        /// Método para verifica de quien es el turno.
+        /// </summary>
+        /// <returns>Jugador que tiene el turno.</returns>
         public Player VerifyTurn()
         {
             if (!this.match.TwoVtwo)
@@ -63,12 +69,13 @@ namespace Library
                 int turn = this.turn % 4;
                 return ListTurns[turn];
             }
-
         }
-
-
-
-
+        /// <summary>
+        /// Método para que un jugador pueda atacar.
+        /// </summary>
+        /// <param name="fila">Fila a atacar.</param>
+        /// <param name="col">Columna a atacar.</param>
+        /// <param name="player">???????</param>
         public void Attack(int fila, int col, Player player)
         {
             if (this.VerifyTurn() == player)
@@ -140,7 +147,5 @@ namespace Library
 
             return false;
         }
-
     }
-
 }
