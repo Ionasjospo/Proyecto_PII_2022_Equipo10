@@ -65,6 +65,7 @@ namespace Library
         public int Size
         {
             get { return size; }
+            set {this.Size=value;}
         }
         /// <summary>
         /// Propiedad que devuelve la letra identificadora del buque.
@@ -77,6 +78,22 @@ namespace Library
                 return this.letterId;
             }
         }
+         public bool IsAlive()
+        {
+            if (this.Size == 0)
+            {
+                this.Alive = false;
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Estado del buque
+        /// </summary>
+        private bool alive = false;
+
+        public bool Alive { get { return alive; } set { this.alive = value;} }
     }
  }    
 

@@ -14,7 +14,7 @@ namespace Library
         /// <summary>
         /// Tablero que contiene los buques.
         /// </summary>
-        private Boards boardWithShips;
+        private BoardWithShips boardWithShips;
         /// <summary>
         /// Tablero que contiene los disparos.
         /// </summary>
@@ -29,7 +29,7 @@ namespace Library
         /// Propiedad que devuelve el tablero con los buques.
         /// </summary>
         /// <value>Tablero con buques.</value>
-        public Boards BoardWithShips
+        public BoardWithShips BoardWithShips
         { get { return this.boardWithShips; } }
         /// <summary>
         /// Propiedad que devuelve el tablero con los disparos realizados.
