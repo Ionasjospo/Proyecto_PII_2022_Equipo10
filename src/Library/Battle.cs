@@ -18,6 +18,7 @@ namespace Library
 
         private Player Winner;
 
+        private User User;
 
         /// <summary>
         /// Constructor de Battle.
@@ -88,7 +89,7 @@ namespace Library
 
         }
 
-        public bool EspecialBombAttack(int fila, int col, Boards board)
+        public bool SpecialBombAttack(int fila, int col, Boards board)
         {
             if (board.Ocean[fila, col] == "O")
             {
@@ -219,6 +220,8 @@ namespace Library
                 board.Ocean[fila, col + 1] = "H";
 
             }           
+
+            User.SpecialBombUsed();
             return false;
         }
     }
