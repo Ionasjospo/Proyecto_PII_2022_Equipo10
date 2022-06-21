@@ -95,7 +95,22 @@ namespace Library
                 board.Ocean[fila, col] = "X";
 
             }
+            if (board.Ocean[fila, col] == "A")
+            {
+                board.Ocean[fila, col] = "H";
+
+            }
             if (board.Ocean[fila, col] == "B")
+            {
+                board.Ocean[fila, col] = "H";
+
+            }
+            if (board.Ocean[fila, col] == "D")
+            {
+                board.Ocean[fila, col] = "H";
+
+            }
+            if (board.Ocean[fila, col] == "S")
             {
                 board.Ocean[fila, col] = "H";
 
@@ -106,7 +121,22 @@ namespace Library
                 board.Ocean[fila + 1, col] = "X";
 
             }
+            if (board.Ocean[fila + 1, col] == "A")
+            {
+                board.Ocean[fila + 1, col] = "H";
+
+            }
             if (board.Ocean[fila + 1, col] == "B")
+            {
+                board.Ocean[fila + 1, col] = "H";
+
+            }
+            if (board.Ocean[fila + 1, col] == "D")
+            {
+                board.Ocean[fila + 1, col] = "H";
+
+            }
+            if (board.Ocean[fila + 1, col] == "S")
             {
                 board.Ocean[fila + 1, col] = "H";
 
@@ -117,7 +147,22 @@ namespace Library
                 board.Ocean[fila - 1, col] = "X";
 
             }
+            if (board.Ocean[fila - 1, col] == "A")
+            {
+                board.Ocean[fila - 1, col] = "H";
+
+            }
             if (board.Ocean[fila - 1, col] == "B")
+            {
+                board.Ocean[fila - 1, col] = "H";
+
+            }
+            if (board.Ocean[fila - 1, col] == "D")
+            {
+                board.Ocean[fila - 1, col] = "H";
+
+            }            
+            if (board.Ocean[fila - 1, col] == "S")
             {
                 board.Ocean[fila - 1, col] = "H";
 
@@ -128,7 +173,22 @@ namespace Library
                 board.Ocean[fila, col - 1] = "X";
 
             }
+            if (board.Ocean[fila, col - 1] == "A")
+            {
+                board.Ocean[fila, col - 1] = "H";
+
+            }
             if (board.Ocean[fila, col - 1] == "B")
+            {
+                board.Ocean[fila, col - 1] = "H";
+
+            }
+            if (board.Ocean[fila, col - 1] == "D")
+            {
+                board.Ocean[fila, col - 1] = "H";
+
+            }
+            if (board.Ocean[fila, col - 1] == "S")
             {
                 board.Ocean[fila, col - 1] = "H";
 
@@ -139,12 +199,26 @@ namespace Library
                 board.Ocean[fila, col + 1] = "X";
 
             }
+            if (board.Ocean[fila, col + 1] == "A")
+            {
+                board.Ocean[fila, col + 1] = "H";
+
+            }
             if (board.Ocean[fila, col + 1] == "B")
             {
                 board.Ocean[fila, col + 1] = "H";
 
             }
+            if (board.Ocean[fila, col + 1] == "D")
+            {
+                board.Ocean[fila, col + 1] = "H";
 
+            }
+            if (board.Ocean[fila, col + 1] == "S")
+            {
+                board.Ocean[fila, col + 1] = "H";
+
+            }           
             return false;
         }
     }
