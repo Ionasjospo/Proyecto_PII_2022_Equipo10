@@ -73,6 +73,7 @@ poner lo de los conflictos
 poner los patrones
 preguntar rutas
 preguntar cuantos test por posicion
+limpieza de cosas al pedo
 <p>
     En esta segunda entrega nos encontramos con nuevos desafios por delante. Comenzamos repartiendo las clases y responsabilidades que cada integrante debería hacer antes de una fecha previamente planeada. A medida que fuimos avanzando en nuetro programa encontramos clases nuevas que no estaban planeadas anteriormente. Como anticipamos en la primera parte, el diagrama uml cambió bastante ya que encontramos nuevas clases que eran necesarias. Para esta entrega priorizamos la lógica del juego y por ahora no implementamos nada del bot de Telegram. 
     Con respecto a las funcionalidades extras de cada integrante: 

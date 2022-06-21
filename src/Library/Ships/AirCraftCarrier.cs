@@ -21,11 +21,11 @@ namespace Library
         /// <summary>
         /// Ruta de la imagen vértical que lo representa.
         /// </summary>
-        private const string pathV = @"../Library/Images/AirCraftCarrierV5.png";
+        private const string pathV = @"C:/Images/AirCraftCarrierV5.png";
         /// <summary>
         /// Ruta de la imagen horizontal que lo representa.
         /// </summary>
-        private const string pathH = @"../Library/Images/AirCraftCarrierH5.png";
+        private const string pathH = @"C:/Images/AirCraftCarrierH5.png";
 
         /// <summary>
         /// Constructor del buque.
