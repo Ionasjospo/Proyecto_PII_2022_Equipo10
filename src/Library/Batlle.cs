@@ -73,7 +73,7 @@ namespace Library
         {
             if (this.VerifyTurn() == player)
             {
-
+                
 
 
 
