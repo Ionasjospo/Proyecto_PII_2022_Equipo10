@@ -20,11 +20,11 @@ namespace Library
         /// <summary>
         /// Ruta de la imagen vértical que lo representa.
         /// </summary>
-        private const string pathV = @"../Library/Images/DestroyerV4.png";
+        private const string pathV = @"C:/Images/DestroyerV4.png";
         /// <summary>
         /// Ruta de la imagen horizontal que lo representa.
         /// </summary>
-        private const string pathH = @"../Library/Images/DestroyerH4.png";
+        private const string pathH = @"C:/Images/DestroyerH4.png";
         /// <summary>
         /// Constructor del buque.
         /// </summary>
