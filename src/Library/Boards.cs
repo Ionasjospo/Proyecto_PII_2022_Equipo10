@@ -83,6 +83,8 @@ namespace Library
         /// <value>Ancho del tablero</value>
         public int SizeV {get{return sizeV;}}
 
+        
+
 
 
 

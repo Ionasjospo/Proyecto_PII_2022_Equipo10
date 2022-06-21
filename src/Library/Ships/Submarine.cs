@@ -5,10 +5,11 @@ namespace Library
     /// </summary>
     public class Submarine : IShip
     {
+
         /// <summary>
         /// Nombre del buque.
         /// </summary>
-        private string name = "submarine"; 
+        private string name = "submarine";
         /// <summary>
         /// Tamaño del buque.
         /// </summary>
@@ -16,7 +17,7 @@ namespace Library
         /// <summary>
         /// Letra la cual identifica al buque.
         /// </summary>
-        private  string letterId = "S";
+        private string letterId = "S";
         /// <summary>
         /// Ruta de la imagen vértical que lo representa.
         /// </summary>
@@ -30,14 +31,15 @@ namespace Library
         /// </summary>        
         public Submarine()
         {
+            this.Alive = true;
         }
         /// <summary>
         /// Propiedad que devuelve el nombre del buque.
         /// </summary>
         /// <value>Nombre.</value>
-        public string Name 
+        public string Name
         {
-            get 
+            get
             {
                 return this.name;
             }
@@ -65,19 +67,41 @@ namespace Library
         public int Size
         {
             get { return size; }
+            set { this.Size = value; }
         }
         /// <summary>
         /// Propiedad que devuelve la letra identificadora del buque.
         /// </summary>
         /// <value>Letra identificadora del buque.</value>
-        public string LetterId 
+        public string LetterId
         {
-            get 
+            get
             {
                 return this.letterId;
             }
         }
-    }
- }    
 
-    
+        public bool IsAlive()
+        {
+            if (this.Size == 0)
+            {
+                this.Alive = false;
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Estado del buque
+        /// </summary>
+        private bool alive = false;
+
+        public bool Alive { get { return alive; } set { this.alive = value;} }
+
+
+
+
+
+    }
+}
+
