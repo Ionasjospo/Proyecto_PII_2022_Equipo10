@@ -128,64 +128,6 @@ namespace Library
             return false;
         }
 
-        public bool EspecialBombAttack(int fila, int col, Boards board)
-        {
-            if (board.Ocean[fila, col] == "O")
-            {
-                board.Ocean[fila, col] = "X";
-
-            }
-            if (board.Ocean[fila, col] == "B")
-            {
-                board.Ocean[fila, col] = "H";
-
-            }
-
-            if (board.Ocean[fila + 1, col] == "O")
-            {
-                board.Ocean[fila + 1, col] = "X";
-
-            }
-            if (board.Ocean[fila + 1, col] == "B")
-            {
-                board.Ocean[fila + 1, col] = "H";
-
-            }
-
-            if (board.Ocean[fila - 1, col] == "O")
-            {
-                board.Ocean[fila - 1, col] = "X";
-
-            }
-            if (board.Ocean[fila - 1, col] == "B")
-            {
-                board.Ocean[fila - 1, col] = "H";
-
-            }
-
-            if (board.Ocean[fila, col - 1] == "O")
-            {
-                board.Ocean[fila, col - 1] = "X";
-
-            }
-            if (board.Ocean[fila, col - 1] == "B")
-            {
-                board.Ocean[fila, col - 1] = "H";
-
-            }
-
-            if (board.Ocean[fila, col + 1] == "O")
-            {
-                board.Ocean[fila, col + 1] = "X";
-
-            }
-            if (board.Ocean[fila, col + 1] == "B")
-            {
-                board.Ocean[fila, col + 1] = "H";
-
-            }
-
-            return false;
-        }
+        
     }
 }
