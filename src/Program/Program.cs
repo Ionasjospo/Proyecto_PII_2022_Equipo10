@@ -74,9 +74,7 @@ namespace Program
             match.Battle.SpecialBombAttack(2, 2, match.PlayerB1, match.PlayerA1);
 
 
-            ShowBoard.ShowConsoleBoard(board2);
-            Console.WriteLine("-------------------------------------");
-            ShowBoard.ShowConsoleBoard(match.PlayerA1.BoardWithShoots);
+         
 
             Console.WriteLine(match.PlayerA1.User.BattlesWon);
 
