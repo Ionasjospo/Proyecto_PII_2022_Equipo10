@@ -40,8 +40,6 @@ namespace Library
         /// </summary>
         /// <returns>CombineImages.</returns>
         private CombineImage combineImage = new CombineImage();
-        // ????????????????????????????
-        private static int controlador = 0;
         /// <summary>
         /// Propiedad que devuelve o "setea" la cantidad de tableros que se craron, sirve para identificar tableros.
         /// </summary>
