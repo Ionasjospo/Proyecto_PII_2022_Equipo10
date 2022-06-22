@@ -1,25 +1,34 @@
 using System;
 using Library;
+using NUnit.Framework;
+using System.Collections.Generic;
 
-namespace Program
+namespace Library.Test
 {
-    class Program
+    public class BattleTest
     {
-        static void Main(string[] args)
+           
+
+          
+
+          
+        [SetUp]
+        public void Setup()
         {
+          
 
+        }
 
+        [Test]
+        public void WinABattle()
+        {
             User user = new User("Parizon");
             User user2 = new User("fumeteo");
-
-            user.NewMatch(false);
-
+             user.NewMatch(false);
             Match match = MatchList.Instance.HistoricMatches[0];
-
+           
             user2.JoinMatch(match);
-
             BoardWithShips board = match.PlayerA1.BoardWithShips as BoardWithShips;
-
             BoardWithShips board2 = match.PlayerB1.BoardWithShips as BoardWithShips;
 
             board.SetPosition(board.Ship[0], 0, 0, "vertical");
@@ -33,9 +42,6 @@ namespace Program
             board2.SetPosition(board.Ship[3], 9, 0, "horizontal");
 
             match.NewBattle();
-
-
-
 
             match.Battle.Attack(2, 2, match.PlayerA1, match.PlayerB1, false);
             match.Battle.Attack(0, 6, match.PlayerB1, match.PlayerA1, false);
@@ -62,27 +68,20 @@ namespace Program
             match.Battle.Attack(9, 1, match.PlayerA1, match.PlayerB1, false);
             match.Battle.Attack(9, 9, match.PlayerB1, match.PlayerA1, false);
             match.Battle.Attack(9, 2, match.PlayerA1, match.PlayerB1, false);
-           
+            match.Battle.Attack(3, 3, match.PlayerB1, match.PlayerA1, false);
+            match.Battle.Attack(9, 3, match.PlayerA1, match.PlayerB1, false);
 
-            match.PlayerB1.User.AddBattleWon();
-            match.PlayerB1.User.AddBattleWon();
-            match.PlayerB1.User.AddBattleWon();
-            match.PlayerB1.User.AddBattleWon();
-            match.PlayerB1.User.AddBattleWon();
-
+            Assert.AreEqual(1,match.PlayerA1.User.BattlesWon);
             
-            match.Battle.SpecialBombAttack(2, 2, match.PlayerB1, match.PlayerA1);
-
-
-         
-
-            Console.WriteLine(match.PlayerA1.User.BattlesWon);
-
-
-
-
-
-
         }
+
+
+    
+
     }
 }
+
+
+
+
+

@@ -85,7 +85,7 @@ namespace Library
             }
             else
             {
-                throw new PositioNotFoundException("No existe tal coordenada. Intente nuevamente con una posición valida.");
+                throw new PositionNotFoundException("No existe tal coordenada. Intente nuevamente con una posición valida.");
             }
             return x;
         }
@@ -139,7 +139,7 @@ namespace Library
             }
             else
             {
-                throw new PositioNotFoundException("No existe tal coordenada. Intente nuevamente con una posición valida.");
+                throw new PositionNotFoundException("No existe tal coordenada. Intente nuevamente con una posición valida.");
             }
             return y;
         }

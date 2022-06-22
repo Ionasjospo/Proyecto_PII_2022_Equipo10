@@ -4,23 +4,23 @@ using System.Runtime.Serialization;
 namespace Exceptions
 {
     /// <summary>
-    /// Exepción creada por si el usuario pone una coordenada invalida.
+    /// Exepción creada por si un usuario intenta unirse a una partida que esta llena.
     /// </summary>
-    public class PositionNotFoundException : Exception
+    public class MatchFullException : Exception
     {
         
         /// <summary>
-        /// Constructor de PositionNotFoundException
+        /// Constructor de MatchFullException
         /// </summary>
-        public PositionNotFoundException()
+        public MatchFullException()
         {
         }
 
         /// <summary>
-        /// Constructor de PositionNotFoundException
+        /// Constructor de MatchFullException
         /// </summary>
         /// <param name="message">Mensaje el cual se le envia al usuario para advertirle que puso mal la ubicación.</param>
-        public PositionNotFoundException(string message)
+        public MatchFullException(string message)
         : base(message)
         {
         }

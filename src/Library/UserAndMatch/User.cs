@@ -71,7 +71,7 @@ namespace Library
         {
             this.battlesWon += 1;
             if (this.battlesWon % battlesForWinSpecialBomb == 0)
-                this.specialBomb += 1;
+                this.specialBomb ++;
         }
         /// <summary>
         /// Si el usuario uso una bomba especial, se resta del total de bombas especiales que el usuario almacenaba.
