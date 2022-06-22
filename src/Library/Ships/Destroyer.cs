@@ -12,7 +12,7 @@ namespace Library
         /// <summary>
         /// Tamaño del buque.
         /// </summary>
-        private const int size = 4;
+        private  int size;
         /// <summary>
         /// Letra la cual identifica al buque.
         /// </summary>
@@ -30,6 +30,7 @@ namespace Library
         /// </summary>
         public Destroyer()
         {
+            this.Size=4;
         }
         /// <summary>
         /// Propiedad que devuelve el nombre del buque.
@@ -65,7 +66,7 @@ namespace Library
         public int Size
         {
             get { return size; }
-            set {this.Size=value;}
+            set {this.size=value;}
         }
         /// <summary>
         /// Propiedad que devuelve la letra identificadora del buque.

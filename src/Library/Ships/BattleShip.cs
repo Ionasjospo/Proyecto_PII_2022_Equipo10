@@ -12,7 +12,7 @@ namespace Library
         /// <summary>
         /// Tamaño del buque.
         /// </summary>
-        private const int size = 3;
+        private  int size;
         /// <summary>
         /// Letra la cual identifica al buque.
         /// </summary>
@@ -32,6 +32,7 @@ namespace Library
         /// </summary>
         public BattleShip()
         {
+            this.Size=3;
         }
         
         /// <summary>
@@ -69,7 +70,7 @@ namespace Library
         public int Size
         {
             get { return size; }
-            set {this.Size=value;}
+            set {this.size=value;}
         }
 
         /// <summary>

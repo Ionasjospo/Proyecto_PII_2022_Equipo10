@@ -13,7 +13,7 @@ namespace Library
         /// <summary>
         /// Tamaño que ocupa en el tablero.
         /// </summary>
-        private const int size = 5;
+        private int size;
         /// <summary>
         /// Letra la cual identifica al buque.
         /// </summary>
@@ -32,6 +32,7 @@ namespace Library
         /// </summary>
         public AirCraftCarrier()
         {
+            this.size=5;
         }
         
         /// <summary>
@@ -69,7 +70,7 @@ namespace Library
        public int Size
         {
             get { return size; }
-            set {this.Size=value;}
+            set {this.size=value;}
         }
         /// <summary>
         /// Propiedad que devuelve la letra identificadora del buque.

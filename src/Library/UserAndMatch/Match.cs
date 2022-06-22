@@ -121,7 +121,7 @@ namespace Library
         /// <summary>
         /// Metodo para comenzar la partida.
         /// </summary>
-        private void NewBattle()
+        public void NewBattle()
         {
             if (twoVtwo && countPlayers == 4)
             {
@@ -132,5 +132,8 @@ namespace Library
                 battle = new Battle(this);
             }
         }
+
+        public Battle Battle
+        {get{return battle; } set{this.battle=value;}} 
     }
 }

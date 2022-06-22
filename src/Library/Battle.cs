@@ -19,7 +19,7 @@ namespace Library
 
         private Coordinates coordinates = new Coordinates();
 
-        private int shipsDestroys=0;
+        private int shipsDestroys = 0;
 
 
         /// <summary>
@@ -40,21 +40,7 @@ namespace Library
                 this.turn = 4;
             }
 
-            for (int i = 0; i < match.PlayerA1.BoardWithShips.Ocean.GetLength(0); i++)
-            {
-                for (int j = 0; j < match.PlayerA1.BoardWithShips.Ocean.GetLength(1); j++)
-                {
-                    match.PlayerA1.BoardWithShips.Ocean[i, j] = "O";
-                }
-            }
-
-            for (int i = 0; i < match.PlayerB1.BoardWithShips.Ocean.GetLength(0); i++)
-            {
-                for (int j = 0; j < match.PlayerB1.BoardWithShips.Ocean.GetLength(0); j++)
-                {
-                    match.PlayerB1.BoardWithShips.Ocean[i, j] = "O";
-                }
-            }
+            
         }
         /// <summary>
         /// Método para verifica de quien es el turno.
@@ -79,55 +65,80 @@ namespace Library
         /// <param name="fila">Fila a atacar.</param>
         /// <param name="col">Columna a atacar.</param>
         /// <param name="player">???????</param>
-        public void Attack(int fila, int col, Player player)
+        public void Attack(int col, int fila, Player player1, Player player2, bool SpecialBomb)
         {
-            coordinates.transformPosition(fila,col);
-            if (this.VerifyTurn() == player)
+            coordinates.transformPosition(col,fila);
+
+            if (this.VerifyTurn() == player1)
             {
-                if (player.BoardWithShips.Ocean[fila, col] == "O")
+                if (player1.BoardWithShoots.Ocean[fila, col] != "X")
                 {
-                    player.BoardWithShoots.Ocean[fila, col] = "X";
-                    combineImage.MergeMultipleImages(player.BoardWithShoots.BoardDefaultPath,@"src\Library\Images\HitOceanShot.png",coordinates.X,coordinates.Y,player.BoardWithShips);
-                    
-                }
-                else
-                {
-                    player.BoardWithShoots.Ocean[fila, col] = "H";
-                    int counter = 0;
-                    foreach (IShip ship in player.BoardWithShips.ListShip)
+                    if (player2.BoardWithShips.Ocean[fila, col] == "O")
                     {
-                        if (player.BoardWithShips.Ocean[fila, col] == ship.LetterId)
+                        player1.BoardWithShoots.Ocean[fila, col] = "X";
+                        combineImage.MergeMultipleImages(player1.BoardWithShoots.BoardDefaultPath, @"C:\Images\HitOceanShot.png", coordinates.X, coordinates.Y, player1.BoardWithShoots);
+                        if (!SpecialBomb)
                         {
-                            player.BoardWithShips.ListShip[counter].Size--;
-                            combineImage.MergeMultipleImages(player.BoardWithShoots.BoardDefaultPath,@"src\Library\Images\HitShipShot.png",coordinates.X,coordinates.Y,player.BoardWithShips);
-                            if(!player.BoardWithShips.ListShip[counter].IsAlive())
+                            this.turn++;
+                        }
+
+                    }
+                    else
+                    {
+                        player1.BoardWithShoots.Ocean[fila, col] = "H";
+                        int counter = 0;
+                        BoardWithShips boardWithShips = player2.BoardWithShips as BoardWithShips;
+                        foreach (IShip ship in boardWithShips.ListShip)
+                        {
+                            if (player2.BoardWithShips.Ocean[fila, col] == ship.LetterId)
                             {
-                                shipsDestroys ++;
-                                if (IsChampion())
+                                boardWithShips.ListShip[counter].Size--;
+                                combineImage.MergeMultipleImages(player1.BoardWithShoots.BoardDefaultPath, @"C:\Images\HitShipShot.png", coordinates.X, coordinates.Y, player1.BoardWithShoots);
+                                if (!boardWithShips.ListShip[counter].IsAlive())
                                 {
-                                    this.Winner=player;
+                                    shipsDestroys++;
+                                    if (IsChampion())
+                                    {
+                                        this.Winner = player1;
+                                        player1.User.AddBattleWon();
+                                    }
                                 }
                             }
+                            counter++;
                         }
-                        counter++;
+                        if (!SpecialBomb)
+                        {
+                            this.turn++;
+                        }
                     }
                 }
+            }
+        }
 
+        public void SpecialBombAttack(int fila, int col, Player player1, Player player2)
+        {
+            if (player1.User.SpecialBomb > 0)
+            {
+                Attack(fila, col, player1, player2, true);
+                Attack(fila - 1, col, player1, player2, true);
+                Attack(fila + 1, col, player1, player2, true);
+                Attack(fila, col - 1, player1, player2, true);
+                Attack(fila, col + 1, player1, player2, true);
 
-
+                player1.User.SpecialBombUsed();
             }
 
         }
 
         public bool IsChampion()
         {
-            if(this.shipsDestroys==4)
+            if (this.shipsDestroys == 4)
             {
                 return true;
             }
             return false;
         }
 
-        
+
     }
 }
