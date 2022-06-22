@@ -13,7 +13,7 @@ namespace Library
         /// <summary>
         /// Tamaño del buque.
         /// </summary>
-        private const int size = 2;
+        private int size =0;
         /// <summary>
         /// Letra la cual identifica al buque.
         /// </summary>
@@ -32,6 +32,7 @@ namespace Library
         public Submarine()
         {
             this.Alive = true;
+            this.Size=2;
         }
         /// <summary>
         /// Propiedad que devuelve el nombre del buque.
@@ -66,8 +67,8 @@ namespace Library
         /// <value>Tamaño del buque.</value>
         public int Size
         {
-            get { return size; }
-            set { this.Size = value; }
+            get { return this.size; }
+            set { this.size = value; }
         }
         /// <summary>
         /// Propiedad que devuelve la letra identificadora del buque.

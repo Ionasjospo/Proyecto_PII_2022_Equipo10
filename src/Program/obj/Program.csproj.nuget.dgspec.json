@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj": {}
+    "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\program\\Program.csproj": {}
   },
   "projects": {
-    "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
+    "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
+        "projectPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\dasil\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\obj\\",
+        "outputPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj": {
+    "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\Program.csproj",
+        "projectPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\program\\Program.csproj",
         "packagesPath": "C:\\Users\\dasil\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Program\\obj\\",
+        "outputPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -84,8 +84,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
-                "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
+              "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
               }
             }
           }
