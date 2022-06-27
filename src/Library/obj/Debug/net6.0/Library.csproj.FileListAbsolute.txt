@@ -34,3 +34,4 @@ c:\Users\dasil\Programacion2\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\ne
 c:\Users\dasil\Programacion2\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\refint\Library.dll
 c:\Users\dasil\Programacion2\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\Library.pdb
 c:\Users\dasil\Programacion2\Proyecto_PII_2022_Equipo10\src\Library\obj\Debug\net6.0\ref\Library.dll
+C:\Users\dasil\Programacion2\Proyecto_PII_2022_Equipo10\src\Library\bin\Debug\net6.0\appsettings.json
