@@ -37,19 +37,19 @@ namespace Library
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
                     CompleteMessage.Append("A continuacion se va a registrar...\n");
-                    CompleteMessage.Append("Ingrese su nombre de usuario (Cuanto mas crativo... mejor!) \n");
+                    CompleteMessage.Append("Ingrese su nombre de usuario, recuerde que será para siempre y no lo podra cambiar (Cuanto mas crativo... mejor!) \n");
                     response = CompleteMessage.ToString();
                     return true;
 
                 }
                 if(HistorialUser.Instance.Historial[message.From.ToString()].Contains("/REGISTRARME") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
-                    StringBuilder CompleteMessage = new StringBuilder();
-                    CompleteMessage.Append($"Su nombre de usuario es: [{message.Text}] \n");
-                    CompleteMessage.Append("Usuario creado con exito!! \n");
+                    StringBuilder completeMessage = new StringBuilder();
+                    completeMessage.Append("Usuario creado con exito! \n");
+                    completeMessage.Append($"Su nombre de usuario es: -{message.Text}- \n");
                     UserList.Instance.addNewUser(message.Text);
 
-                    response = CompleteMessage.ToString();
+                    response = completeMessage.ToString();
                     return true;
                 }
 
