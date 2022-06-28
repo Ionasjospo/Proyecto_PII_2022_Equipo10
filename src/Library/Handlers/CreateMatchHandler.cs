@@ -54,8 +54,12 @@ namespace Library
                     {
                         CompleteMessage.Append($"Partida 1vs1 creada.\n");
                         CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
-                        CompleteMessage.Append($"/CrearTablero");
-                        Match match = new Match(HistorialUser.Instance.UserID[message.From.ToString()],false);
+
+                        CompleteMessage.Append($"/COLOCAR_TABLERO");
+                        //Match match = new Match(HistorialUser.Instance.UserID[message.From.ToString()],false);
+                        User user = UserList.Instance.FindUserById(message.From.ToString());
+                        user.NewMatch(false);
+
                         response = CompleteMessage.ToString();
                         return true;
 
