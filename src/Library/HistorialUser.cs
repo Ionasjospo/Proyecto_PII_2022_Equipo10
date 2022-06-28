@@ -40,5 +40,9 @@ namespace Library
 
         public Dictionary<string, Collection<string>> Historial = new Dictionary<string, Collection<string>>();
 
+        public Dictionary<string, User> UserID = new Dictionary<string, User>();
+
+        
+
     }
 }

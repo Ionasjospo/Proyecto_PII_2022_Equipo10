@@ -45,9 +45,12 @@ namespace Library
                 if(HistorialUser.Instance.Historial[message.From.ToString()].Contains("/REGISTRARME") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
                     StringBuilder completeMessage = new StringBuilder();
-                    completeMessage.Append("Usuario creado con exito! \n");
-                    completeMessage.Append($"Su nombre de usuario es: -{message.Text}- \n");
-                    UserList.Instance.addNewUser(message.Text);
+                    completeMessage.Append($"Su nombre de usuario es: [{message.Text}] \n");
+                    completeMessage.Append("Usuario creado con exito!! \n");
+                    completeMessage.Append("Para empezar a jugar ingresa al /MENU \n");
+                    UserList.Instance.addNewUser(message.Text,message.From.ToString());
+                   
+                    HistorialUser.Instance.Historial[message.From.ToString()].Clear();
 
                     response = completeMessage.ToString();
                     return true;
