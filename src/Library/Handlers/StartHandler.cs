@@ -23,7 +23,7 @@ namespace Library
         public StartHandler(TelegramBotClient bot, BaseHandler next) : base(next)
         {
 
-            this.Keywords = new string[] { "/start", "/MENU" };
+            this.Keywords = new string[] { "/start", "/Menu" };
             this.bot=bot;
         }
         private TelegramBotClient bot;
@@ -41,27 +41,25 @@ namespace Library
                 if (!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
                 {
                     HistorialUser.Instance.Historial.Add(message.From.ToString(),new Collection<string>());
-                    StringBuilder CompleteMessage = new StringBuilder();
-                    CompleteMessage.Append("BIENVENIDO AL BOT DEL EQUIPO 10 \n");
-                    CompleteMessage.Append("Usted no se encuentra registrado... \n");
-                    CompleteMessage.Append("Ingrese /REGISTRARME para continuar");
-                    
-                    AsyncContext.Run(() => SendGameImage(message));
+                    StringBuilder completeMessage = new StringBuilder();
+                    completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
+                    completeMessage.Append("Usted no se encuentra registrado... \n");
+                    completeMessage.Append("Ingrese /Registrarme para continuar");
 
-                    response = CompleteMessage.ToString();
+                    response = completeMessage.ToString();
                    return true;
 
                 }
                 else 
                 {
-                    StringBuilder CompleteMessage = new StringBuilder();
-                    CompleteMessage.Append("BIENVENIDO AL BOT DEL EQUIPO 10\n");   
-                    CompleteMessage.Append("    MENU DE JUEGO \n");
-                    CompleteMessage.Append("    /CREAR_PARTIDA \n");
-                    CompleteMessage.Append("    /BUSCAR_PARTIDA \n");
-                    CompleteMessage.Append("    /OTRAS_OPCIONES \n");
+                    StringBuilder completeMessage = new StringBuilder();
+                    completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");   
+                    completeMessage.Append("    /Menu     \n");
+                    completeMessage.Append("    /BuscarPartida \n");
+                    completeMessage.Append("    /CrearPartida \n");
+                    completeMessage.Append("    /MasOpciones \n");
 
-                    response = CompleteMessage.ToString();
+                    response = completeMessage.ToString();
                    return true;
                 }
 
