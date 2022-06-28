@@ -61,5 +61,22 @@ namespace Library
             HistorialUser.Instance.UserID.Add(id,user);
             users.Add(user);
         }
+
+        public User FindUserById(string id)
+        {
+            try
+            {
+            foreach (User user in this.Users)
+            {
+                if (user.Id == id)
+                    return user;
+            }
+            }
+            catch
+            {
+                throw new Exception("Usuario no registrado.");
+            }
+            return new User("nonuser","nonuser");
+        }
     }
 }
