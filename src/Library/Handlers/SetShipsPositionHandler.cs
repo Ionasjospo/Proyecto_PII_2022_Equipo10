@@ -9,15 +9,15 @@ namespace Library
     /// <summary>
     /// Un "handler" del patrón Chain of Responsibility que implementa el comando "hola".
     /// </summary>
-    public class CreateMatchHandler : BaseHandler
+    public class SetShipsPositionHandler : BaseHandler
     {
         /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="CreateMatchHandler"/>. Esta clase procesa el mensaje "hola".
+        /// Inicializa una nueva instancia de la clase <see cref="SetShipsPositionHandler"/>. Esta clase procesa el mensaje "hola".
         /// </summary>
         /// <param name="next">El próximo "handler".</param>
-        public CreateMatchHandler(BaseHandler next) : base(next)
+        public SetShipsPositionHandler(BaseHandler next) : base(next)
         {
-            this.Keywords = new string[]{"/CrearPartida"};
+            this.Keywords = new string[]{"/CrearTablero"};
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace Library
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override bool InternalHandle(Message message, out string response)
         {
-            if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearPartida"))
+            if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearTablero"))
             {
                 Console.WriteLine("match");
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
@@ -54,7 +54,7 @@ namespace Library
                     {
                         CompleteMessage.Append($"Partida 1vs1 creada.\n");
                         CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
-                        CompleteMessage.Append($"/CrearTablero");
+                        CompleteMessage.Append($"/ColocarTablero");
                         Match match = new Match(HistorialUser.Instance.UserID[message.From.ToString()],false);
                         response = CompleteMessage.ToString();
                         return true;

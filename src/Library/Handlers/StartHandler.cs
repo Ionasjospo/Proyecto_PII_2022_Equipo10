@@ -23,7 +23,7 @@ namespace Library
         public StartHandler(TelegramBotClient bot, BaseHandler next) : base(next)
         {
 
-            this.Keywords = new string[] { "/start", "/MENU" };
+            this.Keywords = new string[] { "/start", "/Menu" };
             this.bot=bot;
         }
         private TelegramBotClient bot;
@@ -44,7 +44,7 @@ namespace Library
                     StringBuilder completeMessage = new StringBuilder();
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
                     completeMessage.Append("Usted no se encuentra registrado... \n");
-                    completeMessage.Append("Ingrese /REGISTRARME para continuar");
+                    completeMessage.Append("Ingrese /Registrarme para continuar");
 
                     response = completeMessage.ToString();
                    return true;

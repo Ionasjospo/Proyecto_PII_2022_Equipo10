@@ -18,7 +18,7 @@ namespace Library
         public RegisterHandler(BaseHandler next) : base(next)
         {
 
-            this.Keywords = new string[]{"/REGISTRARME"};
+            this.Keywords = new string[]{"/Registrarme"};
         }
 
         /// <summary>
@@ -29,11 +29,11 @@ namespace Library
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override bool InternalHandle(Message message, out string response)
         {
-            if (message.Text=="/REGISTRARME" || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/REGISTRARME"))
+            if (message.Text=="/Registrarme" || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme"))
             {
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
 
-                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/REGISTRARME") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
+                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
                     CompleteMessage.Append("A continuacion se va a registrar...\n");
@@ -42,12 +42,12 @@ namespace Library
                     return true;
 
                 }
-                if(HistorialUser.Instance.Historial[message.From.ToString()].Contains("/REGISTRARME") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
+                if(HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
                     StringBuilder completeMessage = new StringBuilder();
-                    completeMessage.Append($"Su nombre de usuario es: [{message.Text}] \n");
+                    completeMessage.Append($"Su nombre de usuario es: '{message.Text}' \n");
                     completeMessage.Append("Usuario creado con exito!! \n");
-                    completeMessage.Append("Para empezar a jugar ingresa al /MENU \n");
+                    completeMessage.Append("Para empezar a jugar ingresa al /Menu \n");
                     UserList.Instance.addNewUser(message.Text,message.From.ToString());
                    
                     HistorialUser.Instance.Historial[message.From.ToString()].Clear();
