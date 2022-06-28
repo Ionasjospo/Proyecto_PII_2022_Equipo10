@@ -47,7 +47,10 @@ namespace Library
                     StringBuilder CompleteMessage = new StringBuilder();
                     CompleteMessage.Append($"Su nombre de usuario es: [{message.Text}] \n");
                     CompleteMessage.Append("Usuario creado con exito!! \n");
-                    UserList.Instance.addNewUser(message.Text);
+                    CompleteMessage.Append("Para empezar a jugar ingresa al /MENU \n");
+                    UserList.Instance.addNewUser(message.Text,message.From.ToString());
+                   
+                    HistorialUser.Instance.Historial[message.From.ToString()].Clear();
 
                     response = CompleteMessage.ToString();
                     return true;
