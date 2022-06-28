@@ -7,7 +7,7 @@ namespace Library
     /// <summary>
     /// Clase que garantiza una lista de usuarios.
     /// </summary>
-    public class UserList : IJsonConvertible
+    public class UserList //: IJsonConvertible
     {
         /// <summary>
         /// Lista de usuarios.
@@ -52,10 +52,10 @@ namespace Library
             users = new List<User>();
         }
 
-        public UserList(string json)
-        {
-            this.LoadFromJson(json);
-        }
+        // public UserList(string json)
+        // {
+        //     this.LoadFromJson(json);
+        // }
 
         /// <summary>
         /// Método para agregar un nuevo usuario a la lista de usuarios.
@@ -86,18 +86,20 @@ namespace Library
             }
             return new User("nonuser","nonuser");
 
-        public string ConvertToJson()
-        {
-            return JsonSerializer.Serialize(this);
-        }
+        // public string ConvertToJson()
+        // {
+        //     return JsonSerializer.Serialize(this);
+        // }
         
 
-        public void LoadFromJson(string json)
-        {
-            UserList userListeserialized = JsonSerializer.Deserialize<UserList>(json);
-            // this.Name = deserialized.Name;
-            // this.FamilyName = deserialized.FamilyName;
+        // public void LoadFromJson(string json)
+        // {
+        //     UserList userListeserialized = JsonSerializer.Deserialize<UserList>(json);
+        //     // this.Name = deserialized.Name;
+        //     // this.FamilyName = deserialized.FamilyName;
 
-        }
+        // }
+    }
     }
 }
+
