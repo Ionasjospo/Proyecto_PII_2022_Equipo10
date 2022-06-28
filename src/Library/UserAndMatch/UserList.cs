@@ -68,6 +68,24 @@ namespace Library
             HistorialUser.Instance.UserID.Add(id,user);
             users.Add(user);
         }
+
+
+        public User FindUserById(string id)
+        {
+            try
+            {
+            foreach (User user in this.Users)
+            {
+                if (user.Id == id)
+                    return user;
+            }
+            }
+            catch
+            {
+                throw new Exception("Usuario no registrado.");
+            }
+            return new User("nonuser","nonuser");
+
         public string ConvertToJson()
         {
             return JsonSerializer.Serialize(this);
@@ -79,6 +97,7 @@ namespace Library
             UserList userListeserialized = JsonSerializer.Deserialize<UserList>(json);
             // this.Name = deserialized.Name;
             // this.FamilyName = deserialized.FamilyName;
+
         }
     }
 }
