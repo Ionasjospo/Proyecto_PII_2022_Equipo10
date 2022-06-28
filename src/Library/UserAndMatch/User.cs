@@ -14,7 +14,7 @@ namespace Library
         /// <summary>
         /// Id del usuario.
         /// </summary>
-        private int id;
+        private string id;
         /// <summary>
         /// Historial de partidas ganadas por el usuario.
         /// </summary>
@@ -39,8 +39,8 @@ namespace Library
         /// Propiedad que returna el id del usuario.
         /// </summary>
         /// <value>Id del usuario.</value>
-        public int Id
-        {get{return this.id;}}
+        public string Id
+        {get{return this.id;} set{this.id=value;}}
         /// <summary>
         /// Propiedad que returna la cantidad de partidas ganadas del usuario.
         /// </summary>
@@ -57,10 +57,10 @@ namespace Library
         /// Constructor del usuario.
         /// </summary>
         /// <param name="name">Nombre del usuario.</param>
-        public User (string name)
+        public User (string name, string id)
         {
             this.name = name;
-            //this.id = id;
+            this.Id = id;
             this.battlesWon = 0;
             this.specialBomb = 0;
         }

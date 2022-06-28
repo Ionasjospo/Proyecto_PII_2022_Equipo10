@@ -20,7 +20,7 @@ namespace Library
         /// <param name="text">string con el texto a mandar.</param>
         public Text(User user, string text)
         {
-            this.id = user.Id;
+            //this.id = user.Id;
             this.text = text;
         }
     }
