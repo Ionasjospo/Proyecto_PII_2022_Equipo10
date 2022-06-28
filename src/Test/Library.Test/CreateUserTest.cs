@@ -12,7 +12,7 @@ public class CreateNewUser
     [Test]
     public void CreateNewUserTest()
     {
-        UserList.Instance.addNewUser("Sergio");
+        UserList.Instance.addNewUser("Sergio","05");
         bool verifier = false;
         foreach (User user in UserList.Instance.Users)
         {

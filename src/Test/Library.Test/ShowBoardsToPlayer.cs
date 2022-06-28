@@ -14,7 +14,7 @@ namespace Library.Test
         [Test]
         public void ShowBoardWithShips()
         {
-            UserList.Instance.addNewUser("Alberto Kesman");
+            UserList.Instance.addNewUser("Alberto Kesman","56");
             UserList.Instance.Users[0].NewMatch(false);
 
             Match match = MatchList.Instance.HistoricMatches[0];

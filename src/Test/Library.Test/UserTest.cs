@@ -15,7 +15,7 @@ namespace Library.Test
         [Test]
         public void CheckBattlesWon()
         {
-            UserList.Instance.addNewUser("Juan");
+            UserList.Instance.addNewUser("Juan","12");
             int test_battlesWon=13;
             for (int i = 0; i < test_battlesWon; i++)
             {
@@ -28,7 +28,7 @@ namespace Library.Test
         [Test]
         public void AddSpecialBombs()
         {
-            UserList.Instance.addNewUser("Juan");
+            UserList.Instance.addNewUser("Juan","12");
             int test_battlesWon=17;
             int test_specialBombsAdded = 3;
             for (int i = 0; i < test_battlesWon; i++)
@@ -42,7 +42,7 @@ namespace Library.Test
         [Test]
         public void UseOneSpecialBombs()
         {
-            UserList.Instance.addNewUser("Juan");
+            UserList.Instance.addNewUser("Juan","12");
             
             int juanBattlesWon=23;
             int juanSpecialBombs = 4;            

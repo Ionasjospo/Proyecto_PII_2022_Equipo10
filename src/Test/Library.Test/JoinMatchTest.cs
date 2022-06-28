@@ -15,12 +15,12 @@ namespace Library.Test
         [Test]
         public void JoinMatch1vs1()
         {
-            UserList.Instance.addNewUser("Francisco Gutierrez");
+            UserList.Instance.addNewUser("Francisco Gutierrez","07");
             UserList.Instance.Users[0].NewMatch(false);
 
             Match match = MatchList.Instance.HistoricMatches[0];
 
-            UserList.Instance.addNewUser("Ramón Díaz");
+            UserList.Instance.addNewUser("Ramón Díaz","14");
             UserList.Instance.Users[1].JoinMatch(match);
 
 
@@ -30,11 +30,11 @@ namespace Library.Test
         [Test]
         public void JoinMatch2vs2()
         {
-            UserList.Instance.addNewUser("Pep");
-            UserList.Instance.addNewUser("Juan");
+            UserList.Instance.addNewUser("Pep","08");
+            UserList.Instance.addNewUser("Juan","09");
 
-            UserList.Instance.addNewUser("Manu");
-            UserList.Instance.addNewUser("Feli");
+            UserList.Instance.addNewUser("Manu","10");
+            UserList.Instance.addNewUser("Feli","11");
 
             UserList.Instance.Users[0].NewMatch(true); //pep crea match 2vs2
 

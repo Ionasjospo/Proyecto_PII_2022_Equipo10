@@ -22,8 +22,8 @@ namespace Library.Test
         [Test]
         public void WinABattle()
         {
-            User user = new User("Parizon");
-            User user2 = new User("fumeteo");
+            User user = new User("Parizon","01");
+            User user2 = new User("fumeteo","02");
              user.NewMatch(false);
             Match match = MatchList.Instance.HistoricMatches[0];
            
