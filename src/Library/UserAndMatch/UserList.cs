@@ -1,11 +1,13 @@
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Library
 {
     /// <summary>
     /// Clase que garantiza una lista de usuarios.
     /// </summary>
-    public class UserList
+    public class UserList : IJsonConvertible
     {
         /// <summary>
         /// Lista de usuarios.
@@ -44,11 +46,16 @@ namespace Library
         /// <summary>
         /// Constructor de UserList.
         /// </summary>
+        [JsonConstructor]
         private UserList ()
         {
             users = new List<User>();
         }
 
+        public UserList(string json)
+        {
+            this.LoadFromJson(json);
+        }
 
         /// <summary>
         /// Método para agregar un nuevo usuario a la lista de usuarios.
@@ -60,6 +67,37 @@ namespace Library
             User user = new User(name,id);
             HistorialUser.Instance.UserID.Add(id,user);
             users.Add(user);
+        }
+
+
+        public User FindUserById(string id)
+        {
+            try
+            {
+            foreach (User user in this.Users)
+            {
+                if (user.Id == id)
+                    return user;
+            }
+            }
+            catch
+            {
+                throw new Exception("Usuario no registrado.");
+            }
+            return new User("nonuser","nonuser");
+
+        public string ConvertToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+        
+
+        public void LoadFromJson(string json)
+        {
+            UserList userListeserialized = JsonSerializer.Deserialize<UserList>(json);
+            // this.Name = deserialized.Name;
+            // this.FamilyName = deserialized.FamilyName;
+
         }
     }
 }
