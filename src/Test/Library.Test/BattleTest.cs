@@ -24,7 +24,7 @@ namespace Library.Test
         {
             User user = new User("Parizon","01");
             User user2 = new User("fumeteo","02");
-             user.NewMatch(false);
+            user.NewMatch(false);
             Match match = MatchList.Instance.HistoricMatches[0];
            
             user2.JoinMatch(match);

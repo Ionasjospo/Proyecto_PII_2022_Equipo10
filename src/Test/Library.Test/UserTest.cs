@@ -15,13 +15,13 @@ namespace Library.Test
         [Test]
         public void CheckBattlesWon()
         {
-            UserList.Instance.addNewUser("Juan","12");
+            UserList.Instance.addNewUser("Juan","16");
             int test_battlesWon=13;
             for (int i = 0; i < test_battlesWon; i++)
             {
-                UserList.Instance.Users[0].AddBattleWon();
+                UserList.Instance.Users[1].AddBattleWon();
             }
-            int user_battlesWon = UserList.Instance.Users[0].BattlesWon;
+            int user_battlesWon = UserList.Instance.Users[1].BattlesWon;
             Assert.AreEqual(test_battlesWon,user_battlesWon);
         }
        
@@ -42,20 +42,20 @@ namespace Library.Test
         [Test]
         public void UseOneSpecialBombs()
         {
-            UserList.Instance.addNewUser("Juan","12");
+            UserList.Instance.addNewUser("Juan","17");
             
             int juanBattlesWon=23;
-            int juanSpecialBombs = 4;            
+            int juanSpecialBombs = 3;            
             for (int i = 0; i < juanBattlesWon; i++)
             {
-                UserList.Instance.Users[0].AddBattleWon();
+                UserList.Instance.Users[2].AddBattleWon();
             }
 
-            UserList.Instance.Users[0].SpecialBombUsed();
+            UserList.Instance.Users[2].SpecialBombUsed();
             
-            int juanSpecialBombsRemain = UserList.Instance.Users[0].SpecialBomb;
+            int juanSpecialBombsRemain = UserList.Instance.Users[2].SpecialBomb+juanSpecialBombs;
 
-            Assert.AreEqual(3, juanSpecialBombsRemain);
+            Assert.AreEqual(6, juanSpecialBombsRemain);
         }
     }
 }
