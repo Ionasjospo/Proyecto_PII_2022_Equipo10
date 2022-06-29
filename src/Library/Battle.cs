@@ -101,6 +101,7 @@ namespace Library
                                     {
                                         this.Winner = player1;
                                         player1.User.AddBattleWon();
+                                        HistorialUser.Instance.MatchID.Remove(this.match.PlayerA1.User.Id);
                                     }
                                 }
                             }

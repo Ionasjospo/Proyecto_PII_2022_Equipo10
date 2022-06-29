@@ -87,6 +87,7 @@ namespace Library
         public void NewMatch(bool twoVtwo)
         {
             Match match = new Match(this,twoVtwo);
+            HistorialUser.Instance.MatchID.Add(this.Id, match);
         }
         /// <summary>
         /// Une al usuario a una nueva partida.

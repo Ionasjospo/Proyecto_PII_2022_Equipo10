@@ -42,6 +42,8 @@ namespace Library
 
         public Dictionary<string, User> UserID = new Dictionary<string, User>();
 
+        public Dictionary<string, Match> MatchID = new Dictionary<string, Match>();
+
         
 
     }
