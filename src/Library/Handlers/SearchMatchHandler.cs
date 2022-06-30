@@ -30,49 +30,35 @@ namespace Library
         {
             if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/BuscarPartida"))
             {
-                Console.WriteLine("SearchMatch1");
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
 
                 if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
-                    Console.WriteLine("SearchMatch2");
                     StringBuilder CompleteMessage = new StringBuilder();
                     CompleteMessage.Append("Seleccione alguna de las siguientes partidas:\n");
-                    Console.WriteLine("SearchMatch3");
-                    foreach (var (key, value) in HistorialUser.Instance.MatchID)
+                    int cont = 0;
+                    foreach (Match match in MatchList.Instance.HistoricMatches)
                     {
-                        Console.WriteLine("SearchMatch4");
-                        CompleteMessage.Append($"Jugar en la partida de /{UserList.Instance.FindUserById(key).Name}");
+                        if (match.OpenToJoin)
+                            CompleteMessage.Append($"Jugar en la partida n° /{cont} \n");
+                        cont++;
                     }
-
                     response = CompleteMessage.ToString();
                     return true;
-
                 }
                 if(HistorialUser.Instance.Historial[message.From.ToString()].Contains("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
-
-                    foreach (var (key, value) in HistorialUser.Instance.MatchID)
-                    {
-                        Console.WriteLine("SearchMatch4");
-
-                        if(message.Text==$"/{UserList.Instance.FindUserById(key).Name}")
-                        {
-                            Console.WriteLine("SearchMatch5");
-                            CompleteMessage.Append($"Te has unido a la partida de {UserList.Instance.FindUserById(key).Name}.\n");
-                            User user = UserList.Instance.FindUserById(key);
-                            user.JoinMatch(value);
-                            CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
-                            CompleteMessage.Append($"/COLOCAR_TABLERO");  
-                            response = CompleteMessage.ToString();
-                            return true;                          
-                        }
-                    }
+                    string matchNum = message.Text.Substring(1);
+                    Match match = MatchList.Instance.HistoricMatches[Convert.ToInt32(matchNum)];
+                    User user = UserList.Instance.FindUserById(message.From.ToString());
+                    user.JoinMatch(match);
+                    CompleteMessage.Append($"Te has unido a la partida de {match.PlayerA1.User.Name}.\n");
+                    CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
+                    CompleteMessage.Append($"/COLOCAR_TABLERO");  
                     response = CompleteMessage.ToString();
                     return true;
                 }
-
             }
             response = string.Empty;
             return false;

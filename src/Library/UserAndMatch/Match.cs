@@ -67,6 +67,12 @@ namespace Library
         public bool TwoVtwo
         { get { return this.twoVtwo; } }
         /// <summary>
+        /// Propiedad que retorna si la partida esta pronta para recibir otros jugadores.
+        /// </summary>
+        /// <value>Valor booleano</value>
+        public bool OpenToJoin
+        { get { return this.openToJoin; } }
+        /// <summary>
         /// Constructor de match.
         /// </summary>
         /// <param name="user"Usuario.></param>
