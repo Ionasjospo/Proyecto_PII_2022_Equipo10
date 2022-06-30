@@ -54,8 +54,13 @@ namespace Library
         /// <returns>El número que tiene en la lista.</returns>
         public void addNewUser(string name, string id)
         {
+<<<<<<< HEAD
             User user = new User(name, id);
             HistorialUser.Instance.UserID.Add(id, user);
+=======
+            User user = new User(name,id);
+        
+>>>>>>> 03b708f26c1880a9e0814f7c33d0d3a125af06e8
             users.Add(user);
         }
 

@@ -87,7 +87,8 @@ namespace Library
         public void NewMatch(bool twoVtwo)
         {
             Match match = new Match(this,twoVtwo);
-        }
+           
+                    }
         /// <summary>
         /// Une al usuario a una nueva partida.
         /// </summary>

@@ -55,17 +55,14 @@ namespace Library
                         CompleteMessage.Append($"Partida 1vs1 creada.\n");
                         CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
 
-                        CompleteMessage.Append($"/COLOCAR_TABLERO");
-                        //Match match = new Match(HistorialUser.Instance.UserID[message.From.ToString()],false);
+                        CompleteMessage.Append($"/Colocar_Tablero");
+                       
                         User user = UserList.Instance.FindUserById(message.From.ToString());
                         user.NewMatch(false);
+                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
 
                         response = CompleteMessage.ToString();
                         return true;
-
-
-
-
                     }
                     if(message.Text=="/2")
                     {
@@ -73,7 +70,6 @@ namespace Library
 
                     }
                    
-
                     response = CompleteMessage.ToString();
                     return true;
                 }
