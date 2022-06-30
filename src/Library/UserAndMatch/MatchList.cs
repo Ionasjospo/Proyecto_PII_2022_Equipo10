@@ -52,5 +52,32 @@ namespace Library
         {
             historicMatches.Add(match);
         }
+
+        public Boards FindBoard(string id)
+        {
+            Boards board = new BoardWithShips();
+
+            foreach (var item in historicMatches)
+            {
+                
+
+                if( item.PlayerA1.User.Id==id ){
+                    return item.PlayerA1.BoardWithShips;
+                }
+                if( item.PlayerB1.User.Id==id ){
+                    return item.PlayerB1.BoardWithShips;
+                }
+                if( item.PlayerA2.User.Id==id ){
+                    return item.PlayerA2.BoardWithShips;
+                }
+                if( item.PlayerB2.User.Id==id ){
+                    return item.PlayerB2.BoardWithShips;
+                }
+
+            }
+
+            return board;
+        }
+        
     }
 }

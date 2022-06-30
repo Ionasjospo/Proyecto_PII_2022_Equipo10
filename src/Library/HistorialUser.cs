@@ -40,7 +40,13 @@ namespace Library
 
         public Dictionary<string, Collection<string>> Historial = new Dictionary<string, Collection<string>>();
 
+<<<<<<< HEAD
+        public Dictionary<string, Match> MatchID= new Dictionary<string, Match>();
+
+        
+=======
         public Dictionary<string, User> UserID = new Dictionary<string, User>();        
+>>>>>>> a7d044f483ac4805c906912545f24c01d87e3d99
 
     }
 }
