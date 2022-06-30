@@ -100,7 +100,7 @@ namespace Program
             Bot = new TelegramBotClient(token);
 
             firstHandler =
-                new StartHandler(Bot,new RegisterHandler(new CreateMatchHandler(null)));
+                new StartHandler(Bot,new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(null)))));
 
             var cts = new CancellationTokenSource();
 
