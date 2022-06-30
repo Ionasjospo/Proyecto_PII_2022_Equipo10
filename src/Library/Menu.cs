@@ -12,7 +12,7 @@ namespace Library
         /// </summary>
         public static StringBuilder ShowOptions()
         {
-            StringBuilder options = new StringBuilder("The options you have are:  \n Create new 1vs1 match \n Create new 2vs2 match \n Join match");
+            StringBuilder options = new StringBuilder("");
             return options;
         }
     }

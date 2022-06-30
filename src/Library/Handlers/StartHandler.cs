@@ -57,6 +57,7 @@ namespace Library
                     completeMessage.Append("    /Menu     \n");
                     completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /CrearPartida \n");
+                    completeMessage.Append("    /Estadisticas \n");
                     completeMessage.Append("    /MasOpciones \n");
 
                     response = completeMessage.ToString();
