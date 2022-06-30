@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using Telegram.Bot;
+using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.InputFiles;
 
 namespace Library
 {
@@ -17,8 +20,9 @@ namespace Library
         /// <param name="next">El próximo "handler".</param>
         public SetShipsPositionHandler(BaseHandler next) : base(next)
         {
-            this.Keywords = new string[]{"/CrearTablero"};
+            this.Keywords = new string[] { "/CrearTablero" };
         }
+        private TelegramBotClient bot;
 
         /// <summary>
         /// Procesa el mensaje "Registrarme" y retorna true; retorna false en caso contrario.
@@ -33,50 +37,47 @@ namespace Library
                 Console.WriteLine("match");
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
 
-                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
+                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearTablero") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
-                    StringBuilder CompleteMessage = new StringBuilder();
-                    CompleteMessage.Append("Esta a punto de comenzar una batalla...\n");
-                    CompleteMessage.Append("Para comenzar debe aclarar si va a ser una guerra con aliados o no...\n");
-                    CompleteMessage.Append("Contamos con dos modalidades de juego:\n");
-                    CompleteMessage.Append("/1 - 1\U0001f19a1\n");
-                    CompleteMessage.Append("/2 - 2\U0001f19a2\n");
+                    StringBuilder completeMessage = new StringBuilder();
+                    completeMessage.Append("Has creado el tablero correctamente.\n");
 
-                    response = CompleteMessage.ToString();
+                    response = completeMessage.ToString();
                     return true;
 
                 }
-                if(HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
+                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
-                    StringBuilder CompleteMessage = new StringBuilder();
-
-                    if(message.Text=="/1")
-                    {
-                        CompleteMessage.Append($"Partida 1vs1 creada.\n");
-                        CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
-                        CompleteMessage.Append($"/ColocarTablero");
-                        Match match = new Match(HistorialUser.Instance.UserID[message.From.ToString()],false);
-                        response = CompleteMessage.ToString();
-                        return true;
+                    StringBuilder completeMessage = new StringBuilder();
 
 
 
-
-                    }
-                    if(message.Text=="/2")
-                    {
-
-
-                    }
-                   
-
-                    response = CompleteMessage.ToString();
+                    response = completeMessage.ToString();
                     return true;
                 }
 
             }
             response = string.Empty;
             return false;
+        }
+
+        private async Task SendGameImage(Message message)
+        {
+            // Can be null during testing
+            if (bot != null)
+            {
+                await bot.SendChatActionAsync(message.Chat.Id, ChatAction.UploadPhoto);
+
+                const string filePath = @"..\Library\Images\batallaV2.png";
+                using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+                var fileName = filePath.Split(Path.DirectorySeparatorChar).Last();
+
+                await bot.SendPhotoAsync(
+                    chatId: message.Chat.Id,
+                    photo: new InputOnlineFile(fileStream, fileName),
+                    caption: "-GRUPO 10-"
+                );
+            }
         }
     }
 }
