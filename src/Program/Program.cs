@@ -95,6 +95,12 @@ namespace Program
         /// </summary>
         public static void Main()
         {
+            //string jsonPath = @"../Library/UserList.json";
+            // System.IO.File.ReadAllText(jsonPath);
+
+            // UserList.Instance.LoadFromJson(jsonPath);
+
+            
             Start();
 
             Bot = new TelegramBotClient(token);
@@ -122,8 +128,15 @@ namespace Program
             // Esperamos a que el usuario aprete Enter en la consola para terminar el bot.
             Console.ReadLine();
 
+            
+            
             // Terminamos el bot.
             cts.Cancel();
+
+            //string newUsers = UserList.Instance.ConvertToJson();
+
+            // Se guardan en los archivos de texto
+            //System.IO.File.WriteAllText(@"../Library/UserList.json", newUsers);
         }
 
         /// <summary>

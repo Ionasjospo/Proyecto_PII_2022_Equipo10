@@ -7,7 +7,7 @@ namespace Library
     /// <summary>
     /// Clase que garantiza una lista de usuarios.
     /// </summary>
-    public class UserList //: IJsonConvertible
+    public class UserList : IJsonConvertible
     {
         /// <summary>
         /// Lista de usuarios.
@@ -43,19 +43,9 @@ namespace Library
                 return userlist;
             }
         }
-        /// <summary>
-        /// Constructor de UserList.
-        /// </summary>
-        [JsonConstructor]
-        private UserList ()
-        {
-            users = new List<User>();
-        }
 
-        // public UserList(string json)
-        // {
-        //     this.LoadFromJson(json);
-        // }
+
+
 
         /// <summary>
         /// Método para agregar un nuevo usuario a la lista de usuarios.
@@ -64,8 +54,8 @@ namespace Library
         /// <returns>El número que tiene en la lista.</returns>
         public void addNewUser(string name, string id)
         {
-            User user = new User(name,id);
-            HistorialUser.Instance.UserID.Add(id,user);
+            User user = new User(name, id);
+            HistorialUser.Instance.UserID.Add(id, user);
             users.Add(user);
         }
 
@@ -74,32 +64,29 @@ namespace Library
         {
             try
             {
-            foreach (User user in this.Users)
-            {
-                if (user.Id == id)
-                    return user;
-            }
+                foreach (User user in this.Users)
+                {
+                    if (user.Id == id)
+                        return user;
+                }
             }
             catch
             {
                 throw new Exception("Usuario no registrado.");
             }
-            return new User("nonuser","nonuser");
+            return new User("nonuser", "nonuser");
+        }
+        public string ConvertToJson()
+        {
+            return JsonSerializer.Serialize(this.users);
+        }
 
-        // public string ConvertToJson()
-        // {
-        //     return JsonSerializer.Serialize(this);
-        // }
-        
+        public void LoadFromJson(string json)
+        {
+            List<User> lista = JsonSerializer.Deserialize<List<User>>(json);
+            this.users = lista;
+        }
 
-        // public void LoadFromJson(string json)
-        // {
-        //     UserList userListeserialized = JsonSerializer.Deserialize<UserList>(json);
-        //     // this.Name = deserialized.Name;
-        //     // this.FamilyName = deserialized.FamilyName;
-
-        // }
-    }
     }
 }
 
