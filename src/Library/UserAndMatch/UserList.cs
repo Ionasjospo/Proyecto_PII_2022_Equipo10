@@ -65,7 +65,7 @@ namespace Library
         public void addNewUser(string name, string id)
         {
             User user = new User(name,id);
-            HistorialUser.Instance.UserID.Add(id,user);
+        
             users.Add(user);
         }
 
