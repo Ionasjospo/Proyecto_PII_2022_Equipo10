@@ -21,7 +21,7 @@ namespace Library
         /// <param name="next">El próximo "handler".</param>
         public SetShipsPositionHandler(TelegramBotClient bot, BaseHandler next) : base(next)
         {
-            this.Keywords = new string[]{"/Colocar_Tablero"};
+            this.Keywords = new string[] { "/Colocar_Tablero" };
             this.bot = bot;
         }
         private TelegramBotClient bot;
@@ -37,14 +37,16 @@ namespace Library
             if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Colocar_Tablero"))
             {
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
+                BoardWithShips board = MatchList.Instance.FindBoard(message.From.ToString()) as BoardWithShips;
+
+
+
 
                 if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Colocar_Tablero") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
-                    
-                    BoardWithShips board = MatchList.Instance.FindBoard(message.From.ToString()) as BoardWithShips;
-                    AsyncContext.Run(() => SendBoardImage(message, board.BoardDefaultPath ));
-                    
+
+                    AsyncContext.Run(() => SendBoardImage(message, board.BoardDefaultPath));
                     int cont = 0;
                     foreach (var item in board.Ship)
                     {
@@ -52,34 +54,83 @@ namespace Library
                         cont++;
                     }
 
-              
+
+                    response = CompleteMessage.ToString();
+
+                    return true;
+
+                }
+                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Colocar_Tablero") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
+                {
+                    StringBuilder CompleteMessage = new StringBuilder();
+
+
+
+                    CompleteMessage.Append($"Nave seleccionada con exito!\n");
+                    CompleteMessage.Append($"Debe ingresar la ubicacion que desea y la palabra vertical o horizontal \n");
+                    CompleteMessage.Append($"Por ejemplo: x,y,vertical \n");
 
                     response = CompleteMessage.ToString();
                     return true;
 
                 }
-                if(HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
+                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Colocar_Tablero") && HistorialUser.Instance.Historial[message.From.ToString()].Count() >= 3)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
 
-                    if(message.Text=="/1")
+                    List<string> list = new List<string>();
+                    list = message.Text.Split(',').ToList();
+                    int x = Convert.ToInt16(list[0]);
+                    int y = Convert.ToInt32(list[1]);
+
+                    string nave = HistorialUser.Instance.Historial[message.From.ToString()][1].Substring(1);
+                    int ship = Convert.ToInt32(nave);
+
+
+                    if (board.SetPosition(board.Ship[ship], x, y, list[2]))
                     {
-                        CompleteMessage.Append($"Partida 1vs1 creada.\n");
-                        CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
-                      
+                        CompleteMessage.Append($"Nave colocada correctamente!!\n");
+                        AsyncContext.Run(() => SendBoardImage(message, board.BoardDefaultPath));
+                        int cont = 0;
+                        foreach (var item in board.Ship)
+                        {
+                            CompleteMessage.Append($"/{cont} - {item.Name} tamaño = {item.Size}\n");
+                            cont++;
+                        }
+                        if (board.ShipReady)
+                        {
+                            CompleteMessage.Append($"Tu flota ya esta lista para la batalla!!!\n");
+                            CompleteMessage.Append($"/Comenzar_combate\n");
+                            HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+
+                        }
+                        else
+                        {
+                            HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                            HistorialUser.Instance.Historial[message.From.ToString()].Add("/Colocar_Tablero");
+
+                        }
+
+
+
                         response = CompleteMessage.ToString();
                         return true;
-
-
-
-
                     }
-                    if(message.Text=="/2")
+                    else
                     {
-
+                        CompleteMessage.Append($"Error al colocar la nave \n");
+                        CompleteMessage.Append($"Coloque nuevamente la nave y la posicion de la misma\n");
+                        int cont = 0;
+                        foreach (var item in board.Ship)
+                        {
+                            CompleteMessage.Append($"/{cont} - {item.Name} tamaño = {item.Size}\n");
+                            cont++;
+                        }
+                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                        HistorialUser.Instance.Historial[message.From.ToString()].Add("/Colocar_Tablero");
 
                     }
-                   
+
 
                     response = CompleteMessage.ToString();
                     return true;
@@ -92,6 +143,8 @@ namespace Library
 
         private async Task SendBoardImage(Message message, string path)
         {
+            User user = UserList.Instance.FindUserById(message.From.ToString());
+
             // Can be null during testing
             if (bot != null)
             {
@@ -104,7 +157,7 @@ namespace Library
                 await bot.SendPhotoAsync(
                     chatId: message.Chat.Id,
                     photo: new InputOnlineFile(fileStream, fileName),
-                    caption: "Este es tu tablero a colocar"
+                    caption: $"Tablero de {user.Name} "
                 );
             }
         }
