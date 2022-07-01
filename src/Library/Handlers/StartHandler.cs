@@ -57,6 +57,7 @@ namespace Library
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");   
                     completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /CrearPartida \n");
+                    completeMessage.Append("    /Estadisticas \n");
                     completeMessage.Append("    /MasOpciones \n");
 
                     response = completeMessage.ToString();

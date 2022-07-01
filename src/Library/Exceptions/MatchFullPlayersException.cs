@@ -6,21 +6,21 @@ namespace Exceptions
     /// <summary>
     /// Exepción creada por si un usuario intenta unirse a una partida que esta llena.
     /// </summary>
-    public class MatchFullException : Exception
+    public class MatchFullPlayersException : Exception
     {
         
         /// <summary>
         /// Constructor de MatchFullException
         /// </summary>
-        public MatchFullException()
+        public MatchFullPlayersException()
         {
         }
 
         /// <summary>
         /// Constructor de MatchFullException
         /// </summary>
-        /// <param name="message">Mensaje el cual se le envia al usuario para advertirle que puso mal la ubicación.</param>
-        public MatchFullException(string message)
+        /// <param name="message">Mensaje el cual se le envia al usuario para advertirle que la partida ya tiene todos los jugadores posibles.</param>
+        public MatchFullPlayersException(string message)
         : base(message)
         {
         }

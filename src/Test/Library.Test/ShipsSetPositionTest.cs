@@ -1,334 +1,334 @@
-using System;
-using Library;
-using NUnit.Framework;
-using System.Collections.Generic;
+// using System;
+// using Library;
+// using NUnit.Framework;
+// using System.Collections.Generic;
 
-namespace Library.Test
-{
-    public class ShipsSetPositionTest
-    {
-        [SetUp]
-        public void Setup()
-        {
-
-
-        }
-
-        [Test]
-        public void SubmarineSetHorizontalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[0], 0, 0, "horizontal");
+// namespace Library.Test
+// {
+//     public class ShipsSetPositionTest
+//     {
+//         [SetUp]
+//         public void Setup()
+//         {
 
 
-            string[,] expectedBoard = new string[10, 10];
+//         }
 
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[0, 0] = "S";
-            expectedBoard[0, 1] = "S";
+//         [Test]
+//         public void SubmarineSetHorizontalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[0], 0, 0, "horizontal");
 
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
+//             string[,] expectedBoard = new string[10, 10];
+
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[0, 0] = "S";
+//             expectedBoard[0, 1] = "S";
 
 
-        [Test]
-        public void SubmarineSetVerticalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[0], 7, 7, "vertical");
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
 
 
-            string[,] expectedBoard = new string[10, 10];
-
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[7, 7] = "S";
-            expectedBoard[8, 7] = "S";
+//         [Test]
+//         public void SubmarineSetVerticalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[0], 7, 7, "vertical");
 
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
+//             string[,] expectedBoard = new string[10, 10];
 
-        [Test]
-        public void BattleShipSetHorizontalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 3, 1, "horizontal");
-
-
-            string[,] expectedBoard = new string[10, 10];
-
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[3, 1] = "B";
-            expectedBoard[3, 2] = "B";
-            expectedBoard[3, 3] = "B";
-
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[7, 7] = "S";
+//             expectedBoard[8, 7] = "S";
 
 
-        [Test]
-        public void BattleShipSetVerticalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 1, 6, "vertical");
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
+
+//         [Test]
+//         public void BattleShipSetHorizontalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[1], 3, 1, "horizontal");
 
 
-            string[,] expectedBoard = new string[10, 10];
+//             string[,] expectedBoard = new string[10, 10];
 
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[1, 6] = "B";
-            expectedBoard[2, 6] = "B";
-            expectedBoard[3, 6] = "B";
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[3, 1] = "B";
+//             expectedBoard[3, 2] = "B";
+//             expectedBoard[3, 3] = "B";
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
-
-        [Test]
-        public void DestroyerSetHorizontalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 8, 6, "horizontal");
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
 
 
-            string[,] expectedBoard = new string[10, 10];
-
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[8, 6] = "D";
-            expectedBoard[8, 7] = "D";
-            expectedBoard[8, 8] = "D";
-            expectedBoard[8, 9] = "D";
-
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
+//         [Test]
+//         public void BattleShipSetVerticalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[1], 1, 6, "vertical");
 
 
-        [Test]
-        public void DestroyerSetVerticalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 3, 4, "vertical");
+//             string[,] expectedBoard = new string[10, 10];
+
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[1, 6] = "B";
+//             expectedBoard[2, 6] = "B";
+//             expectedBoard[3, 6] = "B";
+
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
+
+//         [Test]
+//         public void DestroyerSetHorizontalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[2], 8, 6, "horizontal");
 
 
-            string[,] expectedBoard = new string[10, 10];
+//             string[,] expectedBoard = new string[10, 10];
 
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[3, 4] = "D";
-            expectedBoard[4, 4] = "D";
-            expectedBoard[5, 4] = "D";
-            expectedBoard[6, 4] = "D";
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[8, 6] = "D";
+//             expectedBoard[8, 7] = "D";
+//             expectedBoard[8, 8] = "D";
+//             expectedBoard[8, 9] = "D";
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
-
-        [Test]
-        public void AirCraftCarrierSetHorizontalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 3, 1, "horizontal");
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
 
 
-            string[,] expectedBoard = new string[10, 10];
-
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[3, 1] = "A";
-            expectedBoard[3, 2] = "A";
-            expectedBoard[3, 3] = "A";
-            expectedBoard[3, 4] = "A";
-            expectedBoard[3, 5] = "A";
-
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
+//         [Test]
+//         public void DestroyerSetVerticalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[2], 3, 4, "vertical");
 
 
-        [Test]
-        public void AirCraftCarrierSetVerticalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 1, 5, "vertical");
+//             string[,] expectedBoard = new string[10, 10];
+
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[3, 4] = "D";
+//             expectedBoard[4, 4] = "D";
+//             expectedBoard[5, 4] = "D";
+//             expectedBoard[6, 4] = "D";
+
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
+
+//         [Test]
+//         public void AirCraftCarrierSetHorizontalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[3], 3, 1, "horizontal");
 
 
-            string[,] expectedBoard = new string[10, 10];
+//             string[,] expectedBoard = new string[10, 10];
 
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[1, 5] = "A";
-            expectedBoard[2, 5] = "A";
-            expectedBoard[3, 5] = "A";
-            expectedBoard[4, 5] = "A";
-            expectedBoard[5, 5] = "A";
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[3, 1] = "A";
+//             expectedBoard[3, 2] = "A";
+//             expectedBoard[3, 3] = "A";
+//             expectedBoard[3, 4] = "A";
+//             expectedBoard[3, 5] = "A";
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
-
-        [Test]
-        public void AllShipsSetHorizontalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[0], 3, 5, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 4, 2, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 1, 1, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 9, 0, "horizontal");
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
 
 
-            string[,] expectedBoard = new string[10, 10];
+//         [Test]
+//         public void AirCraftCarrierSetVerticalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[3], 1, 5, "vertical");
 
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[3, 5] = "S";
-            expectedBoard[3, 6] = "S";
 
-            expectedBoard[4, 2] = "B";
-            expectedBoard[4, 3] = "B";
-            expectedBoard[4, 4] = "B";
+//             string[,] expectedBoard = new string[10, 10];
 
-            expectedBoard[1, 1] = "D";
-            expectedBoard[1, 2] = "D";
-            expectedBoard[1, 3] = "D";
-            expectedBoard[1, 4] = "D";
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[1, 5] = "A";
+//             expectedBoard[2, 5] = "A";
+//             expectedBoard[3, 5] = "A";
+//             expectedBoard[4, 5] = "A";
+//             expectedBoard[5, 5] = "A";
+
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
+
+//         [Test]
+//         public void AllShipsSetHorizontalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[0], 3, 5, "horizontal");
+//             boardWithShips.SetPosition(boardWithShips.Ship[1], 4, 2, "horizontal");
+//             boardWithShips.SetPosition(boardWithShips.Ship[2], 1, 1, "horizontal");
+//             boardWithShips.SetPosition(boardWithShips.Ship[3], 9, 0, "horizontal");
+
+
+//             string[,] expectedBoard = new string[10, 10];
+
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[3, 5] = "S";
+//             expectedBoard[3, 6] = "S";
+
+//             expectedBoard[4, 2] = "B";
+//             expectedBoard[4, 3] = "B";
+//             expectedBoard[4, 4] = "B";
+
+//             expectedBoard[1, 1] = "D";
+//             expectedBoard[1, 2] = "D";
+//             expectedBoard[1, 3] = "D";
+//             expectedBoard[1, 4] = "D";
             
-            expectedBoard[9, 0] = "A";
-            expectedBoard[9, 1] = "A";
-            expectedBoard[9, 2] = "A";
-            expectedBoard[9, 3] = "A";
-            expectedBoard[9, 4] = "A";
+//             expectedBoard[9, 0] = "A";
+//             expectedBoard[9, 1] = "A";
+//             expectedBoard[9, 2] = "A";
+//             expectedBoard[9, 3] = "A";
+//             expectedBoard[9, 4] = "A";
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
 
-        [Test]
-        public void AllShipsSetVerticalPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[0], 1, 3, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 3, 2, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 6, 1, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 4, 6, "vertical");
+//         [Test]
+//         public void AllShipsSetVerticalPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[0], 1, 3, "vertical");
+//             boardWithShips.SetPosition(boardWithShips.Ship[1], 3, 2, "vertical");
+//             boardWithShips.SetPosition(boardWithShips.Ship[2], 6, 1, "vertical");
+//             boardWithShips.SetPosition(boardWithShips.Ship[3], 4, 6, "vertical");
 
 
-            string[,] expectedBoard = new string[10, 10];
+//             string[,] expectedBoard = new string[10, 10];
 
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[1, 3] = "S";
-            expectedBoard[2, 3] = "S";
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[1, 3] = "S";
+//             expectedBoard[2, 3] = "S";
 
-            expectedBoard[3, 2] = "B";
-            expectedBoard[4, 2] = "B";
-            expectedBoard[5, 2] = "B";
+//             expectedBoard[3, 2] = "B";
+//             expectedBoard[4, 2] = "B";
+//             expectedBoard[5, 2] = "B";
 
-            expectedBoard[6, 1] = "D";
-            expectedBoard[7, 1] = "D";
-            expectedBoard[8, 1] = "D";
-            expectedBoard[9, 1] = "D";
+//             expectedBoard[6, 1] = "D";
+//             expectedBoard[7, 1] = "D";
+//             expectedBoard[8, 1] = "D";
+//             expectedBoard[9, 1] = "D";
             
-            expectedBoard[4, 6] = "A";
-            expectedBoard[5, 6] = "A";
-            expectedBoard[6, 6] = "A";
-            expectedBoard[7, 6] = "A";
-            expectedBoard[8, 6] = "A";
+//             expectedBoard[4, 6] = "A";
+//             expectedBoard[5, 6] = "A";
+//             expectedBoard[6, 6] = "A";
+//             expectedBoard[7, 6] = "A";
+//             expectedBoard[8, 6] = "A";
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
 
-        [Test]
-        public void AllShipsDifferentPosition()
-        {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[0], 7, 9, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 0, 3, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 6, 2, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 2, 4, "horizontal");
+//         [Test]
+//         public void AllShipsDifferentPosition()
+//         {
+//             BoardWithShips boardWithShips = new BoardWithShips();
+//             boardWithShips.SetPosition(boardWithShips.Ship[0], 7, 9, "vertical");
+//             boardWithShips.SetPosition(boardWithShips.Ship[1], 0, 3, "horizontal");
+//             boardWithShips.SetPosition(boardWithShips.Ship[2], 6, 2, "vertical");
+//             boardWithShips.SetPosition(boardWithShips.Ship[3], 2, 4, "horizontal");
 
 
-            string[,] expectedBoard = new string[10, 10];
+//             string[,] expectedBoard = new string[10, 10];
 
-            for (int x = 0; x < expectedBoard.GetLength(0); x++)
-            {
-                for (int y = 0; y < expectedBoard.GetLength(1); y++)
-                {
-                    expectedBoard[x, y] = "O";
-                }
-            }
-            expectedBoard[7, 9] = "S";
-            expectedBoard[8, 9] = "S";
+//             for (int x = 0; x < expectedBoard.GetLength(0); x++)
+//             {
+//                 for (int y = 0; y < expectedBoard.GetLength(1); y++)
+//                 {
+//                     expectedBoard[x, y] = "O";
+//                 }
+//             }
+//             expectedBoard[7, 9] = "S";
+//             expectedBoard[8, 9] = "S";
 
-            expectedBoard[0, 3] = "B";
-            expectedBoard[0, 4] = "B";
-            expectedBoard[0, 5] = "B";
+//             expectedBoard[0, 3] = "B";
+//             expectedBoard[0, 4] = "B";
+//             expectedBoard[0, 5] = "B";
 
-            expectedBoard[6, 2] = "D";
-            expectedBoard[7, 2] = "D";
-            expectedBoard[8, 2] = "D";
-            expectedBoard[9, 2] = "D";
+//             expectedBoard[6, 2] = "D";
+//             expectedBoard[7, 2] = "D";
+//             expectedBoard[8, 2] = "D";
+//             expectedBoard[9, 2] = "D";
             
-            expectedBoard[2, 4] = "A";
-            expectedBoard[2, 5] = "A";
-            expectedBoard[2, 6] = "A";
-            expectedBoard[2, 7] = "A";
-            expectedBoard[2, 8] = "A";
+//             expectedBoard[2, 4] = "A";
+//             expectedBoard[2, 5] = "A";
+//             expectedBoard[2, 6] = "A";
+//             expectedBoard[2, 7] = "A";
+//             expectedBoard[2, 8] = "A";
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
-        }
-    }
-}
+//             Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+//         }
+//     }
+// }
 
 
 
