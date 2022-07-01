@@ -1,6 +1,7 @@
 using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Exceptions;
 
 namespace Library
 {
@@ -44,6 +45,16 @@ namespace Library
             }
         }
 
+        /// <summary>
+        /// Constructor de UserList.
+        /// </summary>
+        [JsonConstructor]
+        private UserList()
+        {
+            users = new List<User>();
+        }
+
+
 
 
 
@@ -54,17 +65,17 @@ namespace Library
         /// <returns>El número que tiene en la lista.</returns>
         public void addNewUser(string name, string id)
         {
-<<<<<<< HEAD
+
             User user = new User(name, id);
             HistorialUser.Instance.UserID.Add(id, user);
-=======
-            User user = new User(name,id);
-        
->>>>>>> 03b708f26c1880a9e0814f7c33d0d3a125af06e8
             users.Add(user);
         }
 
-
+        /// <summary>
+        /// Método para buscar usuario por su ID.
+        /// </summary>
+        /// <param name="id">identificador del usuario</param>
+        /// <returns>un objeto User</returns>
         public User FindUserById(string id)
         {
             try
@@ -77,10 +88,11 @@ namespace Library
             }
             catch
             {
-                throw new Exception("Usuario no registrado.");
+                throw new UserNotFoundException("Usuario no registrado.");
             }
             return new User("nonuser", "nonuser");
         }
+
         public string ConvertToJson()
         {
             return JsonSerializer.Serialize(this.users);
