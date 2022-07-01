@@ -95,12 +95,22 @@ namespace Program
         /// </summary>
         public static void Main()
         {
+            //string jsonPath = @"../Library/UserList.json";
+            // System.IO.File.ReadAllText(jsonPath);
+
+            // UserList.Instance.LoadFromJson(jsonPath);
+
+            
             Start();
 
             Bot = new TelegramBotClient(token);
 
             firstHandler =
+<<<<<<< HEAD
+                new StartHandler(Bot,new RegisterHandler(new CreateMatchHandler(new UserStatsHandler(null))));
+=======
                 new StartHandler(Bot,new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot, null)))));
+>>>>>>> 03b708f26c1880a9e0814f7c33d0d3a125af06e8
 
             var cts = new CancellationTokenSource();
 
@@ -122,8 +132,15 @@ namespace Program
             // Esperamos a que el usuario aprete Enter en la consola para terminar el bot.
             Console.ReadLine();
 
+            
+            
             // Terminamos el bot.
             cts.Cancel();
+
+            //string newUsers = UserList.Instance.ConvertToJson();
+
+            // Se guardan en los archivos de texto
+            //System.IO.File.WriteAllText(@"../Library/UserList.json", newUsers);
         }
 
         /// <summary>
