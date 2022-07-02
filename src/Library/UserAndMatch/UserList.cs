@@ -8,11 +8,12 @@ namespace Library
     /// <summary>
     /// Clase que garantiza una lista de usuarios.
     /// </summary>
-    public class UserList //: IJsonConvertible
+    public class UserList : IJsonConvertible
     {
         /// <summary>
         /// Lista de usuarios.
         /// </summary>
+        [JsonInclude]
         private List<User> users;
         /// <summary>
         /// Propiedad que devuelve la lista de Usuarios.
@@ -65,8 +66,8 @@ namespace Library
         /// <returns>El número que tiene en la lista.</returns>
         public void addNewUser(string name, string id)
         {
-            User user = new User(name,id);
-        
+            User user = new User(name, id);
+
             users.Add(user);
         }
 
@@ -90,6 +91,54 @@ namespace Library
                 throw new UserNotFoundException("Usuario no registrado.");
             }
             return new User("nonuser", "nonuser");
+        }
+        public bool UsernameIsUsed(string name)
+        {
+
+            foreach (User user in this.Users)
+            {
+                if (user.Name == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool UsernameAreUsed(string name)
+        {
+
+            foreach (User user in this.Users)
+            {
+                if (user.Name == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IdIsRegister(string id)
+        {
+
+            foreach (User user in this.Users)
+            {
+                if (user.Id == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public string ConvertToJson()
+        {
+            return JsonSerializer.Serialize(this.users);
+        }
+
+
+        public void LoadFromJson(string json)
+        {
+            List<User> lista = JsonSerializer.Deserialize<List<User>>(json);
+            this.users = lista;
         }
     }
 }

@@ -12,10 +12,13 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.InputFiles;
 using Library;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Program
 {
-     /// <summary>
+    /// <summary>
     /// Un programa que implementa un bot de Telegram.
     /// </summary>
     public class Program
@@ -95,12 +98,16 @@ namespace Program
         /// </summary>
         public static void Main()
         {
+            string json = @"../Library/jsonData.json";
+            string usersPath =System.IO.File.ReadAllText(json);
+            UserList.Instance.LoadFromJson(usersPath);
+
             Start();
 
             Bot = new TelegramBotClient(token);
 
             firstHandler =
-                new StartHandler(Bot,new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot, null)))));
+                new StartHandler(Bot, new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot, null)))));
 
             var cts = new CancellationTokenSource();
 
@@ -124,6 +131,9 @@ namespace Program
 
             // Terminamos el bot.
             cts.Cancel();
+            string newUsers = UserList.Instance.ConvertToJson();
+            System.IO.File.WriteAllText(json, newUsers);
+
         }
 
         /// <summary>
