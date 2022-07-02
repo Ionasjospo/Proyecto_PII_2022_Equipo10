@@ -129,6 +129,8 @@ namespace Program
             // Esperamos a que el usuario aprete Enter en la consola para terminar el bot.
             Console.ReadLine();
 
+            
+            
             // Terminamos el bot.
             cts.Cancel();
             string newUsers = UserList.Instance.ConvertToJson();

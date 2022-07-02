@@ -45,6 +45,7 @@ namespace Library
                 return userlist;
             }
         }
+
         /// <summary>
         /// Constructor de UserList.
         /// </summary>
@@ -54,10 +55,9 @@ namespace Library
             users = new List<User>();
         }
 
-        // public UserList(string json)
-        // {
-        //     this.LoadFromJson(json);
-        // }
+
+
+
 
         /// <summary>
         /// Método para agregar un nuevo usuario a la lista de usuarios.
@@ -133,7 +133,6 @@ namespace Library
         {
             return JsonSerializer.Serialize(this.users);
         }
-
 
         public void LoadFromJson(string json)
         {
