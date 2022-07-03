@@ -47,10 +47,12 @@ namespace Library
                                 CompleteMessage.Append($"Jugar en la partida n° /{cont} \n");
                             cont++;
                         }
+                        if (cont == 0)
+                        throw new MatchOpenToJoinException("No hay partidas disponibles para unirse \n Tu puedes también /CrearPartida !!");
                     }
                     catch (System.Exception)
                     {
-                        throw new UserNotFoundException("Usuario no registrado."); ;
+                        //throw new MatchOpenToJoinException("No hay partidas disponibles para unirse \n Tu puedes también /CrearPartida !!");
                     }
                     finally
                     {
@@ -62,13 +64,25 @@ namespace Library
                 if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
-                    string matchNum = message.Text.Substring(1);
-                    Match match = MatchList.Instance.HistoricMatches[Convert.ToInt32(matchNum)];
-                    User user = UserList.Instance.FindUserById(message.From.ToString());
-                    user.JoinMatch(match);
-                    CompleteMessage.Append($"Te has unido a la partida de {match.PlayerA1.User.Name}.\n");
-                    CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
-                    CompleteMessage.Append($"/ColocarTablero");
+                    try
+                    {
+                        string matchNum = message.Text.Substring(1);
+                        Match match = MatchList.Instance.HistoricMatches[Convert.ToInt32(matchNum)];
+                        User user = UserList.Instance.FindUserById(message.From.ToString());
+                        user.JoinMatch(match);
+                        CompleteMessage.Append($"Te has unido a la partida de {match.PlayerA1.User.Name}.\n");
+                        CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
+                        CompleteMessage.Append($"/Colocar_Tablero");
+                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                    }
+                    catch (System.Exception)
+                    {
+                        throw new MatchFullPlayersException("Lamentamos que se han completado todas las partidas, \n Tu puedes también /CrearPartida !!");
+                    }
+                    finally
+                    {
+
+                    }
                     response = CompleteMessage.ToString();
                     return true;
                 }

@@ -66,8 +66,17 @@ namespace Library
                     }
                     if(message.Text=="/2")
                     {
+                        CompleteMessage.Append($"Partida 2vs2 creada.\n");
+                        CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
 
+                        CompleteMessage.Append($"/Colocar_Tablero");
+                       
+                        User user = UserList.Instance.FindUserById(message.From.ToString());
+                        user.NewMatch(true);
+                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
 
+                        response = CompleteMessage.ToString();
+                        return true;
                     }
                    
                     response = CompleteMessage.ToString();
