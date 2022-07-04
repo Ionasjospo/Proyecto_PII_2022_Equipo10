@@ -13,6 +13,7 @@ namespace Library
         /// <summary>
         /// Lista de usuarios.
         /// </summary>
+        [JsonInclude]
         private List<User> users;
         /// <summary>
         /// Propiedad que devuelve la lista de Usuarios.
@@ -65,9 +66,7 @@ namespace Library
         /// <returns>El número que tiene en la lista.</returns>
         public void addNewUser(string name, string id)
         {
-
             User user = new User(name, id);
-            HistorialUser.Instance.UserID.Add(id, user);
             users.Add(user);
         }
 
@@ -92,7 +91,44 @@ namespace Library
             }
             return new User("nonuser", "nonuser");
         }
+        public bool UsernameIsUsed(string name)
+        {
 
+            foreach (User user in this.Users)
+            {
+                if (user.Name == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool IdItsUsed(string id)
+        {
+            foreach (User user in this.Users)
+            {
+                string[] onlyId = user.Id.Split("("); 
+                string[] onlyIdUser = onlyId[1].Split(")");
+                if (onlyIdUser[0] == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IdIsRegister(string id)
+        {
+
+            foreach (User user in this.Users)
+            {
+                if (user.Id == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public string ConvertToJson()
         {
             return JsonSerializer.Serialize(this.users);
@@ -103,7 +139,6 @@ namespace Library
             List<User> lista = JsonSerializer.Deserialize<List<User>>(json);
             this.users = lista;
         }
-
     }
 }
 
