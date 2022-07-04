@@ -98,7 +98,7 @@ namespace Program
         /// </summary>
         public static void Main()
         {
-            string json = @"../Library/jsonData.json";
+            string json = @"../Library/RegisterUsers.json";
             string usersPath =System.IO.File.ReadAllText(json);
             UserList.Instance.LoadFromJson(usersPath);
 

@@ -67,7 +67,6 @@ namespace Library
         public void addNewUser(string name, string id)
         {
             User user = new User(name, id);
-
             users.Add(user);
         }
 
@@ -104,12 +103,13 @@ namespace Library
             }
             return false;
         }
-        public bool UsernameAreUsed(string name)
+        public bool IdItsUsed(string id)
         {
-
             foreach (User user in this.Users)
             {
-                if (user.Name == name)
+                string[] onlyId = user.Id.Split("("); 
+                string[] onlyIdUser = onlyId[1].Split(")");
+                if (onlyIdUser[0] == id)
                 {
                     return true;
                 }

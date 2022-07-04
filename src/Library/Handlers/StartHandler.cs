@@ -38,13 +38,12 @@ namespace Library
         {
             if (this.CanHandle(message))
             {
-                if (!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
+                if (!UserList.Instance.IdItsUsed(message.From.Id.ToString()))                                                            //!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
                 {
                     HistorialUser.Instance.Historial.Add(message.From.ToString(), new Collection<string>());
                     StringBuilder completeMessage = new StringBuilder();
                     AsyncContext.Run(() => SendGameImage(message));
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
-
                     completeMessage.Append("Usted no se encuentra registrado... \n");
                     completeMessage.Append("Ingrese /Registrarme para continuar");
 

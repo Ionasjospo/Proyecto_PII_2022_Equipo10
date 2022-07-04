@@ -33,6 +33,7 @@ namespace Library
             HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
             bool itsRegister = false;
             int i = 2;
+            
             if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
             {
                 StringBuilder CompleteMessage = new StringBuilder();
