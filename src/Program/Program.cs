@@ -100,7 +100,7 @@ namespace Program
 
             // UserList.Instance.LoadFromJson(jsonPath);
 
-            
+
             Start();
 
             Bot = new TelegramBotClient(token);
@@ -137,12 +137,25 @@ namespace Program
             // for (int i = 0; i < 15; i++)
             // {
             //     Library.UserList.Instance.addNewUser($"Juanete_{i}", $"202206302152_{i}");
-            //     Library.User user = UserList.Instance.FindUserById($"202206302152{i}");
+            //     Library.User user = UserList.Instance.FindUserById($"202206302152_{i}");
             //     if (i % 2 == 0)
             //         user.NewMatch(false);
             //     else
             //         user.NewMatch(true);
             // }
+
+            ///
+            /// Crea una partida 2vs2 para probar los jugadores 2,3y4
+            /// 
+            Library.UserList.Instance.addNewUser($"Juanete_1", $"202207031150_1");
+            Library.User user = UserList.Instance.FindUserById($"202207031150_1");
+            user.NewMatch(true);
+            BoardWithShips board = MatchList.Instance.FindBoard(user.Id) as BoardWithShips;
+            board.SetPosition(board.Ship[0], 1, 1, "vertical");
+            board.SetPosition(board.Ship[0], 2, 2, "horizontal");
+            board.SetPosition(board.Ship[0], 3, 3, "vertical");
+            board.SetPosition(board.Ship[0], 4, 4, "horizontal");
+
 
             ///         Test by RC -end-
             /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -153,8 +166,8 @@ namespace Program
             // Esperamos a que el usuario aprete Enter en la consola para terminar el bot.
             Console.ReadLine();
 
-            
-            
+
+
             // Terminamos el bot.
             cts.Cancel();
 

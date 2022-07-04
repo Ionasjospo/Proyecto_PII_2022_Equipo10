@@ -31,6 +31,7 @@ namespace Library
         {
             if (message.Text=="/Registrarme" || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme"))
             {
+                Console.WriteLine("Registrarme");
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
 
                 if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
