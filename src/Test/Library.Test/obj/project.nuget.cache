@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5X4zoc9bD/tCmPqX+LilkgqOjtFADWxnNfad+9/GchFoe3+tKwEOZ/iAfHudM2qBQq8LVNzxaRFiT27cXdXkkQ==",
+  "dgSpecHash": "34afSiMhIMJb5/8x/79dES4vKda4/cX9AeTWRSlbxFLLWcGXLZRupPuXELwHPXdDewSkcCm2ndMd4TZ5nO+35Q==",
   "success": true,
-  "projectFilePath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
+  "projectFilePath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dasil\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\dasil\\.nuget\\packages\\magick.net-q16-anycpu\\11.1.2\\magick.net-q16-anycpu.11.1.2.nupkg.sha512",
