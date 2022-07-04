@@ -3517,11 +3517,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
+      "projectUniqueName": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
       "projectName": "Library.Test",
-      "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
+      "projectPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
       "packagesPath": "C:\\Users\\dasil\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\obj\\",
+      "outputPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3536,8 +3536,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
-              "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
+            "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
             }
           }
         }

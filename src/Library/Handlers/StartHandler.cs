@@ -24,7 +24,7 @@ namespace Library
         {
 
             this.Keywords = new string[] { "/start", "/Menu" };
-            this.bot = bot;
+            this.bot=bot;
         }
         private TelegramBotClient bot;
 
@@ -38,9 +38,9 @@ namespace Library
         {
             if (this.CanHandle(message))
             {
-                if (!UserList.Instance.IdItsUsed(message.From.Id.ToString()))                                                            //!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
+                if (!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
                 {
-                    HistorialUser.Instance.Historial.Add(message.From.ToString(), new Collection<string>());
+                    HistorialUser.Instance.Historial.Add(message.From.ToString(),new Collection<string>());
                     StringBuilder completeMessage = new StringBuilder();
                     AsyncContext.Run(() => SendGameImage(message));
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
@@ -48,22 +48,20 @@ namespace Library
                     completeMessage.Append("Ingrese /Registrarme para continuar");
 
                     response = completeMessage.ToString();
-                    return true;
+                   return true;
 
                 }
-                else
+                else 
                 {
                     StringBuilder completeMessage = new StringBuilder();
-                    completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
-                    completeMessage.Append($"Que bueno verte de nuevo {UserList.Instance.FindUserById(message.From.ToString()).Name}.\n ");
-
+                    completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");   
                     completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /CrearPartida \n");
                     completeMessage.Append("    /Estadisticas \n");
                     completeMessage.Append("    /MasOpciones \n");
 
                     response = completeMessage.ToString();
-                    return true;
+                   return true;
                 }
 
             }
