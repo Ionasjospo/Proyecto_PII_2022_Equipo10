@@ -93,6 +93,35 @@ namespace Library
             return new User("nonuser", "nonuser");
         }
 
+        public bool UsernameIsUsed(string name)
+        {
+
+            foreach (User user in this.Users)
+            {
+                if (user.Name == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool IdItsUsed(string id)
+        {
+            foreach (User user in this.Users)
+            {
+                string[] onlyId = user.Id.Split("(");
+                string[] onlyIdUser = onlyId[1].Split(")");
+                
+                if (onlyIdUser[0] == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        
+
         public string ConvertToJson()
         {
             return JsonSerializer.Serialize(this.users);
