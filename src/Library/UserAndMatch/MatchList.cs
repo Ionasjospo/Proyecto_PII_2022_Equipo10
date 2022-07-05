@@ -78,6 +78,52 @@ namespace Library
 
             return board;
         }
+
+        public Boards FindBoardshoot(string id)
+        {
+            Boards board = new BoardWithShots();
+
+            foreach (var item in historicMatches)
+            {
+                if( item.PlayerA1.User.Id==id ){
+                    return item.PlayerA1.BoardWithShoots;
+                }
+                if( item.PlayerB1.User.Id==id ){
+                    return item.PlayerB1.BoardWithShoots;
+                }
+                if( item.PlayerA2.User.Id==id ){
+                    return item.PlayerA2.BoardWithShoots;
+                }
+                if( item.PlayerB2.User.Id==id ){
+                    return item.PlayerB2.BoardWithShoots;
+                }
+            }
+
+            return board;
+        }
+
+        public Match FindMatch(string id)
+        {
+            Match match = new Match(null,false);
+            foreach (var item in historicMatches)
+            {
+
+                if( item.PlayerA1.User.Id==id ){
+                    return item ;
+                }
+                if( item.PlayerB1.User.Id==id ){
+                    return  item;
+                }
+                if( item.PlayerA2.User.Id==id ){
+                    return  item;
+                }
+                if( item.PlayerB2.User.Id==id ){
+                    return  item;
+                }
+            }
+            return match;
+
         
+    }
     }
 }
