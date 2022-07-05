@@ -13,7 +13,8 @@ namespace Library
 
         private int turn = 2;
 
-        private Player Winner;
+        private Player winner;
+        public Player Winner { get {return this.winner;}}
 
         private CombineImage combineImage = new CombineImage();
 
@@ -99,7 +100,7 @@ namespace Library
                                     shipsDestroys++;
                                     if (IsChampion())
                                     {
-                                        this.Winner = player1;
+                                        this.winner = player1;
                                         player1.User.AddBattleWon();
                                     }
                                 }

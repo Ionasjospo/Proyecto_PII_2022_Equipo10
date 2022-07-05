@@ -88,7 +88,7 @@ namespace Library
             }
             catch
             {
-                throw new UserNotFoundException("Usuario no registrado.");
+                throw new UserNotFoundException("Error al buscar usuario registrado.");
             }
             return new User("nonuser", "nonuser");
         }
