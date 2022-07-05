@@ -47,6 +47,7 @@ namespace Library.Test
             expectedBoard[7, 5] = "A";
             expectedBoard[7, 6] = "A";
 
+
             Assert.AreEqual(expectedBoard, match.PlayerA1.BoardWithShips.Ocean);
         }
     }

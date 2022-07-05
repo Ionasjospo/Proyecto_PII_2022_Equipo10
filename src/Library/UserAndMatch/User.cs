@@ -29,40 +29,48 @@ namespace Library
         /// </summary>
         private const int battlesForWinSpecialBomb = 5;
 
+        private List<Match> matchesPlayed;
+
+
         /// <summary>
         /// Propiedad que returna el nombre del usuario.
         /// </summary>
         /// <value>Nombre del usuario.</value>
         public string Name
-        {get{return this.name;}}
+        { get { return this.name; } }
         /// <summary>
         /// Propiedad que returna el id del usuario.
         /// </summary>
         /// <value>Id del usuario.</value>
         public string Id
-        {get{return this.id;} set{this.id=value;}}
+        { get { return this.id; } set { this.id = value; } }
         /// <summary>
         /// Propiedad que returna la cantidad de partidas ganadas del usuario.
         /// </summary>
         /// <value>Cantidad de partidas ganadas.</value>
         public int BattlesWon
-        {get{return this.battlesWon;}}
+        { get { return this.battlesWon; } }
         /// <summary>
         /// Propiedad que returna la cantidad de bombas especiales del usuario.
         /// </summary>
         /// <value>Bombas especiales del usuario.</value>
         public int SpecialBomb
-        {get{return this.specialBomb;}}
+        { get { return this.specialBomb; } }
+
+        public List<Match> MatchesPlayed
+        { get { return this.matchesPlayed; } }
+
         /// <summary>
         /// Constructor del usuario.
         /// </summary>
         /// <param name="name">Nombre del usuario.</param>
-        public User (string name, string id)
+        public User(string name, string id)
         {
             this.name = name;
             this.Id = id;
             this.battlesWon = 0;
             this.specialBomb = 0;
+            this.matchesPlayed = new List<Match>();
         }
         /// <summary>
         /// Agrega al historial una nueva partida ganada.
@@ -71,7 +79,7 @@ namespace Library
         {
             this.battlesWon += 1;
             if (this.battlesWon % battlesForWinSpecialBomb == 0)
-                this.specialBomb ++;
+                this.specialBomb++;
         }
         /// <summary>
         /// Si el usuario uso una bomba especial, se resta del total de bombas especiales que el usuario almacenaba.
@@ -86,25 +94,41 @@ namespace Library
         /// <param name="twoVtwo">Valor booleano, indica si es una partida 2vs2 o no.</param>
         public void NewMatch(bool twoVtwo)
         {
-            Match match = new Match(this,twoVtwo);
+            Match match = new Match(this, twoVtwo);
+            this.matchesPlayed.Add(match);
         }
         /// <summary>
         /// Une al usuario a una nueva partida.
         /// </summary>
         /// <param name="match">Partida.</param>
-        public void JoinMatch(Match match)
+        public bool JoinMatch(Match match)
         {
-            match.Join(this);
+            return match.Join(this);
+            this.matchesPlayed.Add(match);
+        }
+
+        public bool UserInMatchRunning()
+        {
+            foreach (Match match in matchesPlayed)
+            {
+                if (match.Battle == null)
+                    return true;
+                else if (match.Battle.Winner == null)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
 
 
 
-   
 
-        
 
-        
-         
+
+
+
+
 

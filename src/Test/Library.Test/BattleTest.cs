@@ -26,6 +26,7 @@ namespace Library.Test
             User user2 = new User("fumeteo","02");
             user.NewMatch(false);
             Match match = MatchList.Instance.HistoricMatches[0];
+
            
             user2.JoinMatch(match);
             BoardWithShips board = match.PlayerA1.BoardWithShips as BoardWithShips;
@@ -74,10 +75,6 @@ namespace Library.Test
             Assert.AreEqual(1,match.PlayerA1.User.BattlesWon);
             
         }
-
-
-    
-
     }
 }
 

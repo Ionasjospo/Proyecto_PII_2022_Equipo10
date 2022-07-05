@@ -38,10 +38,12 @@ namespace Library
         {
             if (this.CanHandle(message))
             {
-                if (!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
+                
+                if (!UserList.Instance.IdItsUsed(message.From.ToString()))
                 {
                     HistorialUser.Instance.Historial.Add(message.From.ToString(),new Collection<string>());
                     StringBuilder completeMessage = new StringBuilder();
+                    AsyncContext.Run(() => SendGameImage(message));
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
                     completeMessage.Append("Usted no se encuentra registrado... \n");
                     completeMessage.Append("Ingrese /Registrarme para continuar");
@@ -52,11 +54,17 @@ namespace Library
                 }
                 else 
                 {
+                    if(!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
+                    {
+                        HistorialUser.Instance.Historial.Add(message.From.ToString(),new Collection<string>());
+                    }
+                    
                     StringBuilder completeMessage = new StringBuilder();
-                    completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");   
-                    completeMessage.Append("    /Menu     \n");
+                    completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
+                    completeMessage.Append($"Es un gusto verte de nuevo, {UserList.Instance.FindUserById(message.From.ToString()).Name}.\n");   
                     completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /CrearPartida \n");
+                    completeMessage.Append("    /Estadisticas \n");
                     completeMessage.Append("    /MasOpciones \n");
 
                     response = completeMessage.ToString();

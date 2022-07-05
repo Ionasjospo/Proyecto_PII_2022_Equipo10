@@ -59,7 +59,7 @@ namespace Library
         /// </summary>
         /// <value>PlayerB2</value>
         public Player PlayerB2
-        { get { return this.playerB2; } }       
+        { get { return this.playerB2; } }
         /// <summary>
         /// Propiedad que retorna si la partida es 2vs2.
         /// </summary>
@@ -67,41 +67,61 @@ namespace Library
         public bool TwoVtwo
         { get { return this.twoVtwo; } }
         /// <summary>
+        /// Propiedad que retorna si la partida esta pronta para recibir otros jugadores.
+        /// </summary>
+        /// <value>Valor booleano</value>
+        public bool OpenToJoin
+        { get { return this.openToJoin; } }
+        /// <summary>
         /// Constructor de match.
         /// </summary>
         /// <param name="user"Usuario.></param>
         /// <param name="twoVtwo">Si es 2vs2 o no.
         /// </param>
-        public Match(User user,bool twoVtwo)
+        public Match(User user, bool twoVtwo)
         {
             countPlayers++;
             this.openToJoin = true;
             this.twoVtwo = twoVtwo;
             MatchList.Instance.addNewMatch(this);
             this.playerA1 = new Player(user);
-           //NewBattle();
+            //NewBattle();
         }
         /// <summary>
         /// Método para que un usuario se une a una partida.
         /// </summary>
-        public void Join(User user)
+        public bool Join(User user)
         {
             countPlayers++;
             JoinMatchStatus();
             switch (countPlayers)
             {
                 case 2:
-                this.playerB1 = new Player(user);
-                break;
+                    if (this.playerA1.User != user)
+                    {
+                        this.playerB1 = new Player(user);
+                        return true;
+                    }
+                    break;
                 case 3:
-                this.playerA2 = new Player(user);
-                break;
+                    if (this.playerA1.User != user && this.playerB1.User != user)
+                    {
+                        this.playerA2 = new Player(user);
+                        return true;
+                    }
+                    break;
                 case 4:
-                this.playerB2 = new Player(user);
-                break;
+                    if (this.playerA1.User != user && this.playerB1.User != user && this.playerA2.User != user)
+                    {
+                        this.playerB2 = new Player(user);
+                        return true;
+                    }
+                    break;
                 default:
-                break;
+                    return false;
+                    break;
             }
+            return false;
             //NewBattle();
         }
         /// <summary>
@@ -134,6 +154,6 @@ namespace Library
         }
 
         public Battle Battle
-        {get{return battle; } set{this.battle=value;}} 
+        { get { return battle; } set { this.battle = value; } }
     }
 }

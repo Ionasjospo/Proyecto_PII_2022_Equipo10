@@ -9,6 +9,7 @@ public class CreateNewMatchTest
     {
     }
 
+
     [Test]
     public void CreateNewMatch1vs1()
     {
@@ -21,16 +22,18 @@ public class CreateNewMatchTest
             {
                 verifier = true;
             }
-            
+
         }
         Assert.IsTrue(verifier);
     }
+
 
     [Test]
     public void CreateNewMatch2vs2()
     {
         User edi = new User("Edi Cavani","04");
         edi.NewMatch(true);
+
 
         bool verifier = false;
         foreach (Match match in MatchList.Instance.HistoricMatches)
@@ -43,5 +46,4 @@ public class CreateNewMatchTest
         Assert.IsTrue(verifier);
         
     }
-
 }

@@ -9,7 +9,7 @@ namespace Library
         /// <summary>
         /// Indica si se lo colocaron todos los barcos en el tablero.
         /// </summary>
-        private bool shipsReady;
+        private bool shipsReady; 
         /// <summary>
         /// Lista que contiene los barcos colocados.
         /// </summary>
@@ -54,6 +54,11 @@ namespace Library
         public List<IShip> ListShip
         {
             get { return listShip; }
+
+        }
+        public bool ShipReady
+        {
+            get { return shipsReady; }
 
         }
         //???????????
@@ -121,6 +126,7 @@ namespace Library
                                             }
                                             CombineImage.MergeMultipleImages(this.BoardDefaultPath, ship.PathH, Coordinates.X, Coordinates.Y, this);
                                             ListShip.Add(ship);
+                                            ships.Remove(ship);
 
                                             this.Verifyships();
                                             return true;
@@ -162,6 +168,7 @@ namespace Library
                                             }
                                             CombineImage.MergeMultipleImages(this.BoardDefaultPath, ship.PathV, Coordinates.X, Coordinates.Y, this);
                                             ListShip.Add(ship);
+                                            ships.Remove(ship);
 
                                             this.Verifyships();
                                             return true;
