@@ -12,6 +12,9 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.InputFiles;
 using Library;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Exceptions;
 
 namespace Program
 {
@@ -95,10 +98,9 @@ namespace Program
         /// </summary>
         public static void Main()
         {
-            //string jsonPath = @"../Library/UserList.json";
-            // System.IO.File.ReadAllText(jsonPath);
-
-            // UserList.Instance.LoadFromJson(jsonPath);
+            string json = @"../Library/RegisterUsers.json";
+            string usersPath = System.IO.File.ReadAllText(json);
+            UserList.Instance.LoadFromJson(usersPath);
 
 
             Start();
@@ -147,14 +149,6 @@ namespace Program
             ///
             /// Crea una partida 2vs2 para probar los jugadores 2,3y4
             /// 
-            Library.UserList.Instance.addNewUser($"Juanete_1", $"202207031150_1");
-            Library.User user = UserList.Instance.FindUserById($"202207031150_1");
-            user.NewMatch(true);
-            BoardWithShips board = MatchList.Instance.FindBoard(user.Id) as BoardWithShips;
-            board.SetPosition(board.Ship[0], 1, 1, "vertical");
-            board.SetPosition(board.Ship[0], 2, 2, "horizontal");
-            board.SetPosition(board.Ship[0], 3, 3, "vertical");
-            board.SetPosition(board.Ship[0], 4, 4, "horizontal");
 
 
             ///         Test by RC -end-
@@ -171,10 +165,9 @@ namespace Program
             // Terminamos el bot.
             cts.Cancel();
 
-            //string newUsers = UserList.Instance.ConvertToJson();
-
-            // Se guardan en los archivos de texto
-            //System.IO.File.WriteAllText(@"../Library/UserList.json", newUsers);
+            string newUsers = UserList.Instance.ConvertToJson();
+            //string newUsers = JsonSerializer.Serialize(UserList.Instance.Users);
+            System.IO.File.WriteAllText(json, newUsers);
         }
 
         /// <summary>
