@@ -21,7 +21,6 @@ namespace Library
         string msj = "";
         User user;
         Match match;
-        Conversation conversation;
 
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="ConversationHandler"/>. Esta clase procesa el mensaje "hola".
@@ -64,9 +63,6 @@ namespace Library
                             CompleteMessage.Append($"Vuelva a /Menu para ingresar a una partida.\n");
                             HistorialUser.Instance.Historial[message.From.ToString()].Clear();
                         }
-
-
-
                     }
                     catch (System.Exception e)
                     {
@@ -87,19 +83,11 @@ namespace Library
                     {
                         if (message.Text != null || message.Text != "")
                         {
-                            /*
-                            conversation = new Conversation();
-                            conversation.SendMessage(user, message.Text);
-                            */
+                            AsyncContext.Run(() => SendMessage(match.PlayerA1.User, message));
 
-                            /*
-                            AsyncContext.Run(() => SendMessage(match.PlayerA1.User, message.Text));
-                            */
                             if (match.PlayerB1 != null)
                             {
-                                /*
-                                AsyncContext.Run(() => SendMessage(match.PlayerB1.User, message.Text));
-                                */
+                                AsyncContext.Run(() => SendMessage(match.PlayerB1.User, message));
                             }
                             if (match.TwoVtwo)
                             {
@@ -162,9 +150,7 @@ namespace Library
         {
             if (bot != null)
             {
-                //await bot.SendTextMessageAsync(message.Chat.Id, user.Name + " dice: " + message.Text);
                 await bot.SendTextMessageAsync(user.ChatId, user.Name + " dice: " + message.Text);
-                //await bot.SendTextMessage(user.Id, message);
             }
         }
     }
