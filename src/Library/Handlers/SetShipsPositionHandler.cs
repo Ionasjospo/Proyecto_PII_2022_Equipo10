@@ -40,8 +40,6 @@ namespace Library
                 BoardWithShips board = MatchList.Instance.FindBoard(message.From.ToString()) as BoardWithShips;
 
 
-
-
                 if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Colocar_Tablero") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();

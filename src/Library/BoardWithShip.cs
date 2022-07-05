@@ -25,8 +25,6 @@ namespace Library
         {
             this.shipsReady = false;
             this.BoardId = Counter;
-// aca repo //this.CombineImage.MergeMultipleImages(@"..\..\Library\Images\Background.jpg", @"..\..\Library\Images\Background.jpg", 0, 0, this);
-            //this.BoardDefaultPath = @$"..\..\Library\CombinedImages\Board{this.BoardId}.jpg";
             this.CombineImage.MergeMultipleImages(@"C:\Images\Background.jpg", @"C:\Images\Background.jpg", 0, 0, this);
             this.BoardDefaultPath = @$"C:\Images\CombinedImages\Board{this.BoardId}.jpg";
             for (int filas = 0; filas < this.SizeH; filas++)
@@ -36,6 +34,7 @@ namespace Library
                     this.Ocean[filas, col] = "O";
                 }
             }
+            
             IShip submarine = new Submarine();
             IShip battleShip = new BattleShip();
             IShip destroyer = new Destroyer();
@@ -73,12 +72,9 @@ namespace Library
         public void Verifyships()
         {
             int contador = 0;
-            foreach (var item in Ship)
+            foreach (var item in listShip)
             {
-                if (listShip.Contains(item))
-                {
-                    contador++;
-                }
+               contador++;
             }
             if (contador == 4)
             {
