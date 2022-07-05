@@ -66,7 +66,10 @@ namespace Library
                                 cont++;
                             }
                             if (cont == 0)
+                            {
                                 msj = "No hay partidas disponibles para unirse \n Tu puedes también /CrearPartida !!";
+                                HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                            } 
                         }
                     }
                     catch (System.Exception)
@@ -109,7 +112,7 @@ namespace Library
                                             mainUser = false;
                                         }
                                     }
-                                    else if (match.PlayerB2 != null)
+                                    if (match.PlayerB2 != null)
                                     {
                                         if (match.PlayerB2.User == user)
                                         {

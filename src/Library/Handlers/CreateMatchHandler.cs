@@ -90,7 +90,7 @@ namespace Library
                             //response = CompleteMessage.ToString();
                             //return true;
                         }
-                        if (message.Text == "/2")
+                        else if (message.Text == "/2")
                         {
                             CompleteMessage.Append($"Partida 2vs2 creada.\n");
                             CompleteMessage.Append($"A continuacion debera colocar toda su flota...");
@@ -103,6 +103,10 @@ namespace Library
 
                             //response = CompleteMessage.ToString();
                             //return true;
+                        }
+                        else
+                        {
+                            CompleteMessage.Append($"No llegó el comando esperado, vuelva a /Menu e intentelo nuevamente.\n");
                         }
                     }
                     catch (System.Exception e)

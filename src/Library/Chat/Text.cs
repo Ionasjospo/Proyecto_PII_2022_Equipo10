@@ -10,9 +10,9 @@ namespace Library
         /// </summary>
         private string text;       
         /// <summary>
-        /// Id del usuario que envia el mensaje.
+        /// Jugador que envia el mensaje.
         /// </summary>
-        private int id;
+        private User user;
         /// <summary>
         /// Constructor del mensaje.
         /// </summary>
@@ -20,7 +20,7 @@ namespace Library
         /// <param name="text">string con el texto a mandar.</param>
         public Text(User user, string text)
         {
-            //this.id = user.Id;
+            this.user = user;
             this.text = text;
         }
     }

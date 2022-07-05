@@ -44,7 +44,6 @@ namespace Library
                 StringBuilder CompleteMessage = new StringBuilder();
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
 
-                User user = UserList.Instance.FindUserById(message.From.ToString());
                 Match match = MatchList.Instance.FindMatch(message.From.ToString());
 
                 Player me = match.My(message.From.ToString());
@@ -53,31 +52,21 @@ namespace Library
                 BoardWithShips boardenemy = enemy.BoardWithShips as BoardWithShips;
                 BoardWithShots myboard = me.BoardWithShoots as BoardWithShots;
 
-                
+            
                 if (!boardenemy.ShipReady)
                 {
-                  CompleteMessage.Append("Tu enemigo todavia no esta listo... espera un momento y ejecute de nuevo el comando /Comenzar_combate");
+                  CompleteMessage.Append("Tu enemigo todavia no esta listo... espera un momento y ejecute de nuevo el comando /Comenzar_combate nuevamente");
                   HistorialUser.Instance.Historial[message.From.ToString()].Clear();
                   response = CompleteMessage.ToString();
                   return true;
                 }
                 else
                 {
-                    CompleteMessage.Append("Tu enemigo esta listo para la batalla, ya es hora del combate!!");
-                    if(me == match.Battle.VerifyTurn())
-                    {
-                        CompleteMessage.Append("Es");
-                    }
+                    CompleteMessage.Append("Tu enemigo esta listo para la batalla, ya es hora del combate!!\n /Atacar");
+                    HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                    response = CompleteMessage.ToString();
+                    return true;
                 }
-
-                CompleteMessage.Append("El enemigo esta listo para la batalla!!!");
-                response = CompleteMessage.ToString();
-                return true;
-
-
-
-
-
 
 
             }

@@ -108,7 +108,7 @@ namespace Program
             Bot = new TelegramBotClient(token);
 
             firstHandler =
-                new StartHandler(Bot, new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot,new BattleHandler(Bot,null))))));
+                new StartHandler(Bot, new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot, new ConversationHandler(Bot, new BattleHandler(Bot,null)))))));
 
             var cts = new CancellationTokenSource();
 
@@ -149,6 +149,23 @@ namespace Program
             ///
             /// Crea una partida 2vs2 para probar los jugadores 2,3y4
             /// 
+            // Library.UserList.Instance.addNewUser($"Juanete_1", $"202207031150_1");
+            // Library.User user1 = UserList.Instance.FindUserById($"202207031150_1");
+            // user1.NewMatch(true);
+            // BoardWithShips board1 = MatchList.Instance.FindBoard(user1.Id) as BoardWithShips;
+            // board1.SetPosition(board1.Ship[0], 1, 1, "vertical");
+            // board1.SetPosition(board1.Ship[0], 2, 2, "horizontal");
+            // board1.SetPosition(board1.Ship[0], 3, 3, "vertical");
+            // board1.SetPosition(board1.Ship[0], 4, 4, "horizontal");
+
+            // Library.UserList.Instance.addNewUser($"Juanete_2", $"202207050629_2");
+            // Library.User user2 = UserList.Instance.FindUserById($"202207050629_2");
+            // user2.JoinMatch(Library.MatchList.Instance.HistoricMatches[0]);
+            // BoardWithShips board2 = MatchList.Instance.FindBoard(user2.Id) as BoardWithShips;
+            // board2.SetPosition(board2.Ship[0], 1, 1, "vertical");
+            // board2.SetPosition(board2.Ship[0], 2, 2, "horizontal");
+            // board2.SetPosition(board2.Ship[0], 3, 3, "vertical");
+            // board2.SetPosition(board2.Ship[0], 4, 4, "horizontal");
 
 
             ///         Test by RC -end-
