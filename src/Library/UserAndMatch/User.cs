@@ -16,6 +16,10 @@ namespace Library
         /// </summary>
         private string id;
         /// <summary>
+        /// Id del usuario correspondiente al chat actual.
+        /// </summary>
+        private long chatId;
+        /// <summary>
         /// Historial de partidas ganadas por el usuario.
         /// </summary>
         private int battlesWon;
@@ -44,6 +48,12 @@ namespace Library
         /// <value>Id del usuario.</value>
         public string Id
         { get { return this.id; } set { this.id = value; } }
+        /// <summary>
+        /// Propiedad que retorna el Chat.ID del usuario correspondiente al chat actual.
+        /// </summary>
+        /// <value>Chat.Id del usuario.</value>
+        public long ChatId
+        { get { return this.chatId; } set { this.chatId = value; } }
         /// <summary>
         /// Propiedad que returna la cantidad de partidas ganadas del usuario.
         /// </summary>
@@ -103,8 +113,11 @@ namespace Library
         /// <param name="match">Partida.</param>
         public bool JoinMatch(Match match)
         {
-            return match.Join(this);
-            this.matchesPlayed.Add(match);
+            bool joined = match.Join(this);
+            if (joined)
+                this.matchesPlayed.Add(match);
+            return joined;
+
         }
 
         public bool UserInMatchRunning()
