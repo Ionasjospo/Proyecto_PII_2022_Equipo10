@@ -103,8 +103,11 @@ namespace Library
         /// <param name="match">Partida.</param>
         public bool JoinMatch(Match match)
         {
-            return match.Join(this);
-            this.matchesPlayed.Add(match);
+            bool joined = match.Join(this);
+            if (joined)
+                this.matchesPlayed.Add(match);
+            return joined;
+
         }
 
         public bool UserInMatchRunning()
