@@ -65,7 +65,7 @@ namespace Library
                             HistorialUser.Instance.Historial[message.From.ToString()].Clear();
                         }
 
-                        
+
 
                     }
                     catch (System.Exception e)
@@ -104,9 +104,9 @@ namespace Library
                             if (match.TwoVtwo)
                             {
                                 if (match.PlayerA2 != null)
-                                    AsyncContext.Run(() => SendMessage(match.PlayerA2.User, message.Text));
+                                    AsyncContext.Run(() => SendMessage(match.PlayerA2.User, message));
                                 if (match.PlayerB2 != null)
-                                    AsyncContext.Run(() => SendMessage(match.PlayerB2.User, message.Text));
+                                    AsyncContext.Run(() => SendMessage(match.PlayerB2.User, message));
                             }
                         }
                     }
@@ -158,11 +158,12 @@ namespace Library
             return false;
         }
 
-        private async Task SendMessage(User user, string message)
+        private async Task SendMessage(User user, Message message)
         {
             if (bot != null)
             {
-                //await bot.SendTextMessageAsync(user.Id, message);
+                //await bot.SendTextMessageAsync(message.Chat.Id, user.Name + " dice: " + message.Text);
+                await bot.SendTextMessageAsync(message.Chat.Id, user.Name + " dice: " + message.Text);
                 //await bot.SendTextMessage(user.Id, message);
             }
         }

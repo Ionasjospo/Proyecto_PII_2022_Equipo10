@@ -106,14 +106,14 @@ namespace Library
                 case 3:
                     if (this.playerA1.User != user && this.playerB1.User != user)
                     {
-                        this.playerA2 = new Player(user);
+                        this.playerA2 = new Player(user, this.playerA1);
                         return true;
                     }
                     break;
                 case 4:
                     if (this.playerA1.User != user && this.playerB1.User != user && this.playerA2.User != user)
                     {
-                        this.playerB2 = new Player(user);
+                        this.playerB2 = new Player(user, this.playerB1);
                         return true;
                     }
                     break;
