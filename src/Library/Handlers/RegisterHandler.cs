@@ -22,56 +22,65 @@ namespace Library
 
         protected override bool InternalHandle(Message message, out string response)
         {
-            HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
-            bool itsRegister = false;
-            int i = 2;
-
-            if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
+            if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") || this.CanHandle(message) )
             {
-                StringBuilder CompleteMessage = new StringBuilder();
-                CompleteMessage.Append("A continuacion se va a registrar...\n");
-                CompleteMessage.Append("Ingrese su nombre de usuario, recuerde que será para siempre y no lo podra cambiar (Cuanto mas crativo... mejor!) \n");
-                response = CompleteMessage.ToString();
-                return true;
-            }
-            StringBuilder completeMessage = new StringBuilder();
+                HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
+                bool itsRegister = false;
+                int i = 2;
 
-            do
-            {
-                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") || HistorialUser.Instance.Historial[message.From.ToString()].Count() == i)
+                if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
+                    StringBuilder CompleteMessage = new StringBuilder();
+                    CompleteMessage.Append("A continuacion se va a registrar...\n");
+                    CompleteMessage.Append("Ingrese su nombre de usuario, recuerde que será para siempre y no lo podra cambiar (Cuanto mas crativo... mejor!) \n");
+                    response = CompleteMessage.ToString();
+                    return true;
+                }
+                StringBuilder completeMessage = new StringBuilder();
 
-                    if (UserList.Instance.UsernameIsUsed(message.Text.ToString()) == false)
+
+
+                do
+                {
+                    if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == i)
                     {
-                        completeMessage.Append($"Su nombre de usuario es: '{message.Text}' \n");
-                        completeMessage.Append("Usuario creado con exito!! \n");
-                        completeMessage.Append("Para empezar a jugar ingresa al /Menu \n");
-                        UserList.Instance.addNewUser(message.Text, message.From.ToString());
-                        itsRegister = true;
 
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                        if (UserList.Instance.UsernameIsUsed(message.Text.ToString()) == false)
+                        {
+                            completeMessage.Append($"Su nombre de usuario es: '{message.Text}' \n");
+                            completeMessage.Append("Usuario creado con exito!! \n");
+                            completeMessage.Append("Para empezar a jugar ingresa al /Menu \n");
+                            UserList.Instance.addNewUser(message.Text, message.From.ToString());
+                            itsRegister = true;
 
-                        response = completeMessage.ToString();
-                        return true;
-                    }
-                    else
-                    {
-                        completeMessage.Clear();
-                        i++;
+                            HistorialUser.Instance.Historial[message.From.ToString()].Clear();
 
-                        //throw new UserNameAlreadyExistException("Pestañaste! , el nombre de usuario que intentaste poner ya lo tiene otra persona. Intente con otro nuevamente.");
+                            response = completeMessage.ToString();
+                            return true;
+                        }
+                        else
+                        {
+                            completeMessage.Clear();
+                            i++;
 
-                        completeMessage.Append("Pestañaste! , el nombre de usuario que intentaste poner ya lo tiene otra persona. Intente con otro nuevamente. /Registrarme ");
+                            //throw new UserNameAlreadyExistException("Pestañaste! , el nombre de usuario que intentaste poner ya lo tiene otra persona. Intente con otro nuevamente.");
 
-                        response = completeMessage.ToString();
-                        return true;
-                        //message = new Message();
+                            completeMessage.Append("Pestañaste! , el nombre de usuario que intentaste poner ya lo tiene otra persona. Intente con otro nuevamente. ");
+
+                            response = completeMessage.ToString();
+                            return true;
+                            //message = new Message();
+                        }
                     }
                 }
+                while (!itsRegister);
+                response = string.Empty;
+                return true;
             }
-            while (!itsRegister);
-            response = string.Empty;
-            return true;
+             response = string.Empty;
+             return false;
+
         }
+       
     }
 }
