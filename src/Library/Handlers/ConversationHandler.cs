@@ -163,7 +163,7 @@ namespace Library
             if (bot != null)
             {
                 //await bot.SendTextMessageAsync(user.Id, message);
-                await bot.SendTextMessage(user.Id, message);
+                //await bot.SendTextMessage(user.Id, message);
             }
         }
     }

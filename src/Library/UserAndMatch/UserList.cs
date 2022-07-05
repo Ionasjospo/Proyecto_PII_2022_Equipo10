@@ -2,6 +2,7 @@ using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Exceptions;
+using System.Collections.ObjectModel;
 
 namespace Library
 {
@@ -67,8 +68,11 @@ namespace Library
         {
 
             User user = new User(name, id);
+            
             HistorialUser.Instance.UserID.Add(id, user);
             users.Add(user);
+            
+
         }
 
         /// <summary>
@@ -92,6 +96,38 @@ namespace Library
             }
             return new User("nonuser", "nonuser");
         }
+
+        public bool UsernameIsUsed(string name)
+        {
+
+            foreach (User user in this.Users)
+            {
+                if (user.Name == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool IdItsUsed(string id)
+        {
+            Console.WriteLine(id);
+            
+            foreach (User user in users)
+            {
+                Console.WriteLine(user.Id);
+                // string[] onlyId = user.Id.Split("(");
+                // string[] onlyIdUser = onlyId[1].Split(")");
+                
+                if (user.Id == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        
 
         public string ConvertToJson()
         {

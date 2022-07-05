@@ -140,3 +140,11 @@ Nos hace falta trabajar con el bot de Telegram para para concluir con algunas fu
 <p></br></br></p>
 
 <h1> Hito 3 (5 de julio)</h1>
+
+La entrega final fue la más divertida porque comenzamos a poder vizualizar el trabajo que habiamos hecho. 
+
+Nuestras funcionalidades que parecian muy dificil de implementar funcionaron muy bien y le dieron otra funcionalidad distinta a nuestro juego.
+
+Conclusiones:
+
+Pasos a futuro:
