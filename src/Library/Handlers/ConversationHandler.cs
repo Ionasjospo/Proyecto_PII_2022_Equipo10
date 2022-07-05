@@ -163,7 +163,7 @@ namespace Library
             if (bot != null)
             {
                 //await bot.SendTextMessageAsync(message.Chat.Id, user.Name + " dice: " + message.Text);
-                await bot.SendTextMessageAsync(message.Chat.Id, user.Name + " dice: " + message.Text);
+                await bot.SendTextMessageAsync(user.ChatId, user.Name + " dice: " + message.Text);
                 //await bot.SendTextMessage(user.Id, message);
             }
         }

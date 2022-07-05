@@ -24,7 +24,7 @@ namespace Library
         {
 
             this.Keywords = new string[] { "/start", "/Menu" };
-            this.bot=bot;
+            this.bot = bot;
         }
         private TelegramBotClient bot;
 
@@ -38,10 +38,10 @@ namespace Library
         {
             if (this.CanHandle(message))
             {
-                
+
                 if (!UserList.Instance.IdItsUsed(message.From.ToString()))
                 {
-                    HistorialUser.Instance.Historial.Add(message.From.ToString(),new Collection<string>());
+                    HistorialUser.Instance.Historial.Add(message.From.ToString(), new Collection<string>());
                     StringBuilder completeMessage = new StringBuilder();
                     AsyncContext.Run(() => SendGameImage(message));
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
@@ -49,19 +49,22 @@ namespace Library
                     completeMessage.Append("Ingrese /Registrarme para continuar");
 
                     response = completeMessage.ToString();
-                   return true;
+                    return true;
 
                 }
-                else 
+                else
                 {
-                    if(!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
+
+                    if (!HistorialUser.Instance.Historial.ContainsKey(message.From.ToString()))
                     {
-                        HistorialUser.Instance.Historial.Add(message.From.ToString(),new Collection<string>());
+                        HistorialUser.Instance.Historial.Add(message.From.ToString(), new Collection<string>());
                     }
+                    User user = UserList.Instance.FindUserById(message.From.ToString());
+                    user.ChatId = message.Chat.Id;
                     
                     StringBuilder completeMessage = new StringBuilder();
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
-                    completeMessage.Append($"Es un gusto verte de nuevo, {UserList.Instance.FindUserById(message.From.ToString()).Name}.\n");   
+                    completeMessage.Append($"Es un gusto verte de nuevo, {UserList.Instance.FindUserById(message.From.ToString()).Name}.\n");
                     completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /CrearPartida \n");
                     completeMessage.Append("    /Estadisticas \n");
@@ -69,7 +72,7 @@ namespace Library
                     completeMessage.Append("    /MasOpciones \n");
 
                     response = completeMessage.ToString();
-                   return true;
+                    return true;
                 }
 
             }
