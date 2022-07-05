@@ -15,13 +15,14 @@ namespace Library.Test
         [Test]
         public void JoinMatch1vs1()
         {
-            UserList.Instance.addNewUser("Francisco Gutierrez","07");
-            UserList.Instance.Users[0].NewMatch(false);
 
-            Match match = MatchList.Instance.HistoricMatches[0];
+            UserList.Instance.addNewUser("Francisco Gutierrez","07");
+            UserList.Instance.Users[1].NewMatch(false);
+            
+            Match match = MatchList.Instance.HistoricMatches[1];
 
             UserList.Instance.addNewUser("Ramón Díaz","14");
-            UserList.Instance.Users[1].JoinMatch(match);
+            UserList.Instance.Users[2].JoinMatch(match);
 
 
             Assert.AreEqual("Ramón Díaz", match.PlayerB1.User.Name);
@@ -36,13 +37,13 @@ namespace Library.Test
             UserList.Instance.addNewUser("Manu","10");
             UserList.Instance.addNewUser("Feli","11");
 
-            UserList.Instance.Users[0].NewMatch(true); //pep crea match 2vs2
+            UserList.Instance.Users[3].NewMatch(true); //pep crea match 2vs2
 
-            Match match = MatchList.Instance.HistoricMatches[0];
+            Match match = MatchList.Instance.HistoricMatches[2];
 
-            UserList.Instance.Users[1].JoinMatch(match); //juan se une
-            UserList.Instance.Users[2].JoinMatch(match);//manu se une
-            UserList.Instance.Users[3].JoinMatch(match);//feli se une
+            UserList.Instance.Users[4].JoinMatch(match); //juan se une
+            UserList.Instance.Users[5].JoinMatch(match);//manu se une
+            UserList.Instance.Users[6].JoinMatch(match);//feli se une
 
 
 
