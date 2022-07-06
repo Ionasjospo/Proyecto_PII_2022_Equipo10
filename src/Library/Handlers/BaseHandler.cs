@@ -41,7 +41,6 @@ namespace Library
         /// <param name="next">El próximo "handler".</param>
         public BaseHandler(string[] keywords, BaseHandler next)
         {
-            
             this.Next = next;
         }
 

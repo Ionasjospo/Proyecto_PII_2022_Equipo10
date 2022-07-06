@@ -213,9 +213,9 @@ namespace Library.Test
         {
             BoardWithShips boardWithShips = new BoardWithShips();
             boardWithShips.SetPosition(boardWithShips.Ship[0], 3, 5, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 4, 2, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 1, 1, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 9, 0, "horizontal");
+            boardWithShips.SetPosition(boardWithShips.Ship[0], 4, 2, "horizontal");
+            boardWithShips.SetPosition(boardWithShips.Ship[0], 1, 1, "horizontal");
+            boardWithShips.SetPosition(boardWithShips.Ship[0], 9, 0, "horizontal");
 
 
             string[,] expectedBoard = new string[10, 10];
@@ -251,11 +251,12 @@ namespace Library.Test
         [Test]
         public void AllShipsSetVerticalPosition()
         {
-            BoardWithShips boardWithShips = new BoardWithShips();
-            boardWithShips.SetPosition(boardWithShips.Ship[0], 1, 3, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 3, 2, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 6, 1, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 4, 6, "vertical");
+            BoardWithShips bw = new BoardWithShips();
+            bw.SetPosition(bw.Ship[0], 1, 1, "vertical");
+            bw.SetPosition(bw.Ship[0], 2, 2, "vertical");
+            bw.SetPosition(bw.Ship[0], 3, 3, "vertical");
+            bw.SetPosition(bw.Ship[0], 4, 4, "vertical");
+            
 
 
             string[,] expectedBoard = new string[10, 10];
@@ -267,25 +268,25 @@ namespace Library.Test
                     expectedBoard[x, y] = "O";
                 }
             }
-            expectedBoard[1, 3] = "S";
-            expectedBoard[2, 3] = "S";
+            expectedBoard[1, 1] = "S";
+            expectedBoard[2, 1] = "S";
 
+            expectedBoard[2, 2] = "B";
             expectedBoard[3, 2] = "B";
             expectedBoard[4, 2] = "B";
-            expectedBoard[5, 2] = "B";
 
-            expectedBoard[6, 1] = "D";
-            expectedBoard[7, 1] = "D";
-            expectedBoard[8, 1] = "D";
-            expectedBoard[9, 1] = "D";
+            expectedBoard[3, 3] = "D";
+            expectedBoard[4, 3] = "D";
+            expectedBoard[5, 3] = "D";
+            expectedBoard[6, 3] = "D";
             
-            expectedBoard[4, 6] = "A";
-            expectedBoard[5, 6] = "A";
-            expectedBoard[6, 6] = "A";
-            expectedBoard[7, 6] = "A";
-            expectedBoard[8, 6] = "A";
+            expectedBoard[4, 4] = "A";
+            expectedBoard[5, 4] = "A";
+            expectedBoard[6, 4] = "A";
+            expectedBoard[7, 4] = "A";
+            expectedBoard[8, 4] = "A";
 
-            Assert.AreEqual(expectedBoard, boardWithShips.Ocean);
+            Assert.AreEqual(expectedBoard, bw.Ocean);
         }
 
         [Test]
@@ -293,9 +294,9 @@ namespace Library.Test
         {
             BoardWithShips boardWithShips = new BoardWithShips();
             boardWithShips.SetPosition(boardWithShips.Ship[0], 7, 9, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[1], 0, 3, "horizontal");
-            boardWithShips.SetPosition(boardWithShips.Ship[2], 6, 2, "vertical");
-            boardWithShips.SetPosition(boardWithShips.Ship[3], 2, 4, "horizontal");
+            boardWithShips.SetPosition(boardWithShips.Ship[0], 0, 3, "horizontal");
+            boardWithShips.SetPosition(boardWithShips.Ship[0], 6, 2, "vertical");
+            boardWithShips.SetPosition(boardWithShips.Ship[0], 2, 4, "horizontal");
 
 
             string[,] expectedBoard = new string[10, 10];
