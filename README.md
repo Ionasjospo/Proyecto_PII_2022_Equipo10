@@ -107,9 +107,9 @@ En esta ultima parte, debido a que empezamos a interactuar con el bot directamen
 Nuestras funcionalidades le dieron una profundidad al juego, desde la posibilidad de comunicarte con tu oponente (chat), hasta las imagenes que se utilizaron para formar el tablero y los barcos, estas funcionalidades, permiten jugar de una manera mas disfrutable.
 <p>
 <br>
-<h2> Concluciones</h2>  
+<h2> Conclusiones</h2>  
 <p>
-<p>Como concluciones del proyecto, nos parecio una buena idea que el programa que se nos encargo generar fuera el de un juego, ya que el progrma final, generado correctamente, podria ser disfrutado por los integrantes del grupo.
+<p>Como conclusiones del proyecto, nos pareció una buena idea que el programa que se nos encargo generar fuera el de un juego, ya que el progrma final, generado correctamente, podria ser disfrutado por los integrantes del grupo.
 
 Otro punto que nos parecio relevante mencionar fue lo de las funcionalidades extras, algo que nos permitio ser creativos y experimentar con ciertos temas, en nuestro caso se presentaron las ideas de un ataque especial, una forma de juego alternativa, un chat entre jugadores y la presentacion del juego atraves de imagenes generadas por nosotros.
 
