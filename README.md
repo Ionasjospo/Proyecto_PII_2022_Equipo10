@@ -102,18 +102,44 @@ Nos hace falta trabajar con el bot de Telegram para para concluir con algunas fu
 <p>
 <p>La entrega final fue la más divertida porque comenzamos a poder vizualizar el trabajo que habiamos hecho. 
 
-En esta ultima parte, debido a que empezamos a interactuar con el bot directamente, pudimos observar que parte del programa se traducia bien en el bot, de esta manera pudimos corregir algunos problemas que habian pasado de ser percibidos y agregar algunas cosas que habiamos pasado por alto.
+En esta ultima parte, debido a que empezamos a interactuar con el bot directamente, pudimos observar que el core del programa se implementaba bien en el bot, y no fue tan complicado crear la mayoria de los handlers ya que teniamos todos los metodos necesarios.
 
-Nuestras funcionalidades le dieron una profundidad al juego, desde la posibilidad de comunicarte con tu oponente (chat), hasta las imagenes que se utilizaron para formar el tablero y los barcos, estas funcionalidades, permiten jugar de una manera mas disfrutable.
+Respecto a las funcionalidades extras negociadas con el cliente:
+
+Las funcionalidades extras nos permitio ser creativos y experimentar con ciertos temas, en nuestro caso se presentaron las ideas de un ataque especial, una forma de juego alternativa, un chat entre jugadores y la presentacion del juego atraves de imagenes generadas por nosotros
+
+Chat: Fue más complicado de lo que nos parecio al principio, pero finalmente logramos implementarla. Ofrece libertad a los jugadores para poder hablar entre ellos 
+ 
+Imagenes: Ofrece una elegante ayuda visual al usuario y es algo que nos distingue de la competencia en el mercado. 
+
+2vs2:
+La modalidad 2 vs 2 fue todo un reto, se pudo implementar pero no se desarrollo un handler para que 4 usuarios jueguen a la vez, no por dificultad si no por tiempo, 
+ya que como se menciono anteriormente se priorizaron otras fucionalidades.
+
+Bomba Especial:
+La bomba especial se pudo implementar de forma exitosa y funcional pero no se mostro en el bot, ya que ya habiamos implementado una forma de atacar y esto conllevaba 
+mas modificaciones.
+
+
+
+Aspectos de la entrega que nos hubieran gustado desarrollar mas:
+
+Como en el anterior hito se nos presentaron problemas a la hora de realizar los Unit test, mas especificamente los test con los handlers, pero al final se pudieron llevar a cabo correctamente.
+
+
+Mas haya del resultado final, desde un principio aspirabamos a mucho, esto resulto ser un inconveniente a la hora de desarrollar aspectos de mayor prioridad,
+Se pudo realizar todas las funcionalidades extras a nivel logico, luego a vincularnos con el bot, estas no pudieron ser efectuadas, ya que conllevaron mas tiempo
+de lo estipulado.
+
 <p>
 <br>
 <h2> Conclusiones</h2>  
 <p>
-<p>Como conclusiones del proyecto, nos pareció una buena idea que el programa que se nos encargo generar fuera el de un juego, ya que el progrma final, generado correctamente, podria ser disfrutado por los integrantes del grupo.
+<p>Como conclusiones del proyecto, la propuesta estuvo muy buena y nos motivo a trabajar en ella. En lineas generales debimos aprender a trabajar constantemente y no dejar todo para el ultimo día como nos sucedio.
 
-Otro punto que nos parecio relevante mencionar fue lo de las funcionalidades extras, algo que nos permitio ser creativos y experimentar con ciertos temas, en nuestro caso se presentaron las ideas de un ataque especial, una forma de juego alternativa, un chat entre jugadores y la presentacion del juego atraves de imagenes generadas por nosotros.
 
-Como en el anterior hito se nos presentaron problemas a la hora de realizar los Unit test, mas especificamente los test con los handlers, pero al final se pudieron llevar a cabo correctamente.
+
+
 
 <p></br></br></p>
 
