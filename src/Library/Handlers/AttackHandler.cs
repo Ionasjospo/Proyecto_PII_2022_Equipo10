@@ -75,8 +75,8 @@ namespace Library
 
                     if(match.Battle.Winner == me || match.Battle.Winner==enemy)
                     {
-                        combineImage.MergeMultipleImages(me.BoardWithShoots.BoardDefaultPath,@"C:/Images/Winner.jpeg",0,0,me.BoardWithShoots);
-                        combineImage.MergeMultipleImages(enemy.BoardWithShoots.BoardDefaultPath,@"C:/Images/Looser.jpeg",0,0,enemy.BoardWithShoots);
+                        combineImage.MergeMultipleImages(me.BoardWithShoots.BoardDefaultPath,@"C:/Images/Winner.png",0,0,me.BoardWithShoots);
+                        combineImage.MergeMultipleImages(enemy.BoardWithShoots.BoardDefaultPath,@"C:/Images/Looser.png",0,0,enemy.BoardWithShoots);
                         
                         AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
                         
