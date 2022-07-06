@@ -12,9 +12,14 @@ namespace Library
     /// </summary>
     public class SearchMatchHandler : BaseHandler
     {
+        /// <summary>
+        /// Mensaje a responder.
+        /// </summary>
         string msj = "";
+        /// <summary>
+        /// Instancia de user.
+        /// </summary>
         User user;
-
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="SearchMatchHandler"/>. 
         /// Esta clase procesa el mensaje "BuscarPartida".

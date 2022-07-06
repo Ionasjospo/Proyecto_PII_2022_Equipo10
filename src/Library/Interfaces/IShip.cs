@@ -30,9 +30,15 @@ namespace Library
         /// </summary>
         /// <value>Un string con una letra identificadora.</value>
         public string LetterId { get; }
-
+        /// <summary>
+        /// Propiedad para saber si el barco esta vivo.
+        /// </summary>
+        /// <returns>true si esta vivo, false si no esta vivo</returns>
         public bool IsAlive();
-
+        /// <summary>
+        /// Determina si esta con vida el barco.
+        /// </summary>
+        /// <value>true si esta vivo, false si esta hundido</value>
         public bool Alive {get; set;}
     }
 }

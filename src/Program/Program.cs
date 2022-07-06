@@ -98,6 +98,10 @@ namespace Program
         /// </summary>
         public static void Main()
         {
+            
+            //Console.WriteLine(user.Id);
+            
+            
             string json = @"../Library/RegisterUsers.json";
             string usersPath = System.IO.File.ReadAllText(json);
             UserList.Instance.LoadFromJson(usersPath);
@@ -108,7 +112,11 @@ namespace Program
             Bot = new TelegramBotClient(token);
 
             firstHandler =
-                new StartHandler(Bot, new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot, null)))));
+                new StartHandler(Bot, new RegisterHandler
+                (new CreateMatchHandler
+                (new SearchMatchHandler
+                (new SetShipsPositionHandler
+                (Bot, new FinalHandler(null))))));
 
             var cts = new CancellationTokenSource();
 
@@ -127,35 +135,7 @@ namespace Program
 
             Console.WriteLine($"Bot is up!");
 
-            ///            
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///         Test by RC -start-
-
-            ///
-            /// Crea varias partidas para probar el SearchMatchHandle
-            /// 
-            // for (int i = 0; i < 15; i++)
-            // {
-            //     Library.UserList.Instance.addNewUser($"Juanete_{i}", $"202206302152_{i}");
-            //     Library.User user = UserList.Instance.FindUserById($"202206302152_{i}");
-            //     if (i % 2 == 0)
-            //         user.NewMatch(false);
-            //     else
-            //         user.NewMatch(true);
-            // }
-
-            ///
-            /// Crea una partida 2vs2 para probar los jugadores 2,3y4
-            /// 
-
-
-            ///         Test by RC -end-
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// 
+        
 
             // Esperamos a que el usuario aprete Enter en la consola para terminar el bot.
             Console.ReadLine();
@@ -166,7 +146,6 @@ namespace Program
             cts.Cancel();
 
             string newUsers = UserList.Instance.ConvertToJson();
-            //string newUsers = JsonSerializer.Serialize(UserList.Instance.Users);
             System.IO.File.WriteAllText(json, newUsers);
         }
 

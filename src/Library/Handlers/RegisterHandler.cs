@@ -12,14 +12,26 @@ using Exceptions;
 
 namespace Library
 {
+    /// <summary>
+    /// Un "handler" del patrón Chain of Responsibility que implementa el comando "/Registrarme".
+    /// </summary>
     public class RegisterHandler : BaseHandler
     {
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="RegisterHandler"/>. 
+        /// Esta clase procesa el mensaje "Registrarme".
+        /// </summary>
+        /// <param name="next">El próximo "handler".</param>
         public RegisterHandler(BaseHandler next) : base(next)
         {
-
             this.Keywords = new string[] { "/Registrarme" };
         }
-
+        /// <summary>
+        /// Procesa el mensaje "/Registrarme" y retorna true; retorna false en caso contrario.
+        /// </summary>
+        /// <param name="message">El mensaje a procesar.</param>
+        /// <param name="response">La respuesta al mensaje procesado.</param>
+        /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override bool InternalHandle(Message message, out string response)
         {
             if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Registrarme") || this.CanHandle(message) )

@@ -34,9 +34,8 @@ namespace Library
                 StringBuilder completeMessage = new StringBuilder();
 
                 completeMessage.Append("Tus estadisticas son: \n");
-                completeMessage.Append($"Has ganado {UserList.Instance.FindUserById(message.From.Id.ToString()).BattlesWon} partidas.\n ");
-                completeMessage.Append($"Tienes un total de {UserList.Instance.FindUserById(message.From.Id.ToString()).SpecialBomb} bombas especiales disponibles para usar.\n ");
-                completeMessage.Append($"Si deseas obtener más bombas especiales gana más partidas o puedes adquerirla con el comando /PurchaseSpecialBombs.\n ");
+                completeMessage.Append($"Has ganado {UserList.Instance.FindUserById(message.From.ToString()).BattlesWon} partidas.\n ");
+                completeMessage.Append($"Tienes un total de {UserList.Instance.FindUserById(message.From.ToString()).SpecialBomb} bombas especiales disponibles para usar.");
                 response = completeMessage.ToString();
                 return true;
             }
