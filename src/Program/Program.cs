@@ -98,6 +98,10 @@ namespace Program
         /// </summary>
         public static void Main()
         {
+            
+            //Console.WriteLine(user.Id);
+            
+            
             string json = @"../Library/RegisterUsers.json";
             string usersPath = System.IO.File.ReadAllText(json);
             UserList.Instance.LoadFromJson(usersPath);
@@ -127,55 +131,7 @@ namespace Program
 
             Console.WriteLine($"Bot is up!");
 
-
-
-
-
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///         Test by RC -start-
-
-            ///
-            /// Crea varias partidas para probar el SearchMatchHandle
-            /// 
-            // for (int i = 0; i < 15; i++)
-            // {
-            //     Library.UserList.Instance.addNewUser($"Juanete_{i}", $"202206302152_{i}");
-            //     Library.User user = UserList.Instance.FindUserById($"202206302152_{i}");
-            //     if (i % 2 == 0)
-            //         user.NewMatch(false);
-            //     else
-            //         user.NewMatch(true);
-            // }
-
-            ///
-            /// Crea una partida 2vs2 para probar los jugadores 2,3y4
-            /// 
-            // Library.UserList.Instance.addNewUser($"Juanete_1", $"202207031150_1");
-            // Library.User user1 = UserList.Instance.FindUserById($"202207031150_1");
-            // user1.NewMatch(true);
-            // BoardWithShips board1 = MatchList.Instance.FindBoard(user1.Id) as BoardWithShips;
-            // board1.SetPosition(board1.Ship[0], 1, 1, "vertical");
-            // board1.SetPosition(board1.Ship[0], 2, 2, "horizontal");
-            // board1.SetPosition(board1.Ship[0], 3, 3, "vertical");
-            // board1.SetPosition(board1.Ship[0], 4, 4, "horizontal");
-
-            // Library.UserList.Instance.addNewUser($"Juanete_2", $"202207050629_2");
-            // Library.User user2 = UserList.Instance.FindUserById($"202207050629_2");
-            // user2.JoinMatch(Library.MatchList.Instance.HistoricMatches[0]);
-            // BoardWithShips board2 = MatchList.Instance.FindBoard(user2.Id) as BoardWithShips;
-            // board2.SetPosition(board2.Ship[0], 1, 1, "vertical");
-            // board2.SetPosition(board2.Ship[0], 2, 2, "horizontal");
-            // board2.SetPosition(board2.Ship[0], 3, 3, "vertical");
-            // board2.SetPosition(board2.Ship[0], 4, 4, "horizontal");
-
-
-            ///         Test by RC -end-
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /// 
+        
 
             // Esperamos a que el usuario aprete Enter en la consola para terminar el bot.
             Console.ReadLine();
@@ -186,7 +142,6 @@ namespace Program
             cts.Cancel();
 
             string newUsers = UserList.Instance.ConvertToJson();
-      
             System.IO.File.WriteAllText(json, newUsers);
         }
 

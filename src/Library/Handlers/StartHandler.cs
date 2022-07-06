@@ -17,7 +17,7 @@ namespace Library
     public class StartHandler : BaseHandler
     {
         /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="HelloHandler"/>. Esta clase procesa el mensaje "hola".
+        /// Inicializa una nueva instancia de la clase <see cref="StartHandler"/>. Esta clase procesa el mensaje "/start".
         /// </summary>
         /// <param name="next">El próximo "handler".</param>
         public StartHandler(TelegramBotClient bot, BaseHandler next) : base(next)
@@ -29,7 +29,7 @@ namespace Library
         private TelegramBotClient bot;
 
         /// <summary>
-        /// Procesa el mensaje "hola" y retorna true; retorna false en caso contrario.
+        /// Procesa el mensaje "/start" y retorna true; retorna false en caso contrario.
         /// </summary>
         /// <param name="message">El mensaje a procesar.</param>
         /// <param name="response">La respuesta al mensaje procesado.</param>
@@ -65,11 +65,10 @@ namespace Library
                     StringBuilder completeMessage = new StringBuilder();
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
                     completeMessage.Append($"Es un gusto verte de nuevo, {UserList.Instance.FindUserById(message.From.ToString()).Name}.\n");
-                    completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /CrearPartida \n");
+                    completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /Estadisticas \n");
                     completeMessage.Append("    /Chat \n");
-                    completeMessage.Append("    /MasOpciones \n");
 
                     response = completeMessage.ToString();
                     return true;

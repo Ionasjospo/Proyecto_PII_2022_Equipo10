@@ -9,8 +9,6 @@ namespace Library
     /// </summary>
     public class HistorialUser
     {
-       
-        
         /// <summary>
         /// Historial del usuario para interactuar con el bot
         /// </summary>
@@ -37,10 +35,11 @@ namespace Library
         {
             
         }
-
+        /// <summary>
+        /// Historial que contiene los comandos que uso el usuario.
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<string, Collection<string>> Historial = new Dictionary<string, Collection<string>>();
-
-        public Dictionary<string, User> UserID = new Dictionary<string, User>();        
-
+           
     }
 }

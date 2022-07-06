@@ -12,9 +12,14 @@ namespace Library
     /// </summary>
     public class SearchMatchHandler : BaseHandler
     {
+        /// <summary>
+        /// Mensaje a responder.
+        /// </summary>
         string msj = "";
+        /// <summary>
+        /// Instancia de user.
+        /// </summary>
         User user;
-
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="SearchMatchHandler"/>. 
         /// Esta clase procesa el mensaje "BuscarPartida".
@@ -33,13 +38,13 @@ namespace Library
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override bool InternalHandle(Message message, out string response)
         {
+            msj = "";
             if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/BuscarPartida"))
             {
                 Console.WriteLine("BuscarPartida");
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
 
-                //if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
-                if (HistorialUser.Instance.Historial[message.From.ToString()][0]==("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
+                if (HistorialUser.Instance.Historial[message.From.ToString()][0] == ("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
                     try
@@ -69,23 +74,22 @@ namespace Library
                             {
                                 msj = "No hay partidas disponibles para unirse \n Tu puedes también /CrearPartida !!";
                                 HistorialUser.Instance.Historial[message.From.ToString()].Clear();
-                            } 
+                            }
                         }
                     }
                     catch (System.Exception)
                     {
                         msj = "Ocurrió un error al intentar buscar partidas para unirse. \n";
-                        throw new MatchOpenToJoinException(msj);
-                    }
-                    finally
-                    {
+                        new MatchOpenToJoinException(msj);
                         CompleteMessage.Append(msj);
                         response = CompleteMessage.ToString();
-                    }                    
+                        return true;
+                    }
+                    CompleteMessage.Append(msj);
+                    response = CompleteMessage.ToString();
                     return true;
                 }
-                //if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
-                if (HistorialUser.Instance.Historial[message.From.ToString()][0]==("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
+                if (HistorialUser.Instance.Historial[message.From.ToString()][0] == ("/BuscarPartida") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
                     try
@@ -141,14 +145,14 @@ namespace Library
                     catch (System.Exception e)
                     {
                         msj = "Lamentamos que no es posible unirse a una partida.\n";
-                        throw new MatchFullPlayersException(msj + e.ToString());
-                    }
-                    finally
-                    {
+                        new MatchFullPlayersException(msj + e.ToString());
                         CompleteMessage.Append(msj);
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
-                        response = CompleteMessage.ToString();                        
+                        response = CompleteMessage.ToString();
+                        return true;
                     }
+                    CompleteMessage.Append(msj);
+                    HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                    response = CompleteMessage.ToString();
                     return true;
                 }
             }

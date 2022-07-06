@@ -18,7 +18,7 @@ namespace Library
     public class ConversationHandler : BaseHandler
     {
 
-        string msj = "";
+        string msj;
         User user;
         Match match;
 
@@ -40,6 +40,7 @@ namespace Library
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override bool InternalHandle(Message message, out string response)
         {
+            msj = "";
             if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Chat"))
             {
                 Console.WriteLine("chat");
@@ -66,14 +67,14 @@ namespace Library
                     }
                     catch (System.Exception e)
                     {
-                        msj = "Lamentamos ...\n";
-                        throw new CreateMatchException(msj + e.ToString());
-                    }
-                    finally
-                    {
+                        msj = "Lamentamos no pueda enviar un mensaje.\n";
+                        new ChatException(msj + e.ToString());
                         CompleteMessage.Append(msj);
                         response = CompleteMessage.ToString();
+                        return true;
                     }
+                    CompleteMessage.Append(msj);
+                    response = CompleteMessage.ToString();
                     return true;
                 }
                 if (HistorialUser.Instance.Historial[message.From.ToString()][0] == "/Chat" && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
@@ -100,45 +101,16 @@ namespace Library
                     }
                     catch (System.Exception e)
                     {
-                        msj = "Lamentamos que...\n";
-                        throw new CreateMatchException(msj + e.ToString());
-                    }
-                    finally
-                    {
+                        msj = "Lamentamos no pueda enviar un mensaje.\n";
+                        new ChatException(msj + e.ToString());
                         CompleteMessage.Append(msj);
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
                         response = CompleteMessage.ToString();
+                        return true;
                     }
-                    return true;
-                }
-                if (HistorialUser.Instance.Historial[message.From.ToString()][0] == "/Chat" && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 3)
-                {
-                    StringBuilder CompleteMessage = new StringBuilder();
-                    try
-                    {
-                        if (message.Text == "/Aliado")
-                        {
-                            UserList.Instance.addNewUser(message.Text, message.From.ToString());
-                            Conversation conversation = new Conversation();
-                            //conversation.SendMessage(user)
 
-                        }
-                        if (message.Text == "/Enemigo")
-                        {
-
-                        }
-                    }
-                    catch (System.Exception e)
-                    {
-                        msj = "Lamentamos que...\n";
-                        throw new CreateMatchException(msj + e.ToString());
-                    }
-                    finally
-                    {
-                        CompleteMessage.Append(msj);
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
-                        response = CompleteMessage.ToString();
-                    }
+                    CompleteMessage.Append(msj);
+                    HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                    response = CompleteMessage.ToString();
                     return true;
                 }
             }

@@ -3,26 +3,49 @@ using ImageMagick;
 
 namespace Library
 {
-
+    /// <summary>
+    /// Clase que representa la batalla.
+    /// </summary>
     public class Battle
     {
+        /// <summary>
+        /// Instancia de match.
+        /// </summary>
+        /// <value>Match</value>
         private Match match { get; set; }
-
-
+        /// <summary>
+        /// Lista que lleva los turnos para atacar.
+        /// </summary>
+        /// <typeparam name="Player">Jugadores que quieren atacar</typeparam>
+        /// <returns></returns>
         private List<Player> ListTurns = new List<Player>();
-
+        /// <summary>
+        /// Atributo que sirve para determinar que jugador debe atacar.
+        /// </summary>
         private int turn = 2;
-
+        /// <summary>
+        /// Jugador ganador de la partida.
+        /// </summary>
         private Player winner;
+        /// <summary>
+        /// Propiedad que devuelve el jugador que ganó.
+        /// </summary>
+        /// <value>Player</value>
         public Player Winner { get {return this.winner;}}
-
+        /// <summary>
+        /// Instancia de CombineImage.
+        /// </summary>
+        /// <returns>CombineImage</returns>
         private CombineImage combineImage = new CombineImage();
-
+        /// <summary>
+        /// Intancia de coordinates.
+        /// </summary>
+        /// <returns>Coordinates</returns>
         private Coordinates coordinates = new Coordinates();
-
+        /// <summary>
+        /// Atributo para contar los barcos que han sidos destruidos.
+        /// </summary>
         private int shipsDestroys = 0;
-
-
         /// <summary>
         /// Constructor de Battle.
         /// </summary>
@@ -65,7 +88,9 @@ namespace Library
         /// </summary>
         /// <param name="fila">Fila a atacar.</param>
         /// <param name="col">Columna a atacar.</param>
-        /// <param name="player">???????</param>
+        /// <param name="player1">Jugador que ataca.</param>
+        /// <param name="player2">Jugador atacado.</param>
+
         public void Attack(int col, int fila, Player player1, Player player2, bool SpecialBomb)
         {
             coordinates.transformPosition(col,fila);
@@ -115,7 +140,13 @@ namespace Library
                 }
             }
         }
-
+        /// <summary>
+        /// Método para atacar con la bomba especial.
+        /// </summary>
+        /// <param name="fila">Fila</param>
+        /// <param name="col">Columna</param>
+        /// <param name="player1">Jugador que ataca</param>
+        /// <param name="player2">Jugador que es atacado</param>
         public void SpecialBombAttack(int fila, int col, Player player1, Player player2)
         {
             if (player1.User.SpecialBomb > 0)
@@ -128,9 +159,11 @@ namespace Library
 
                 player1.User.SpecialBombUsed();
             }
-
         }
-
+        /// <summary>
+        /// Metodo para determinar si el jugador es el ganador.
+        /// </summary>
+        /// <returns></returns>
         public bool IsChampion()
         {
             if (this.shipsDestroys == 4)
@@ -139,7 +172,5 @@ namespace Library
             }
             return false;
         }
-
-
     }
 }
