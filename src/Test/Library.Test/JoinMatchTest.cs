@@ -44,6 +44,9 @@ namespace Library.Test
             UserList.Instance.FindUserById("33").JoinMatch(match);//manu se une
             UserList.Instance.FindUserById("333").JoinMatch(match);//feli se une
 
+            UserList.Instance.Users[4].JoinMatch(match); //juan se une
+            UserList.Instance.Users[5].JoinMatch(match);//manu se une
+            UserList.Instance.Users[6].JoinMatch(match);//feli se une
 
 
             Assert.AreEqual("Juan", match.PlayerB1.User.Name);
