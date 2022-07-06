@@ -7,15 +7,15 @@
 // {
 //     public class BattleTest
 //     {
-           
 
-          
 
-          
+
+
+
 //         [SetUp]
 //         public void Setup()
 //         {
-          
+
 
 //         }
 
@@ -26,7 +26,7 @@
 //             User user2 = new User("fumeteo");
 //              user.NewMatch(false);
 //             Match match = MatchList.Instance.HistoricMatches[0];
-           
+
 //             user2.JoinMatch(match);
 //             BoardWithShips board = match.PlayerA1.BoardWithShips as BoardWithShips;
 //             BoardWithShips board2 = match.PlayerB1.BoardWithShips as BoardWithShips;
@@ -72,11 +72,11 @@
 //             match.Battle.Attack(9, 3, match.PlayerA1, match.PlayerB1, false);
 
 //             Assert.AreEqual(1,match.PlayerA1.User.BattlesWon);
-            
+
 //         }
 
 
-    
+
 
 //     }
 // }

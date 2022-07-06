@@ -63,6 +63,7 @@ namespace Library
                 else
                 {
                     CompleteMessage.Append("Tu enemigo esta listo para la batalla, ya es hora del combate!!\n /Atacar");
+                    match.NewBattle();
                     HistorialUser.Instance.Historial[message.From.ToString()].Clear();
                     response = CompleteMessage.ToString();
                     return true;
