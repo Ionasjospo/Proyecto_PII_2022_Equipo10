@@ -13,7 +13,7 @@ namespace Library
     public class CreateMatchHandler : BaseHandler
     {
 
-        string msj = "";
+        string msj;
         User user;
 
         /// <summary>
@@ -33,6 +33,7 @@ namespace Library
         /// <returns>true si el mensaje fue procesado; false en caso contrario.</returns>
         protected override bool InternalHandle(Message message, out string response)
         {
+            msj = "";
             if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/CrearPartida"))
             {
                 Console.WriteLine("match");
