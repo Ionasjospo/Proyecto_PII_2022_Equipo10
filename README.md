@@ -82,9 +82,40 @@ Como en esta entrega no hicimos uso del bot esta funcionalidad se vió opacada p
 <h3>Bomba especial</h3>
 Ofrece una funcionalidad distinta y genera competitividad entre los usuario, ya que estos van a querer ganar para que se le sume al contador de victorias para que cuando acumulen 5 victorias tengan la super bomba que es una gran ventaja frente al rival. 
 Se cumplió con ella y se implemento correctamente.
-
+<br>
+<br>
+<h2> Concluciones</h2>  
+El desafio más dificil de esta entrega fue el hecho de respetar y utilizar los principios y patrones dados en clase.</br> 
+</br>
+Otra situación que se nos dificultó fueron los Unit Test, si bien realizarlos no son muy complicados, dejamos para ultimo momento ya que queriamos terminar la parte logica, y esto pudo haber sido un error.</br>
+</br>
+Nos hace falta trabajar con el bot de Telegram para para concluir con algunas funcionalidad, además de asignarle un ID correspondiente a cada Usuario.
+</p></br></p>
+<h3>Ejección de TEST</h3>
+<p>Los TEST correspondiente a los siguientes archivos deben ejecutarse de a uno, pues generan error en caso de ejecutarse en a la misma vez:</br>
+- JoinMatchTest</br>
+- UserTest</br>
+</p>
 <p></br></br></p>
 
+<h1> Hito 3 (5 de julio)</h1>
+<p>
+<p>La entrega final fue la más divertida porque comenzamos a poder vizualizar el trabajo que habiamos hecho. 
+
+En esta ultima parte, debido a que empezamos a interactuar con el bot directamente, pudimos observar que parte del programa se traducia bien en el bot, de esta manera pudimos corregir algunos problemas que habian pasado de ser percibidos y agregar algunas cosas que habiamos pasado por alto.
+
+Nuestras funcionalidades le dieron una profundidad al juego, desde la posibilidad de comunicarte con tu oponente (chat), hasta las imagenes que se utilizaron para formar el tablero y los barcos, estas funcionalidades, permiten jugar de una manera mas disfrutable.
+<p>
+<br>
+<h2> Concluciones</h2>  
+<p>
+<p>Como concluciones del proyecto, nos parecio una buena idea que el programa que se nos encargo generar fuera el de un juego, ya que el progrma final, generado correctamente, podria ser disfrutado por los integrantes del grupo.
+
+Otro punto que nos parecio relevante mencionar fue lo de las funcionalidades extras, algo que nos permitio ser creativos y experimentar con ciertos temas, en nuestro caso se presentaron las ideas de un ataque especial, una forma de juego alternativa, un chat entre jugadores y la presentacion del juego atraves de imagenes generadas por nosotros.
+
+Como en el anterior hito se nos presentaron problemas a la hora de realizar los Unit test, mas especificamente los test con los handlers, pero al final se pudieron llevar a cabo correctamente.
+
+<p></br></br></p>
 
 <h2>Notas IMPORTANTES a tener en cuenta</h2>
 <h3><a name = "RutaImagenes">Ruta de imágenes</a></h3>
@@ -97,24 +128,13 @@ De esta forma que queda una carpeta:</br>
 - también queda "C:\Images\CombinedImages\" donde aparecerán las imágenes del tablero modificado a medida se avanza la batalla.</br>
 </p>
 
-
-<h3>Ejección de TEST</h3>
-<p>Los TEST correspondiente a los siguientes archivos deben ejecutarse de a uno, pues generan error en caso de ejecutarse en a la misma vez:</br>
-- JoinMatchTest</br>
-- UserTest</br>
-</p>
-
-
-
 <p></br></br></p>
+
 <h1>Apendice</h1>
 
 <h2> Patrones</h2>
 <p>
 Los patrones utilizados se encuentran en el PDF correspondiente dentro de la carpeta "\doc".
-
-
-
 
 <h2><a name="NuGet">NuGet</a></h2>
 Aprendimos a usar la herramienta <a href="https://docs.microsoft.com/en-us/nuget/what-is-nuget">NuGet </a>(lo aprendimos nosotros y fue muy satisfactorio) que es el manejador oficial de paquetes de .NET y .NET Core. Un paquete es una libreria compilada que nos permiten utilizar funcionalidades extras a nuestro proyecto. Quizas Nuget, en las proximas entregas nos sea realmente útil.
@@ -127,24 +147,3 @@ La imagenes fueron creadas por nosotros con los programas Adobe Illustrator y Ad
 
 <h2>Fuentes</h2>
 Las principales fuentes utilizadas fueron del libro UML y Patrones Optimizado de Craig Larman. Para los patrones una fuente muy util fue <a href="https://refactoring.guru/es">RefactoringGuru</a>. Ademas de los conocimientos aprendidos de clase y sus repositorios con código de ejemplo.
-
-<h2> Concluciones</h2>  
-El desafio más dificil de esta entrega fue el hecho de respetar y utilizar los principios y patrones dados en clase.</br> 
-</br>
-Otra situación que se nos dificultó fueron los Unit Test, si bien realizarlos no son muy complicados, dejamos para ultimo momento ya que queriamos terminar la parte logica, y esto pudo haber sido un error.</br>
-</br>
-Nos hace falta trabajar con el bot de Telegram para para concluir con algunas funcionalidad, además de asignarle un ID correspondiente a cada Usuario.
-
-
-<p></br></br></p>
-<p></br></br></p>
-
-<h1> Hito 3 (5 de julio)</h1>
-
-La entrega final fue la más divertida porque comenzamos a poder vizualizar el trabajo que habiamos hecho. 
-
-Nuestras funcionalidades que parecian muy dificil de implementar funcionaron muy bien y le dieron otra funcionalidad distinta a nuestro juego.
-
-Conclusiones:
-
-Pasos a futuro:
