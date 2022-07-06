@@ -63,13 +63,13 @@ namespace Library
                     catch (System.Exception e)
                     {
                         msj = "Lamentamos que no es posible crear una partida.\n";
-                        throw new CreateMatchException(msj + e.ToString());
-                    }
-                    finally
-                    {
+                        new CreateMatchException(msj + e.ToString());
                         CompleteMessage.Append(msj);
                         response = CompleteMessage.ToString();
+                        return true;
                     }
+                    CompleteMessage.Append(msj);
+                    response = CompleteMessage.ToString();
                     return true;
                 }
                 if (HistorialUser.Instance.Historial[message.From.ToString()][0] == "/CrearPartida" && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
@@ -113,14 +113,16 @@ namespace Library
                     catch (System.Exception e)
                     {
                         msj = "Lamentamos que no es posible crear una partida.\n";
-                        throw new CreateMatchException(msj + e.ToString());
-                    }
-                    finally
-                    {
+                        new CreateMatchException(msj + e.ToString());
                         CompleteMessage.Append(msj);
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
                         response = CompleteMessage.ToString();
+                        return true;
                     }
+
+                    CompleteMessage.Append(msj);
+                    HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                    response = CompleteMessage.ToString();
+
                     return true;
                 }
 
