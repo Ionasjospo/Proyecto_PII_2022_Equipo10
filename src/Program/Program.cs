@@ -108,7 +108,7 @@ namespace Program
             Bot = new TelegramBotClient(token);
 
             firstHandler =
-                new StartHandler(Bot, new RegisterHandler(new ConversationHandler(Bot, new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot, null))))));
+                new StartHandler(Bot, new RegisterHandler(new CreateMatchHandler(new SearchMatchHandler(new SetShipsPositionHandler(Bot, new ConversationHandler(Bot, new BattleHandler(Bot,null)))))));
 
             var cts = new CancellationTokenSource();
 
@@ -136,7 +136,7 @@ namespace Program
             cts.Cancel();
 
             string newUsers = UserList.Instance.ConvertToJson();
-            //string newUsers = JsonSerializer.Serialize(UserList.Instance.Users);
+      
             System.IO.File.WriteAllText(json, newUsers);
         }
 
