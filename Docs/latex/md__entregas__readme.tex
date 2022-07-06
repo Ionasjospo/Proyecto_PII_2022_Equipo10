@@ -1,0 +1,51 @@
+\hypertarget{md__entregas__readme_autotoc_md23}{}\doxysection{Universidad Católica del Uruguay}\label{md__entregas__readme_autotoc_md23}
+\hypertarget{md__entregas__readme_autotoc_md24}{}\doxysubsection{Facultad de Ingeniería y Tecnologías}\label{md__entregas__readme_autotoc_md24}
+\hypertarget{md__entregas__readme_autotoc_md25}{}\doxysubsubsection{Programación II}\label{md__entregas__readme_autotoc_md25}
+\hypertarget{md__entregas__readme_autotoc_md26}{}\doxysubsection{Proyecto 2022 -\/ Primer Semestre -\/ Batalla Naval -\/ $<$a href=\char`\"{}https\+://es.\+wikipedia.\+org/wiki/\+Batalla\+\_\+naval\+\_\+(juego)\char`\"{}$>$\+Batalla naval (juego)$<$/a$>$.}\label{md__entregas__readme_autotoc_md26}
+La pregunta orientadora de este proyecto es\+:
+
+\begin{quote}
+\+:thinking\+: ¿\+Cómo podemos nosotros, estudiantes de Programación II de la Universidad Católica del Uruguay, crear un juego de estrategia y suerte para jugar de forma online? \end{quote}
+El trabajo consiste en desarrollar un \href{https://es.wikipedia.org/wiki/Bot_conversacional}{\texttt{ chatbot}} que permitirá conectar juadores.\hypertarget{md__entregas__readme_autotoc_md27}{}\doxysubsection{Introducción}\label{md__entregas__readme_autotoc_md27}
+Un chatbot (o bot conversacional) es «un programa que simula mantener una conversación con una persona al proveer respuestas automáticas a entradas hechas por el usuario.\+»$<$sup$>$1
+
+Existen gran variedad de chatbots actualmente y varios {\itshape sabores}. Hay chatbots que simplemente responden a comandos pre-\/establecidos, y otros que integran algoritmos de \href{https://es.wikipedia.org/wiki/Inteligencia_artificial}{\texttt{ inteligencia artificial}} para procesar los mensajes de los usuarios e \href{https://es.wikipedia.org/wiki/Procesamiento_de_lenguajes_naturales}{\texttt{ interpretar lo que se está diciendo}}.
+
+Los chatbots son especialmente útiles para asistir a las personas en tareas o consultas sin necesidad de la interacción humana del otro lado. Algunos ejemplos de esto son\+:
+
+
+\begin{DoxyItemize}
+\item ayudar a resolver un problema cuando pido comida y no llega
+\item hacer trámites con bancos, por ejemplo, notificación por Whatsapp que salgo de viaje
+\item \href{https://www.gub.uy/ministerio-salud-publica/coronavirus}{\texttt{ asistencia al público actualmente durante la pandemia del COVID-\/19}}
+\item hacer de asistente, por ejemplo, para agendar reuniones entre personas
+\item oficiar de agente de viajes, para encontrar vuelos, estadías, etc.
+\item buscar multimedia (GIFs, videos, música, etc.)
+\item y mucho más.
+\end{DoxyItemize}
+
+Algunas de las aplicaciones más conocidas que abren sus puertas al desarrollo de chatbots (tienen \href{https://es.wikipedia.org/wiki/Interfaz_de_programaci\%C3\%B3n_de_aplicaciones}{\texttt{ APIs}}) son\+: Telegram, Messenger, Whatsapp, Slack, Discord, entre otras.\hypertarget{md__entregas__readme_autotoc_md28}{}\doxysubsection{La propuesta}\label{md__entregas__readme_autotoc_md28}
+Aquí veremos una explicación general e informal de las funciones del software (nuestro programa), escrita desde la perspectiva del usuario final.
+
+
+\begin{DoxyItemize}
+\item Como jugador debo poder iniciar una partida.
+\item Como jugador debo posicionar mis naves antes de comenzar con el primer movimiento.
+\item Como jugador debo poder acceder a dos tableros, uno para visualizar mis propias naves y otro para que contenga los disaparos realizados.
+\item Como jugador debo poder indicar una posición de ataque.
+\item Como administrador del juego, debo poder registrar usuarios.
+\item Como administrador del juego, debo poder conectar dos jugadores que se encuentren esperando para jugar.
+\item Como administrador debo poder actualizar el tablero de registro de ataques, cuando un jugador ataca a otro.
+\item Como administrador debo poder actualizar el tablero de un jugador cuando recibe un ataque.
+\item Como administrador del juego, debo poder almacenar todas las partidas en juego, junto con sus datos (tableros, jugadores, etc.)
+\item Como administrador del juego, se debe permitir tantas rondas como sean necesarias para cada una de las partidas.
+\item Como administrador del juego, luego de cada ataque debo indicar el resultado del mismo a ambos participantes (si el ataque coincide con la posición de un barco\+: \char`\"{}\+Tocado\char`\"{} en caso de haber más partes aún sin atancar, \char`\"{}\+Hundido\char`\"{} sino quedan partes de la nave por atacar, o bien si no ha tocado ninguna parte de una nave indicará \char`\"{}\+Agua\char`\"{}.
+\item Como adnministrador debo indicar que se finalizó la partida cuando todas las naves de un jugador queden hundidas.
+\end{DoxyItemize}\hypertarget{md__entregas__readme_autotoc_md29}{}\doxysubsubsection{Negociando con el cliente}\label{md__entregas__readme_autotoc_md29}
+Cómo empresa desarrolladora de video juegos, analizan que el juego es muy simple y quieren destacarse ante la competencia, por esto deciden agregar algunas funcionalidades/requerimientos a la letra del proyecto. Para esto, cada uno de los participantes del equipo deberá idear una nueva funcionalidad, que deberá presentar ante el cliente (o sea los profesores de la asignatura) y negociar el diseño y dearrollo de las mismas para sumar al proyecto.\hypertarget{md__entregas__readme_autotoc_md30}{}\doxysubsubsection{Persistencia de la información}\label{md__entregas__readme_autotoc_md30}
+Cómo ya te habrás dado cuenta, nuestro chatbot necesitará guardar la información de empresas, emprendedores, materiales, etc. Para esto te brindaremos una interface que te permitirá realizar persistencia de datos (guardar y recuperar) y luego una implemnentación utilizando archivos. Tengan presente, que a los profes les gusta guardar información en bases de datos, así que si cambiamos la implementación de la interface, el chatbot debería seguir funcionando sin cambios.\hypertarget{md__entregas__readme_autotoc_md31}{}\doxysubsection{Roadmap y Entregables}\label{md__entregas__readme_autotoc_md31}
+$\vert$ Instancia $\vert$ Fecha $\vert$ Entregables $\vert$ $\vert$ --- $\vert$ --- $\vert$ --- $\vert$ $\vert$ Kick-\/off $\vert$ 21 de Abril $\vert$ $\vert$ Primer Entrega $\vert$ 26 de Mayo $\vert$ \href{https://github.com/ucudal/Proyecto_PII_2022_1/blob/main/Entregas/Entrega1.md}{\texttt{ Entrega de tarjetas CRC/\+Diagrama de Clases.}}\textsuperscript{1} $\vert$ Segunda Entrega $\vert$ 21 de Junio $\vert$ \href{https://github.com/ucudal/Proyecto_PII_2022_1/blob/main/Entregas/Entrega2.md}{\texttt{ Entrega}} de \href{https://es.wikipedia.org/wiki/Historias_de_usuario}{\texttt{ User Stories}} implementadas. Las historias de usuario deberán ser implementadas mediante casos de prueba. $\vert$ Entrega Final $\vert$5 de Julio\textsuperscript{2}$\vert$
+
+\textsuperscript{1} Cada equipo designará qué integrante del equipo desarrollará cada clase. La distribución debe contemplar número de clases y responsabilidades. Se evaluará que cada integrante trabaje en una rama independiente y que se integren los cambios mediante pull requests.
+
+\textsuperscript{2} Las entregas serán hasta las 23\+:59 del día indicado. 
