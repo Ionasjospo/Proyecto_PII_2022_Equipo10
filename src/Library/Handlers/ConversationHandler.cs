@@ -68,13 +68,13 @@ namespace Library
                     catch (System.Exception e)
                     {
                         msj = "Lamentamos no pueda enviar un mensaje.\n";
-                        throw new ChatException(msj + e.ToString());
-                    }
-                    finally
-                    {
+                        new ChatException(msj + e.ToString());
                         CompleteMessage.Append(msj);
                         response = CompleteMessage.ToString();
+                        return true;
                     }
+                    CompleteMessage.Append(msj);
+                    response = CompleteMessage.ToString();
                     return true;
                 }
                 if (HistorialUser.Instance.Historial[message.From.ToString()][0] == "/Chat" && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
@@ -102,14 +102,15 @@ namespace Library
                     catch (System.Exception e)
                     {
                         msj = "Lamentamos no pueda enviar un mensaje.\n";
-                        throw new ChatException(msj + e.ToString());
-                    }
-                    finally
-                    {
+                        new ChatException(msj + e.ToString());
                         CompleteMessage.Append(msj);
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
                         response = CompleteMessage.ToString();
+                        return true;
                     }
+
+                    CompleteMessage.Append(msj);
+                    HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                    response = CompleteMessage.ToString();
                     return true;
                 }
             }

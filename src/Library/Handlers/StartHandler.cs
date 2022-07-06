@@ -65,11 +65,10 @@ namespace Library
                     StringBuilder completeMessage = new StringBuilder();
                     completeMessage.Append("Bienvenido a la Batalla Naval del Equipo 10\n");
                     completeMessage.Append($"Es un gusto verte de nuevo, {UserList.Instance.FindUserById(message.From.ToString()).Name}.\n");
-                    completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /CrearPartida \n");
+                    completeMessage.Append("    /BuscarPartida \n");
                     completeMessage.Append("    /Estadisticas \n");
                     completeMessage.Append("    /Chat \n");
-                    completeMessage.Append("    /MasOpciones \n");
 
                     response = completeMessage.ToString();
                     return true;
