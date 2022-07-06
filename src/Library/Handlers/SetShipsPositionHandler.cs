@@ -16,7 +16,8 @@ namespace Library
     public class SetShipsPositionHandler : BaseHandler
     {
         /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="SetShipsPositionHandler"/>. Esta clase procesa el mensaje "hola".
+        /// Inicializa una nueva instancia de la clase <see cref="SetShipsPositionHandler"/>. 
+        /// Esta clase procesa el mensaje "Colocar_Tablero".
         /// </summary>
         /// <param name="next">El próximo "handler".</param>
         public SetShipsPositionHandler(TelegramBotClient bot, BaseHandler next) : base(next)
@@ -27,7 +28,7 @@ namespace Library
         private TelegramBotClient bot;
 
         /// <summary>
-        /// Procesa el mensaje "Registrarme" y retorna true; retorna false en caso contrario.
+        /// Procesa el mensaje "/Colocar_Tablero" y retorna true; retorna false en caso contrario.
         /// </summary>
         /// <param name="message">El mensaje a procesar.</param>
         /// <param name="response">La respuesta al mensaje procesado.</param>
@@ -38,7 +39,6 @@ namespace Library
             {
                 HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
                 BoardWithShips board = MatchList.Instance.FindBoard(message.From.ToString()) as BoardWithShips;
-
 
                 if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Colocar_Tablero") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 1)
                 {
@@ -52,17 +52,13 @@ namespace Library
                         cont++;
                     }
 
-
                     response = CompleteMessage.ToString();
-
                     return true;
 
                 }
                 if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Colocar_Tablero") && HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2)
                 {
                     StringBuilder CompleteMessage = new StringBuilder();
-
-
 
                     CompleteMessage.Append($"Nave seleccionada con exito!\n");
                     CompleteMessage.Append($"Debe ingresar la ubicacion que desea y la palabra vertical o horizontal \n");
@@ -128,8 +124,6 @@ namespace Library
                         HistorialUser.Instance.Historial[message.From.ToString()].Add("/Colocar_Tablero");
 
                     }
-
-
                     response = CompleteMessage.ToString();
                     return true;
                 }

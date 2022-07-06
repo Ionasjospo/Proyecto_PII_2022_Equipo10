@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NK7X8KEqhi2I4lAZ1rutANZMKGvZOmSXQWcmJrYKtOSjCqN1wY9aLqMJOlk8HRgnQ1yUoC17xbyp8Zy2vK+cQA==",
+  "dgSpecHash": "hDD+HyMG3lGBBwrK6r+AB5c1tFX20Kv8j/RHPeqXpPxAh6TmP/a0r3zUDXkEQl8PWWyEa4GuvBdyVfzlwYIlyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
+  "projectFilePath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dasil\\.nuget\\packages\\magick.net-q16-anycpu\\11.1.2\\magick.net-q16-anycpu.11.1.2.nupkg.sha512",
     "C:\\Users\\dasil\\.nuget\\packages\\magick.net.core\\11.1.2\\magick.net.core.11.1.2.nupkg.sha512",

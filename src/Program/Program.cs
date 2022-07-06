@@ -98,6 +98,10 @@ namespace Program
         /// </summary>
         public static void Main()
         {
+            
+            //Console.WriteLine(user.Id);
+            
+            
             string json = @"../Library/RegisterUsers.json";
             string usersPath = System.IO.File.ReadAllText(json);
             UserList.Instance.LoadFromJson(usersPath);
@@ -127,6 +131,8 @@ namespace Program
 
             Console.WriteLine($"Bot is up!");
 
+        
+
             // Esperamos a que el usuario aprete Enter en la consola para terminar el bot.
             Console.ReadLine();
 
@@ -136,7 +142,6 @@ namespace Program
             cts.Cancel();
 
             string newUsers = UserList.Instance.ConvertToJson();
-      
             System.IO.File.WriteAllText(json, newUsers);
         }
 

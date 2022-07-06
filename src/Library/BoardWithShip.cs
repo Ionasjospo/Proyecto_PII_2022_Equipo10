@@ -16,7 +16,10 @@ namespace Library
         /// <typeparam name="IShip">Tipo IShip de los buques.</typeparam>
         /// <returns>Los buques colocados.</returns>
         private List<IShip> listShip = new List<IShip>();
-        // para que es esta lista???
+        /// <summary>
+        /// Lista que contiene los barcos a colocar.
+        /// </summary>
+        /// <typeparam name="IShip">Tipo IShip</typeparam>
         private List<IShip> ships = new List<IShip>();
         /// <summary>
         /// Constructor del tablero.
@@ -55,12 +58,19 @@ namespace Library
             get { return listShip; }
 
         }
+        /// <summary>
+        /// Metodo para saber si todos los barcos han sido colocados.
+        /// </summary>
+        /// <value></value>
         public bool ShipReady
         {
             get { return shipsReady; }
 
         }
-        //???????????
+        /// <summary>
+        /// Método para obtener que barcos faltan para colocar.
+        /// </summary>
+        /// <value>Barcos por colocar</value>
         public List<IShip> Ship
         {
             get { return this.ships; }
