@@ -31,7 +31,7 @@ namespace Library
         /// Propiedad que devuelve el jugador que ganó.
         /// </summary>
         /// <value>Player</value>
-        public Player Winner { get {return this.winner;}}
+        public Player Winner { get { return this.winner; } }
         /// <summary>
         /// Instancia de CombineImage.
         /// </summary>
@@ -46,6 +46,13 @@ namespace Library
         /// Atributo para contar los barcos que han sidos destruidos.
         /// </summary>
         private int shipsDestroys = 0;
+        private int waterHeat = 0;
+
+        private int shipHeat = 0;
+        public int ShipHeat
+        { get { return this.shipHeat; } }
+        public int WaterHeat
+        { get { return this.waterHeat; } }
         /// <summary>
         /// Constructor de Battle.
         /// </summary>
@@ -64,7 +71,7 @@ namespace Library
                 this.turn = 4;
             }
 
-            
+
         }
         /// <summary>
         /// Método para verifica de quien es el turno.
@@ -93,7 +100,7 @@ namespace Library
 
         public void Attack(int col, int fila, Player player1, Player player2, bool SpecialBomb)
         {
-            coordinates.transformPosition(col,fila);
+            coordinates.transformPosition(col, fila);
 
             if (this.VerifyTurn() == player1)
             {
@@ -101,6 +108,7 @@ namespace Library
                 {
                     if (player2.BoardWithShips.Ocean[fila, col] == "O")
                     {
+                        this.waterHeat++;
                         player1.BoardWithShoots.Ocean[fila, col] = "X";
                         combineImage.MergeMultipleImages(player1.BoardWithShoots.BoardDefaultPath, @"C:\Images\HitOceanShot.png", coordinates.X, coordinates.Y, player1.BoardWithShoots);
                         if (!SpecialBomb)
@@ -111,6 +119,7 @@ namespace Library
                     }
                     else
                     {
+                        this.shipHeat++;
                         player1.BoardWithShoots.Ocean[fila, col] = "H";
                         int counter = 0;
                         BoardWithShips boardWithShips = player2.BoardWithShips as BoardWithShips;

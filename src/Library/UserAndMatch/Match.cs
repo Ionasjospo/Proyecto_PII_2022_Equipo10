@@ -36,6 +36,8 @@ namespace Library
         /// Contador de jugadores en la partida.
         /// </summary>
         private int countPlayers = 0;
+
+      
         /// <summary>
         /// Propiedad que retorna el jugador A1.
         /// </summary>
