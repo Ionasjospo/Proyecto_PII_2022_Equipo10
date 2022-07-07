@@ -50,6 +50,11 @@ namespace Library
         /// Constructor de Battle.
         /// </summary>
         /// <param name="match">Partida.</param>
+        private int shotsOnWater = 0;
+        public int ShotsOnWater { get {return this.shotsOnWater;}}
+
+        private int shotsOnShips = 0;       
+        public int ShotsOnShips{ get {return this.shotsOnShips;}}
         public Battle(Match match)
         {
             this.match = match;
@@ -101,6 +106,7 @@ namespace Library
                 {
                     if (player2.BoardWithShips.Ocean[fila, col] == "O")
                     {
+                        shotsOnWater ++;
                         player1.BoardWithShoots.Ocean[fila, col] = "X";
                         combineImage.MergeMultipleImages(player1.BoardWithShoots.BoardDefaultPath, @"C:\Images\HitOceanShot.png", coordinates.X, coordinates.Y, player1.BoardWithShoots);
                         if (!SpecialBomb)
@@ -118,6 +124,7 @@ namespace Library
                         {
                             if (player2.BoardWithShips.Ocean[fila, col] == ship.LetterId)
                             {
+                                shotsOnShips ++;
                                 boardWithShips.ListShip[counter].Size--;
                                 combineImage.MergeMultipleImages(player1.BoardWithShoots.BoardDefaultPath, @"C:\Images\HitShipShot.png", coordinates.X, coordinates.Y, player1.BoardWithShoots);
                                 if (!boardWithShips.ListShip[counter].IsAlive())

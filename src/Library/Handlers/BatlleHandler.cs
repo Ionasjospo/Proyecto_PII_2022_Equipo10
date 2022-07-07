@@ -27,6 +27,9 @@ namespace Library
             this.Keywords = new string[] { "/Comenzar_combate" };
             this.bot = bot;
 
+            this.Keywords = new string[] { "/MostrarDisparos" };
+            this.bot = bot;
+
         }
         private TelegramBotClient bot;
 
@@ -69,8 +72,40 @@ namespace Library
                     return true;
                 }
 
+            }          
+            // if (this.CanHandle(message) || HistorialUser.Instance.Historial[message.From.ToString()].Contains("/MostrarDisparos"))
+            // {
+            //     StringBuilder CompleteMessage = new StringBuilder();
+            //     HistorialUser.Instance.Historial[message.From.ToString()].Add(message.Text);
 
-            }
+            //     Match match = MatchList.Instance.FindMatch(message.From.ToString());
+
+            //     Player me = match.My(message.From.ToString());
+            //     Player enemy = match.MyEnemy(message.From.ToString());
+
+            //     BoardWithShips boardenemy = enemy.BoardWithShips as BoardWithShips;
+            //     BoardWithShots myboard = me.BoardWithShoots as BoardWithShots;
+
+            //     int shotsOnWater = match.Battle.ShotsOnWater;
+            //     int shotsOnShips = match.Battle.ShotsOnShips;
+
+            //     {
+            //         if (!boardenemy.ShipReady)
+            //         {
+            //             CompleteMessage.Append("Disparos\n Disparos en AGUA: ",shotsOnWater,"\nDisparos en Barcos: ",shotsOnShips);
+            //             HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+            //             response = CompleteMessage.ToString();
+            //             return true;
+            //         }
+            //         else
+            //         {
+            //             CompleteMessage.Append("");
+            //             HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+            //             response = CompleteMessage.ToString();
+            //             return true;
+            //         }
+            //     }
+            // }
             response = string.Empty;
             return false;
         }
