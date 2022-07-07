@@ -46,6 +46,17 @@ namespace Library
         /// Atributo para contar los barcos que han sidos destruidos.
         /// </summary>
         private int shipsDestroys = 0;
+
+        private ShootsCount shoots;
+
+        public ShootsCount Shoots
+        {
+            get 
+            { 
+                return this.shoots;
+            }
+        } 
+
         /// <summary>
         /// Constructor de Battle.
         /// </summary>
@@ -53,6 +64,7 @@ namespace Library
         public Battle(Match match)
         {
             this.match = match;
+            this.shoots = new ShootsCount();
 
             this.ListTurns.Add(match.PlayerA1);
             this.ListTurns.Add(match.PlayerB1);
@@ -101,17 +113,18 @@ namespace Library
                 {
                     if (player2.BoardWithShips.Ocean[fila, col] == "O")
                     {
+                        Shoots.AddWater();
                         player1.BoardWithShoots.Ocean[fila, col] = "X";
                         combineImage.MergeMultipleImages(player1.BoardWithShoots.BoardDefaultPath, @"C:\Images\HitOceanShot.png", coordinates.X, coordinates.Y, player1.BoardWithShoots);
                         if (!SpecialBomb)
                         {
                             this.turn++;
                         }
-
                     }
                     else
                     {
                         player1.BoardWithShoots.Ocean[fila, col] = "H";
+                        Shoots.AddShip();
                         int counter = 0;
                         BoardWithShips boardWithShips = player2.BoardWithShips as BoardWithShips;
                         foreach (IShip ship in boardWithShips.ListShip)

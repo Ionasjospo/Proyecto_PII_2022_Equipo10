@@ -65,43 +65,49 @@ namespace Library
                     }
                     if (HistorialUser.Instance.Historial[message.From.ToString()].Contains("/Atacar") && (HistorialUser.Instance.Historial[message.From.ToString()].Count() == 2))
                     {
+                        // if (HistorialUser.Instance.Historial[message.From.ToString()][1] == ("/VerDisparosTotales"))
+                        // {
+                            
+                        // }
+                        // else
+                        // {
+                            List<string> list = new List<string>();
+                            list = message.Text.Split(',').ToList();
+                            int x = Convert.ToInt16(list[0]);
+                            int y = Convert.ToInt32(list[1]);
 
-                        List<string> list = new List<string>();
-                        list = message.Text.Split(',').ToList();
-                        int x = Convert.ToInt16(list[0]);
-                        int y = Convert.ToInt32(list[1]);
+                            match.Battle.Attack(x, y, me, enemy, false);
 
-                        match.Battle.Attack(x, y, me, enemy, false);
+                            if (match.Battle.Winner == me || match.Battle.Winner == enemy)
+                            {
+                                combineImage.MergeMultipleImages(me.BoardWithShoots.BoardDefaultPath, @"C:/Images/Winner.png", 0, 0, me.BoardWithShoots);
+                                combineImage.MergeMultipleImages(enemy.BoardWithShoots.BoardDefaultPath, @"C:/Images/Looser.png", 0, 0, enemy.BoardWithShoots);
 
-                    if(match.Battle.Winner == me || match.Battle.Winner==enemy)
-                    {
-                        combineImage.MergeMultipleImages(me.BoardWithShoots.BoardDefaultPath,@"C:/Images/Winner.png",0,0,me.BoardWithShoots);
-                        combineImage.MergeMultipleImages(enemy.BoardWithShoots.BoardDefaultPath,@"C:/Images/Looser.png",0,0,enemy.BoardWithShoots);
-                        
-                        AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
-                        
-                        AsyncContext.Run(() => SendBoardImage2(message, enemy.BoardWithShoots.BoardDefaultPath,enemy));
+                                AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
 
-                        CompleteMessage.Append("La batalla a finalizado... /Menu");
-                        response = CompleteMessage.ToString();
-                        return true;
+                                AsyncContext.Run(() => SendBoardImage2(message, enemy.BoardWithShoots.BoardDefaultPath, enemy));
+
+                                CompleteMessage.Append("La batalla a finalizado... /Menu");
+                                response = CompleteMessage.ToString();
+                                return true;
 
 
 
-                    }
-                    else
-                    {
-                        AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
+                            }
+                            else
+                            {
+                                AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
 
-                        AsyncContext.Run(() => SendMessage(enemy.User, message));
+                                AsyncContext.Run(() => SendMessage(enemy.User, message));
 
-                        CompleteMessage.Append("Esperando al rival... \n");
+                                CompleteMessage.Append("Esperando al rival... \n");
+                                CompleteMessage.Append("¿Deseas /VerDisparosTotales ? \n");
 
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
-                        response = CompleteMessage.ToString();
-                        return true;
-                    }
-                        
+                                HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                                response = CompleteMessage.ToString();
+                                return true;
+                            }
+                        //}
                     }
 
                     HistorialUser.Instance.Historial[message.From.ToString()].Clear();
@@ -142,7 +148,7 @@ namespace Library
 
         private async Task SendBoardImage2(Message message, string path, Player enemy)
         {
-            
+
             // Can be null during testing
             if (bot != null)
             {
