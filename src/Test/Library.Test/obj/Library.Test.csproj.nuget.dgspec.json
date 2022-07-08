@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj": {}
+    "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj": {}
   },
   "projects": {
-    "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
+    "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
+        "projectUniqueName": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\dasil\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\obj\\",
+        "projectPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -102,21 +102,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj": {
+    "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
+        "projectUniqueName": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
         "projectName": "Library.Test",
-        "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
-        "packagesPath": "C:\\Users\\dasil\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\obj\\",
+        "projectPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\Library.Test.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Test\\Library.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dasil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -128,8 +128,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
-                "projectPath": "c:\\Users\\dasil\\Programacion2\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
+              "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj": {
+                "projectPath": "c:\\Users\\Usuario\\OneDrive - Universidad Católica del Uruguay\\Escritorio\\UCU\\SegundoAño\\Prog2_2022\\DefensaProyecto2022\\Proyecto_PII_2022_Equipo10\\src\\Library\\Library.csproj"
               }
             }
           }
@@ -180,7 +180,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

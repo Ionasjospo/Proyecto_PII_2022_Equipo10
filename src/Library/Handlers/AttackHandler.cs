@@ -31,6 +31,7 @@ namespace Library
         private TelegramBotClient bot;
         private CombineImage combineImage = new CombineImage();
 
+
         /// <summary>
         /// Procesa el mensaje "hola" y retorna true; retorna false en caso contrario.
         /// </summary>
@@ -60,6 +61,9 @@ namespace Library
                     {
                         AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
                         CompleteMessage.Append("Es tu turno, indique las coordenadas que desea atacar ej: x,y \n");
+                        CompleteMessage.Append("Si deseas ver los disparos totales al agua /VerDisparosAlAgua. \n");
+                        CompleteMessage.Append("Si deseas ver los disparos totales al agua /VerDisparosABarcos. \n");
+
                         response = CompleteMessage.ToString();
                         return true;
                     }
@@ -73,35 +77,35 @@ namespace Library
 
                         match.Battle.Attack(x, y, me, enemy, false);
 
-                    if(match.Battle.Winner == me || match.Battle.Winner==enemy)
-                    {
-                        combineImage.MergeMultipleImages(me.BoardWithShoots.BoardDefaultPath,@"C:/Images/Winner.png",0,0,me.BoardWithShoots);
-                        combineImage.MergeMultipleImages(enemy.BoardWithShoots.BoardDefaultPath,@"C:/Images/Looser.png",0,0,enemy.BoardWithShoots);
-                        
-                        AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
-                        
-                        AsyncContext.Run(() => SendBoardImage2(message, enemy.BoardWithShoots.BoardDefaultPath,enemy));
+                        if (match.Battle.Winner == me || match.Battle.Winner == enemy)
+                        {
+                            combineImage.MergeMultipleImages(me.BoardWithShoots.BoardDefaultPath, @"C:/Images/Winner.png", 0, 0, me.BoardWithShoots);
+                            combineImage.MergeMultipleImages(enemy.BoardWithShoots.BoardDefaultPath, @"C:/Images/Looser.png", 0, 0, enemy.BoardWithShoots);
 
-                        CompleteMessage.Append("La batalla a finalizado... /Menu");
-                        response = CompleteMessage.ToString();
-                        return true;
+                            AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
+
+                            AsyncContext.Run(() => SendBoardImage2(message, enemy.BoardWithShoots.BoardDefaultPath, enemy));
+
+                            CompleteMessage.Append("La batalla a finalizado... /Menu");
+                            response = CompleteMessage.ToString();
+                            return true;
 
 
 
-                    }
-                    else
-                    {
-                        AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
+                        }
+                        else
+                        {
+                            AsyncContext.Run(() => SendBoardImage(message, me.BoardWithShoots.BoardDefaultPath));
 
-                        AsyncContext.Run(() => SendMessage(enemy.User, message));
+                            AsyncContext.Run(() => SendMessage(enemy.User, message));
 
-                        CompleteMessage.Append("Esperando al rival... \n");
+                            CompleteMessage.Append("Esperando al rival... \n");
 
-                        HistorialUser.Instance.Historial[message.From.ToString()].Clear();
-                        response = CompleteMessage.ToString();
-                        return true;
-                    }
-                        
+                            HistorialUser.Instance.Historial[message.From.ToString()].Clear();
+                            response = CompleteMessage.ToString();
+                            return true;
+                        }
+
                     }
 
                     HistorialUser.Instance.Historial[message.From.ToString()].Clear();
@@ -142,7 +146,7 @@ namespace Library
 
         private async Task SendBoardImage2(Message message, string path, Player enemy)
         {
-            
+
             // Can be null during testing
             if (bot != null)
             {

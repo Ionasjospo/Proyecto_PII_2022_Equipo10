@@ -31,7 +31,7 @@ namespace Library
         /// Propiedad que devuelve el jugador que ganó.
         /// </summary>
         /// <value>Player</value>
-        public Player Winner { get {return this.winner;}}
+        public Player Winner { get { return this.winner; } }
         /// <summary>
         /// Instancia de CombineImage.
         /// </summary>
@@ -50,6 +50,9 @@ namespace Library
         /// Constructor de Battle.
         /// </summary>
         /// <param name="match">Partida.</param>
+
+        public QuantityOfShots quantityOfShots = new QuantityOfShots();
+
         public Battle(Match match)
         {
             this.match = match;
@@ -64,7 +67,7 @@ namespace Library
                 this.turn = 4;
             }
 
-            
+
         }
         /// <summary>
         /// Método para verifica de quien es el turno.
@@ -93,7 +96,7 @@ namespace Library
 
         public void Attack(int col, int fila, Player player1, Player player2, bool SpecialBomb)
         {
-            coordinates.transformPosition(col,fila);
+            coordinates.transformPosition(col, fila);
 
             if (this.VerifyTurn() == player1)
             {
@@ -102,6 +105,7 @@ namespace Library
                     if (player2.BoardWithShips.Ocean[fila, col] == "O")
                     {
                         player1.BoardWithShoots.Ocean[fila, col] = "X";
+                        quantityOfShots.AddWaterShot();
                         combineImage.MergeMultipleImages(player1.BoardWithShoots.BoardDefaultPath, @"C:\Images\HitOceanShot.png", coordinates.X, coordinates.Y, player1.BoardWithShoots);
                         if (!SpecialBomb)
                         {
@@ -112,6 +116,7 @@ namespace Library
                     else
                     {
                         player1.BoardWithShoots.Ocean[fila, col] = "H";
+                        quantityOfShots.AddShipShot();
                         int counter = 0;
                         BoardWithShips boardWithShips = player2.BoardWithShips as BoardWithShips;
                         foreach (IShip ship in boardWithShips.ListShip)
